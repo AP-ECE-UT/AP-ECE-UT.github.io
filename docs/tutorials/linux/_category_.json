@@ -1,0 +1,8 @@
+{
+  "label": "آموزش لینوکس",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "آموزش نصب، راه اندازی و دستورات اولیه لینوکس"
+  }
+}
