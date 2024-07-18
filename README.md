@@ -5,7 +5,7 @@
 ## ویرایش سایت
 برای ویرایش این سایت کافیست این مخزن را کلون کنید و سپس فایل های مارک داون داخل دایرکتوری های docs و blog را ویرایش نمایید.
 ```
-$ git clone https://github.com/erfanasgari21/ap-website.git
+$ git clone https://github.com/AP-ECE-UT/AP-ECE-UT.github.io.git
 ```
 در صورتی که تغییرات شما روی شاخه `main` پذیرفته شود، مستقیما روی سایت دیپلوی می‌گردد.
 
