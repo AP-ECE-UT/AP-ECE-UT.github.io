@@ -4,8 +4,8 @@
 
 ## ویرایش سایت
 برای ویرایش این سایت کافیست این مخزن را کلون کنید و سپس فایل های مارک داون داخل دایرکتوری های docs و blog را ویرایش نمایید.
-```
-$ git clone https://github.com/AP-ECE-UT/AP-ECE-UT.github.io.git
+```bash
+git clone https://github.com/erfanasgari21/ap-website.git
 ```
 در صورتی که تغییرات شما روی شاخه `main` پذیرفته شود، مستقیما روی سایت دیپلوی می‌گردد.
 
@@ -24,10 +24,10 @@ docs
  برای اجرای پیش نمایش لوکال این سایت، باید رانتایم node و پکیج منیجر npm را روی سیستم خود داشته باشید. [آموزش نصب](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
  
  سپس وارد مخزن کلون شده شوید و با دستور زیر پکیج های مورد نیاز را نصب نمائید:
-```
-$ npm install
+```bash
+npm install
 ```
 سپس با دستور زیر آن را روی لوکال هاست اجرا نمایید و مشاهده کنید:
-```
-$ npm run start
+```bash
+npm run start
 ```
