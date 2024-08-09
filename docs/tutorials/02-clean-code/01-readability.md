@@ -17,7 +17,7 @@ sidebar_position: 2
 برای مثال:
 
 * تورفتگی خوب:
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -36,7 +36,7 @@ int main() {
 ```
 
 * تورفتگی بد:
-```
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -63,13 +63,13 @@ return 0;
 
 برای مثال:
 
-```
+```cpp
 int d; //elapsed time in day
 ```
 
 اسم d هیچ حسی درباره کاربرد این متغیر ایجاد نمی کند. برای مثال این اسم برای متغیر متناسب تر است:
 
-```
+```cpp
 int elapsedTimeInDay
 ```
 
@@ -119,7 +119,7 @@ int elapsedTimeInDay
 
 مثال:
 
-```
+```cpp
 // Check to see if the employee is eligible for full benefits
 if ((employee.flags & HOURLY_FLAG) &&
 (employee.age > 65))
@@ -127,7 +127,7 @@ if ((employee.flags & HOURLY_FLAG) &&
 
 در این قطعه کد دلیل استفاده از if در قالب کامنت توضیح داده شده. در حالی که می توان با تغییر مد از کامنت صرف نظر کرد:
 
-```
+```cpp
 if (employee.isEligibleForFullBenefits())
 ```
 با این کار هم از کامنت گذاری جلوگیری کردیم هم ازکد تکراری جلوگیری کردیم. با تعریف این method در قسمت های دیگر کد نیازی به نوشتن if قسمت قبل نداریم و این موضوع کیفیت کد را بالا می برد.
