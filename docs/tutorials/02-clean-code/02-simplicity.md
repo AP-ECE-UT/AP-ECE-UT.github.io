@@ -4,31 +4,96 @@ sidebar_position: 3
 
 # سادگی
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+![simplicity](https://media.licdn.com/dms/image/D5612AQHJcv2vhkq85Q/article-cover_image-shrink_720_1280/0/1671646445344?e=2147483647&v=beta&t=AqqOXU_qWkdDTT2EWDEoj2-KRFFwoNB2T4foTulD-VA)
 
-## Create your first Post
+## طراحی ساده
 
-Create a file at `blog/2021-02-28-greetings.md`:
+اگر شما در یک جنگل پیچ در پیچ گیر افتاده باشید، ترجیح می‌دهید تا از تابلو های ساده‌ای که به طور شفاف مسیر را به شما نشان می‌دهند استفاده کنید تا نقشه‌ای که مجبور باشید جهت‌های جغرافیایی را تشخیص دهید تا مسیر خود را به بیرون پیدا کنید.
+به طور کلی برای هر مسئله راه حل‌های گوناگونی وجود دارد که ممکن است به ذهن هر شخصی نرسد. ساده کد نوشتن به ما کمک می‌کند تا روند برنامه برای همه قابل درک باشد و این موضوع باعث می شود عیب یابی یا گسترش دادن کد برای ما آسان تر شود.
+البته سادگی، به این معنی نیست که از هوش و خلاقیت در کدها صرفنظر کنیم. سادگی، یعنی به روشنی و شفافیت فکر کنیم و راه حل‌ها را به ساده‌ترین و قابل فهم‌ترین شکل ممکن بنویسیم.
 
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
+## چگونه ساده کد بزنیم؟
 
-Congratulations, you have made your first post!
+![kent beck](Images/beck.png)
 
-Feel free to play around and edit this post as much as you like.
+برای این کار چهار قانون تعریف می کنیم:
+
+    ۱. کد همه تست‌ها را به درستی اجرا کند
+
+    ۲. قسمت‌های تکراری نداشته باشد
+
+    ۳. قصد و منظور برنامه نویس را نشان دهد
+
+    ۴. تعداد کلاس‌ها و method ها و توابع کم و معقول باشد
+    
+این قوانین توسط کنت بک (Kent Beck) **به ترتیب اولویت** مطرح شده‌اند.
+
+### قانون اول
+
+![test](Images/test.jpeg)
+
+ایده‌ای که برای پیاده سازی یک برنامه داریم ممکن است خیلی شگفت انگیز باشد، اما در عمل خیر!
+در واقع کدی که نتوان آن را تست کرد قابل استفاده نیست و نباید کدی بنویسیم که نتوانیم عملکرد آن را بررسی کنیم.
+
+در قسمت‌های بعدی به طور مفصل درباره تست کردن برنامه صحبت می‌کنیم.
+
+### قانون دوم
+
+![duplication](https://assets.codegrip.tech/wp-content/uploads/2019/10/03143434/image1.jpg)
+
+**دشمن** یک برنامه خوب، کد تکراری است. چون کد تکراری برنامه را پیچیده‌تر می کند. خط هایی در کد که کاملا شبیه به هم هستند یا قسمت‌هایی که عملیات یکسان انجام می‌دهند، تکراری محسوب می‌شوند و باید به گونه‌ای این مشکلات را رفع کنیم. معمولا با تعریف یک تابع یا اضافه کردن یک method به کلاس می توان قسمت‌های تکراری را حذف کرد.
+مثلا در یک بازی برای حرکت بازیکن به جای اینکه برای هر جهت یک تابع بنویسیم:
+
+```cpp
+Position Player:: WalkNorth()
+{
+   var player = GetPlayer();
+   player.Move("N");
+   return player.NewPosition;
+}
+ 
+Position Player:: WalkSouth()
+{
+   var player = GetPlayer();
+   player.Move("S");
+   return player.NewPosition;
+}
+ 
+Position Player:: WalkEast()
+{
+   var player = GetPlayer();
+   player.Move("E");
+   return player.NewPosition;
+}
+ 
+Position Player:: WalkWest()
+{
+   var player = GetPlayer();
+   player.Move("W");
+   return player.NewPosition;
+}
+
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+می توان یک تابع نوشت که به عنوان ورودی جهت بگیرد و حرکت را انجام دهد:
+
+```cpp
+Position Player:: Walk(string direction)
+{
+   var player = GetPlayer();
+   player.Move(direction);
+   return player.NewPosition;
+} 
+
+```
+
+### قانون سوم
+
+![expressive](https://miro.medium.com/v2/resize:fit:1358/1*fbLOk37-QdvxUaYWai3Cog.png)
+
+کد معرف ماست. برای اینکه راه حل خودمان را برای یک مسئله بیان کنیم باید کدی بنویسیم که این کار را انجام دهد و هر کسی با دیدن کد منظور و راه حل ما را متوجه شود. چون ما ضمیمه کد نیستیم که آن را توضیح بدهیم!
+
+### قانون چهارم
+
+اولویت این قانون از بقیه **کمتر** است. بنابراین سعی می کنیم در کد نوشتن بیشتر به موارد بالا بپردازیم. اما به طور کلی کوچک بودن کلاس ها و توابع و در کل برنامه از پیچیدگی آن کم می کند. فهمیدن کد طولانی طاقت فرساست و از آن بدتر پیدا کردن مشکل. در قسمت بعد به طور مفصل به توابع می پردازیم.
+
