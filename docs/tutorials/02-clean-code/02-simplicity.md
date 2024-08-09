@@ -47,28 +47,28 @@ sidebar_position: 3
 ```cpp
 Position Player:: WalkNorth()
 {
-   var player = GetPlayer();
+   Player player = GetPlayer();
    player.Move("N");
    return player.NewPosition;
 }
  
 Position Player:: WalkSouth()
 {
-   var player = GetPlayer();
+   Player player = GetPlayer();
    player.Move("S");
    return player.NewPosition;
 }
  
 Position Player:: WalkEast()
 {
-   var player = GetPlayer();
+   Player player = GetPlayer();
    player.Move("E");
    return player.NewPosition;
 }
  
 Position Player:: WalkWest()
 {
-   var player = GetPlayer();
+   Player player = GetPlayer();
    player.Move("W");
    return player.NewPosition;
 }
@@ -80,7 +80,7 @@ Position Player:: WalkWest()
 ```cpp
 Position Player:: Walk(string direction)
 {
-   var player = GetPlayer();
+   Player player = GetPlayer();
    player.Move(direction);
    return player.NewPosition;
 } 
