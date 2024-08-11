@@ -4,31 +4,47 @@ sidebar_position: 6
 
 # آزمون‌پذیری
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+![test](https://lh3.googleusercontent.com/9dFoNEVq2q-tsRRX47L-HJ16UL37mglvT-b6FC2_yn4FvivdI5jJYUjjnjEaN33cY4XlLoH-cH7XSwSM8QcoI-ypEiolVWqqL7neM8QsgPEffY2X4dzsJKl5Qvt3wNID5wt8Yty7fi1ljDfkFwZd5ZU)
 
-## Create your first Post
+آزمون‌پذیری کد (Testability) یعنی کدی که نوشته‌ایم را بتوان به سادگی تست کرد و از عملکرد آن مطمئن شد. تمام مواردی که تا اینجا درباره آنها صحبت کردیم در آزمون‌پذیری کد نقش دارند و اگر آنها را رعایت کنیم، کدی داریم که تست کردن آن آسان است. برای مثال درباره سادگی کد بحث کردیم. ساده بودن کد هم احتمال خطا را کم می‌کند هم تست کردن آن راحت است.
+در این قسمت ویژگی‌هایی را بررسی می‌کنیم که به ما در تست کردن کد کمک می‌کند.
 
-Create a file at `blog/2021-02-28-greetings.md`:
+## جداسازی (Isolation)
 
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
+![isolation](https://insights.sei.cmu.edu/media/images/Figure_3.max-1280x720.format-webp.webp)
 
-Congratulations, you have made your first post!
+باید به گونه‌ای کد بنویسیم که بتوان اجزای آن را مستقل از هم تست کرد. هر چه وابستگی اجزای کد کمتر باشد تست کردن آنها راحت‌تر است. اگر اجزای کد بهم وابستگی شدیدی داشته باشند، در صورتی که یکی از اجزای کد باگ داشته باشد و بخواهیم آن را تغییر بدهیم، تمام قسمت‌هایی که قبلا تست کردیم باید دوباره تست شوند. ☹
 
-Feel free to play around and edit this post as much as you like.
-```
+## کپسوله‌سازی (Encapsulation)
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+![](https://xperti.io/wp-content/uploads/2023/08/xblog-Encapsulation.png)
+
+وقتی کد به خوبی کپسوله شده باشد، جزئیات داخلی یک کلاس از دید دیگر کلاس ها پنهان می‌ماند. این امر باعث می‌شود تغییرات در یک بخش، تأثیری بر دیگر بخش‌ها نداشته باشد و حوزه تست‌ها مشخص باشد. 
+
+## TDD
+
+![](https://python-tdd.readthedocs.io/en/latest/_images/tdd.png)
+
+توسعهٔ مبتنی بر آزمون (Test-Driven Development) یا (TDD)  یک روش برنامه‌نویسی است که در آن به جای اینکه اول دست به کد شویم، تست طراحی می کنیم و سپس کد را برای عبور از این تست‌ها می نویسیم. فرآیند  TDD به سه مرحلهٔ اصلی تقسیم می‌شود: 
+
+    ۱. نوشتن تست
+
+    ۲. نوشتن کد
+
+    ۳. بازنگری
+
+### قدم اول: نوشتن تست (Write a Test)
+اولین قدم در TDD نوشتن یک تست است که برای یک قابلیت خاص یا بخش خاصی از کد نوشته می‌شود. تست باید ساده و سریع باشد و تنها یک حالت خاص را آزمایش کند.
+
+### قدم دوم: نوشتن کد (Write Just Enough Code)
+پس از نوشتن تست، به اندازه ای کد می نویسیم که تست درست اجرا شود. در این مرحله، کد باید تا حد امکان ساده و بدون پیچیدگی‌های اضافی باشد.
+
+### قدم سوم: بازنگری و بهبود (Refactor)
+وقتی تست عبور کرد، کد را بازنگری می کنیم تا ببینیم امکان بهتر کردن ساختار و خوانایی آن وجود دارد یا خیر. اگر تغییراتی لازم باشد، تغییرات را به گونه ای اعمال می کنیم که تست ها همچنان درست باشند.
+
+این سه مرحله (نوشتن تست، نوشتن کد، بازنگری) به طور مداوم در TDD تکرار می‌شود. این چرخه به ما کمک می‌کند تا همواره از عملکرد صحیح کد اطمینان حاصل کنیم و به تدریج کد را با کیفیت تر کنیم.
+
+### مزایای TDD
+* اطمینان از درستی کد: چون ابتدا تست‌ها را طراحی می کنیم، مطمئن هستیم که کد عملکرد درستی دارد.
+* کاهش باگ‌ها: با توجه به اینکه هر بخش از کد با تست همراه است، احتمال ایجاد باگ و مشکلات کاهش می‌یابد.
+* بهبود ساختار کد:  چون هر قسمت را بازنگری می کنیم و تغییرات لازم را اعمال می کنیم.
