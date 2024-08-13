@@ -10,9 +10,7 @@ sidebar_position: 2
 
 ## مثال
 
-به عنوان مثال، فایل هدر `myclass.hpp` را در نظر بگیرید:
-
-```cpp
+```cpp title="myclass.hpp"
 #ifndef MYCLASS_H
 #define MYCLASS_H
 
@@ -24,9 +22,7 @@ public:
 #endif
 ```
 
-و فایل منبع `myclass.cpp` را در نظر بگیرید:
-
-```cpp
+```cpp title="myclass.cpp"
 #include "myclass.hpp"
 
 void MyClass::myFunction() {
