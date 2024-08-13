@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: "برنامه‌سازی پیشرفته",
-    tagline: "سایت برنامه‌سازی پیشرفته پیشرفته دانشگاه تهران!",
+    tagline: "سایت برنامه‌سازی پیشرفته دانشگاه تهران!",
     favicon: "img/favicon.ico",
 
     // Set the production url of your site here
