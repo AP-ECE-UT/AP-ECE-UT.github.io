@@ -105,6 +105,6 @@ p, li, a {
 }
 
 [class*="codeBlockTitle"] {
-  text-align: left !important;
+  text-align: right;
   font-family: 'Vazirmatn', sans-serif;
 }
