@@ -9,7 +9,7 @@ sidebar_position: 0
 
 
 <br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://cdn-icons-png.flaticon.com/512/80/80910.png" alt="consistancy" width="300"/>
+  <img src="https://cdn-icons-png.flaticon.com/512/80/80910.png" alt="multifile icon" width="300"/>
 </div><br/>
 
 در یک پروژه چندفایلی، فایل‌ها به گونه‌ای سازماندهی می‌شوند که یافتن و درک کد آسان باشد. این معمولاً شامل گروه‌بندی فایل‌های مرتبط در دایرکتوری‌ها و استفاده از یک نام‌گذاری منسجم برای فایل‌ها و دایرکتوری‌ها است. فایل‌ها با استفاده از روش‌های مختلفی مانند `include#` در ++C یا `import` در پایتون به یکدیگر متصل می‌شوند. این امکان را فراهم می‌کند که کد در یک فایل از کد در فایل دیگر استفاده کند.
