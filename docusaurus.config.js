@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: "برنامه‌سازی پیشرفته",
-    tagline: "پیشرفته در برنامه نویسی عا",
+    tagline: "سایت برنامه‌سازی پیشرفته پیشرفته دانشگاه تهران!",
     favicon: "img/favicon.ico",
 
     // Set the production url of your site here
@@ -48,7 +48,6 @@ const config = {
     presets: [
         [
             "classic",
-            /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
                     sidebarPath: "./sidebars.js",
