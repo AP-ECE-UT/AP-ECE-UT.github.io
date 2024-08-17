@@ -82,7 +82,7 @@ git commit -m "<commit message>" -m "<description>"
 ```
 
 <br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/zouykvhs1a681.jpg" alt="version control" width="600"/>
+  <img src="https://i.redd.it/zouykvhs1a681.jpg" alt="version control" width="400"/>
 </div><br/>
 
 ### Log
