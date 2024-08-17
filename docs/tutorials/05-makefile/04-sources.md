@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # منابع
 
-تعدادی منابع بیشتر برای یادگیری بهتر شما آماده شده:
+منابع بیشتر برای یادگیری
 
 - [آموزش Makefile](https://makefiletutorial.com/)
 - [آموزش ++C - برنامه‌نویسی چندفایلی](https://www.youtube.com/watch?v=9OvKEkGmvos)

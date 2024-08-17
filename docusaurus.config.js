@@ -148,7 +148,7 @@ const config = {
             prism: {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,
-                additionalLanguages: ['powershell', 'makefile'],
+                additionalLanguages: ['powershell', 'makefile', 'bash'],
             },
         }),
     stylesheets: [
