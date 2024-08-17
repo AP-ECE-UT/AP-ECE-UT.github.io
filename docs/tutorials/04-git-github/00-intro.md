@@ -13,4 +13,6 @@ Ctrl + Z
 
 ![versionControl](Images/versionControl.png)
 
-
+<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
+  <img src="./Images/versionControl.png" alt="version control"/>
+</div><br/>
