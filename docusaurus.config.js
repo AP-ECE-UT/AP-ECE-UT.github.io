@@ -48,7 +48,7 @@ const config = {
     presets: [
         [
             "classic",
-            ({
+            {
                 docs: {
                     sidebarPath: "./sidebars.js",
                     // Please change this to your repo.
@@ -64,7 +64,7 @@ const config = {
                 theme: {
                     customCss: "./src/css/custom.css",
                 },
-            }),
+            },
         ],
     ],
 
@@ -94,6 +94,11 @@ const config = {
                     },
                     { to: "/blog", label: "مجله", position: "left" },
                     {
+                        href: "/ta",
+                        label: "دستیاران",
+                        position: "right",
+                    },
+                    {
                         href: "https://github.com/AP-ECE-UT",
                         label: "GitHub",
                         position: "right",
@@ -103,7 +108,7 @@ const config = {
             prism: {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,
-                additionalLanguages: ['powershell', 'makefile', 'bash'],
+                additionalLanguages: ["powershell", "makefile", "bash"],
             },
         }),
     stylesheets: [
