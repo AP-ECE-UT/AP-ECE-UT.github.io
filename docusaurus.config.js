@@ -32,15 +32,11 @@ const config = {
     // may want to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: "fa",
-        locales: ["fa", "en"],
+        locales: ["fa"],
         localeConfigs: {
             fa: {
                 label: "فارسی",
                 direction: "rtl",
-            },
-            en: {
-                label: "English",
-                direction: "ltr",
             },
         },
     },
@@ -94,7 +90,7 @@ const config = {
                     },
                     { to: "/blog", label: "مجله", position: "left" },
                     {
-                        href: "/ta",
+                        to: "/ta",
                         label: "دستیاران",
                         position: "right",
                     },
