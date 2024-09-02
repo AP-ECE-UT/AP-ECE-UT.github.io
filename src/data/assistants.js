@@ -43,8 +43,8 @@ export default [
                 email: "erfanasgari@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/elahekhodaverdi",
+                    linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
                 },
             },
             {
