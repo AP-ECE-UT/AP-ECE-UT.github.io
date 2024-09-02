@@ -5,11 +5,11 @@ export default [
             {
                 name: "الهه خداوردی",
                 title: "دستیار ارشد",
-                email: "elahe@gmail.com",
-                imageURL: "https://github.com/wgao19.png",
+                email: "elahekhodavrdi@gmail.com",
+                imageURL: "https://avatars.githubusercontent.com/u/102658681?v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/elahekhodaverdi",
+                    linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
                 },
             },
             {
