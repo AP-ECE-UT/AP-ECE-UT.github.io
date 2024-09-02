@@ -61,7 +61,7 @@ export default [
                 name: "سروش صحرائی",
                 title: "تمرین ۴ و ۵",
                 email: "soroush.sahraei@gmail.com",
-                imageURL: "https://media.licdn.com/dms/image/v2/D4D03AQFn6f5DndOTKw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720946910927?e=1730937600&v=beta&t=hd9c09Xvx4WTKV-k9xiXDLij4nJTe2e_miTuq6SndgA",
+                imageURL: "https://ut-acm.ir/wp-content/uploads/2024/07/soroush.jpg",
                 socials: {
                     github: "https://github.com/sahroush",
                     linkedin: "https://www.linkedin.com/in/sahroush/",
