@@ -15,11 +15,11 @@ export default [
             {
                 name: "شهریار عطار",
                 title: "دستیار ارشد",
-                email: "shahriar@gmail.com",
+                email: "attarshahriar@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/u/77535132?v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/Shahriar-0",
+                    linkedin: "https://www.linkedin.com/in/shahriar-attar/",
                 },
             },
         ],
@@ -79,54 +79,4 @@ export default [
             },
         ],
     },
-    /*{
-        section: "دستیاران سابق",
-        list: [
-            {
-                name: "عرفان",
-                title: "دستیار معمولی",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق",
-                title: "دستیار کهنه کار",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق",
-                title: "دستیار کهنه کار",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق",
-                title: "دستیار کهنه کار",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "عرفان",
-                title: "دستیار معمولی",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-        ],
-    },*/
 ];

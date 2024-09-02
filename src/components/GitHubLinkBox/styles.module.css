@@ -1,0 +1,27 @@
+/* Light Theme */
+.githubLinkBox {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.githubLink {
+  color: #0366d6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Dark Theme */
+html[data-theme="dark"] .githubLinkBox {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+}
+
+html[data-theme="dark"] .githubLink {
+  color: #58a6ff;
+}
