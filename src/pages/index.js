@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <Layout
       title={` ${siteConfig.title}`}
-      description="<head />">
+      description="سایت درس برنامه نویسی پیشرفته دانشگاه تهران <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
