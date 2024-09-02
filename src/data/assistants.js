@@ -58,13 +58,13 @@ export default [
                 },
             },
             {
-                name: "میثاق محقق",
-                title: "تمرین 2 و 3",
-                email: "erfanasgari@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
+                name: "سروش صحرائی",
+                title: "تمرین ۴ و ۵",
+                email: "soroush.sahraei@gmail.com",
+                imageURL: "https://media.licdn.com/dms/image/v2/D4D03AQFn6f5DndOTKw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720946910927?e=1730937600&v=beta&t=hd9c09Xvx4WTKV-k9xiXDLij4nJTe2e_miTuq6SndgA",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/sahroush",
+                    linkedin: "https://www.linkedin.com/in/sahroush/",
                 },
             },
             {
