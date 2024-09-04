@@ -26,7 +26,7 @@ function HomepageHeader() {
 export default function Home() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout title={`${siteConfig.title}`} description="سایت درس برنامه نویسی پیشرفته دانشگاه تهران <head />">
+        <Layout title={`${siteConfig.title}`} description="سایت درس برنامه نویسی پیشرفته دانشگاه تهران">
             <HomepageHeader />
             <main>
                 <section className={styles.tas}>
