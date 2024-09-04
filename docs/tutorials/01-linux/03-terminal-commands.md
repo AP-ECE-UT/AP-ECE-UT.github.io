@@ -68,10 +68,6 @@ mkdir new_directory
 rmdir old_directory
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://preview.redd.it/a-small-difference-makes-you-a-good-administrator-v0-r0pba4mur9ea1.jpg?width=640&crop=smart&auto=webp&s=d465e04eb57eacaadef7c9e19eb2e277472a934c" alt="linux command meme" width="400"/>
-</div><br/>
-
 ### 6. `nano` (ویرایشگر متن)
 
 یک ویرایشگر متن ساده برای ویرایش فایل‌ها به‌طور مستقیم در ترمینال است.
@@ -133,6 +129,10 @@ rm filename.txt
 ```bash
 rm -r directory_name
 ```
+
+<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
+  <img src="https://preview.redd.it/a-small-difference-makes-you-a-good-administrator-v0-r0pba4mur9ea1.jpg?width=640&crop=smart&auto=webp&s=d465e04eb57eacaadef7c9e19eb2e277472a934c" alt="linux command meme" width="400"/>
+</div><br/>
 
 ### 11. `grep` (جستجو در فایل‌ها)
 
