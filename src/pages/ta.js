@@ -3,6 +3,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import AssistantCard from "@site/src/components/AssistantCard";
+import Footer from "@site/src/components/FooterDuck";
 
 import Heading from "@theme/Heading";
 import styles from "./ta.module.css";
@@ -43,6 +44,7 @@ export default function Home() {
                     ))}
                 </section>
             </main>
+            <Footer />
         </Layout>
     );
 }

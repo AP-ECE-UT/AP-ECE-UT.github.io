@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: "برنامه‌سازی پیشرفته",
-    tagline: "سایت برنامه‌سازی پیشرفته دانشگاه تهران!",
+    tagline: "سایت درس برنامه‌سازی پیشرفته دانشگاه تهران!",
     favicon: "img/favicon.ico",
 
     // Set the production url of your site here
@@ -73,7 +73,7 @@ const config = {
                 title: "برنامه‌سازی پیشرفته",
                 logo: {
                     alt: "My Site Logo",
-                    src: "img/duck.png",
+                    src: "img/logo.svg",
                 },
                 items: [
                     {
@@ -86,7 +86,7 @@ const config = {
                         type: "docSidebar",
                         sidebarId: "tutorialsSidebar",
                         position: "left",
-                        label: "آموزش ها",
+                        label: "آموزش‌ها",
                     },
                     { to: "/blog", label: "مجله", position: "left" },
                     {
@@ -96,6 +96,51 @@ const config = {
                     },
                 ],
             },
+            // footer: {
+            //     style: "dark",
+            //     links: [
+            //         {
+            //             title: "Docs",
+            //             items: [
+            //                 {
+            //                     label: "Tutorial",
+            //                     to: "/docs/intro",
+            //                 },
+            //             ],
+            //         },
+            //         {
+            //             title: "Community",
+            //             items: [
+            //                 {
+            //                     label: "Stack Overflow",
+            //                     href: "https://stackoverflow.com/questions/tagged/docusaurus",
+            //                 },
+            //                 {
+            //                     label: "Discord",
+            //                     href: "https://discordapp.com/invite/docusaurus",
+            //                 },
+            //                 {
+            //                     label: "Twitter",
+            //                     href: "https://twitter.com/docusaurus",
+            //                 },
+            //             ],
+            //         },
+            //         {
+            //             title: "More",
+            //             items: [
+            //                 {
+            //                     label: "Blog",
+            //                     to: "/blog",
+            //                 },
+            //                 {
+            //                     label: "GitHub",
+            //                     href: "https://github.com/facebook/docusaurus",
+            //                 },
+            //             ],
+            //         },
+            //     ],
+            //     copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+            // },
             prism: {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,

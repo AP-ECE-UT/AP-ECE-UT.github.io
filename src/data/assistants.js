@@ -33,28 +33,17 @@ export default [
                 email: "erfanasgari@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/erfanasgari21",
+                    linkedin: "https://www.linkedin.com/in/erfan-asgari-b748701b4/",
                 },
             },
             {
-                name: "میثاق محقق",
+                name: "علی پادیاور",
                 title: "تمرین 2 و 3",
-                email: "erfanasgari@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
+                email: "apadyav@gmail.com",
+                imageURL: "https://avatars.githubusercontent.com/u/31136768?v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق محقق",
-                title: "تمرین 2 و 3",
-                email: "erfanasgari@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/alumpish",
                 },
             },
             {
@@ -67,67 +56,57 @@ export default [
                     linkedin: "https://www.linkedin.com/in/sahroush/",
                 },
             },
-            {
-                name: "عرفان عسگری",
-                title: "تمرین 2 و 3",
-                email: "erfanasgari@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
-                },
-            },
         ],
     },
-    {
-        section: "دستیاران سابق",
-        opacity: 0.7,
-        list: [
-            {
-                name: "عرفان",
-                title: "دستیار معمولی",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق",
-                title: "دستیار کهنه کار",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق",
-                title: "دستیار کهنه کار",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "میثاق",
-                title: "دستیار کهنه کار",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-            {
-                name: "عرفان",
-                title: "دستیار معمولی",
-                url: "https://github.com/wgao19.png",
-                imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
-                socials: {
-                    github: "https://github.com/wgao19.png",
-                },
-            },
-        ],
-    },
+    // {
+    //     section: "دستیاران سابق",
+    //     opacity: 0.7,
+    //     list: [
+    //         {
+    //             name: "عرفان",
+    //             title: "دستیار معمولی",
+    //             url: "https://github.com/wgao19.png",
+    //             imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
+    //             socials: {
+    //                 github: "https://github.com/wgao19.png",
+    //             },
+    //         },
+    //         {
+    //             name: "میثاق",
+    //             title: "دستیار کهنه کار",
+    //             url: "https://github.com/wgao19.png",
+    //             imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
+    //             socials: {
+    //                 github: "https://github.com/wgao19.png",
+    //             },
+    //         },
+    //         {
+    //             name: "میثاق",
+    //             title: "دستیار کهنه کار",
+    //             url: "https://github.com/wgao19.png",
+    //             imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
+    //             socials: {
+    //                 github: "https://github.com/wgao19.png",
+    //             },
+    //         },
+    //         {
+    //             name: "میثاق",
+    //             title: "دستیار کهنه کار",
+    //             url: "https://github.com/wgao19.png",
+    //             imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
+    //             socials: {
+    //                 github: "https://github.com/wgao19.png",
+    //             },
+    //         },
+    //         {
+    //             name: "عرفان",
+    //             title: "دستیار معمولی",
+    //             url: "https://github.com/wgao19.png",
+    //             imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
+    //             socials: {
+    //                 github: "https://github.com/wgao19.png",
+    //             },
+    //         },
+    //     ],
+    // },
 ];
