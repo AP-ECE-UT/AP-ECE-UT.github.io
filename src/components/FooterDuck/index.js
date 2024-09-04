@@ -8,16 +8,20 @@ import styles from "./styles.module.css";
 
 const Footer = () => {
     return (
-        <div className={styles.footerContainer}>
-            <div className={styles.wave} alt="wave">
-                <div className={styles.text}>
-                    <span style={{ marginTop: "10px" }}>{"©"}</span>
-                    {" برنامه سازی پیشرفته -  دانشکده مهندسی برق و کامپیوتر  - دانشکدگان فنی دانشگاه تهران - "}
-                    {"پاییز ۱۴۰۳"}
+        <>
+            <div className={styles.footerContainer}>
+                <div className={styles.wave} alt="wave">
+                    <div className={styles.text}>
+                        <span style={{ marginTop: "10px" }}>{"©"}</span>
+                        {" برنامه سازی پیشرفته"}
+                        <br />
+                        <span className={styles.dash}>{" - "}</span>
+                        {" دانشکده مهندسی برق و کامپیوتر  - دانشکدگان فنی دانشگاه تهران - "}
+                        {"پاییز ۱۴۰۳"}
+                    </div>
                 </div>
-            </div>
-            <img src="img/duck-waving.webp" style={{ top: -40, left: 40 }} className={styles.duck} alt="wave" />
-            {/* <motion.img
+                <img src="img/duck-waving.webp" style={{ top: -40, left: 40 }} className={styles.duck} alt="wave" />
+                {/* <motion.img
                 className={styles.duck}
                 src={"img/duck-waving.webp"}
                 alt="duck"
@@ -31,7 +35,8 @@ const Footer = () => {
                 }}
                 style={{ top: "-40px" }}
             /> */}
-        </div>
+            </div>
+        </>
     );
 };
 

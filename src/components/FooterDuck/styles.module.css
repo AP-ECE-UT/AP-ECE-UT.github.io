@@ -1,7 +1,7 @@
 .footerContainer {
   position: relative;
   margin-top: 100px;
-    height: 50px; /* Adjust based on your wave SVG height */
+    height: fit-content; /* Adjust based on your wave SVG height */
     width: 100%;
 }
 
@@ -12,6 +12,22 @@
   width: 100%;
   display: flex; 
   min-height: 50px;
+}
+
+@media only screen and (min-width: 800px) {
+  br { 
+   display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .dash {
+    display: none;
+  }
+  .wave { 
+    padding: 10px;
+    min-height: 100px;
+  }
 }
 
 .duck {
