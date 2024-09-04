@@ -73,7 +73,7 @@ const config = {
                 title: "برنامه‌سازی پیشرفته",
                 logo: {
                     alt: "My Site Logo",
-                    src: "img/logo.svg",
+                    src: "img/duck.svg",
                 },
                 items: [
                     {
