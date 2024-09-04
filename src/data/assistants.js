@@ -77,6 +77,16 @@ export default [
                     linkedin: "https://github.com/wgao19.png",
                 },
             },
+            {
+                name: "کوروش علی‌نقی",
+                title: "تمرین ۵ و ۶",
+                email: "kouroshalinaghi@gmail.com",
+                imageURL: "https://avatars.githubusercontent.com/u/46046526?v=4",
+                socials: {
+                    github: "https://github.com/KouroshAlinaghi/",
+                    linkedin: "https://www.linkedin.com/in/kouroshalinaghi/",
+                },
+            },
         ],
     },
 ];
