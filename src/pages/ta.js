@@ -26,7 +26,7 @@ function HomepageHeader() {
 export default function Home() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout title={" دستیاران آموزشی"}>
+        <Layout title={" دستیاران آموزشی"} description="معرفی و راه های ارتباطی دستیاران آموزشی درس">
             <HomepageHeader />
             <main>
                 <section className={styles.tas}>
