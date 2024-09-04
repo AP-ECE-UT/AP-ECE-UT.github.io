@@ -94,11 +94,6 @@ const config = {
                         label: "دستیاران",
                         position: "right",
                     },
-                    {
-                        href: "https://github.com/AP-ECE-UT",
-                        label: "GitHub",
-                        position: "right",
-                    },
                 ],
             },
             prism: {

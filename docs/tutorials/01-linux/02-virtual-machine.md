@@ -1,30 +1,49 @@
+---
+sidebar_position: 2
+---
+
 # نصب روی ماشین مجازی (VM)
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+## ماشین مجازی (VM) چیست؟
 
-## Create your first Post
+ماشین مجازی (Virtual Machine) یک محیط نرم‌افزاری است که مانند یک رایانه واقعی عمل می‌کند. ماشین‌های مجازی امکان اجرای یک یا چند سیستم‌عامل مهمان را در کنار سیستم‌عامل اصلی (میزبان) فراهم می‌کنند. به عبارت دیگر، ماشین‌های مجازی به شما اجازه می‌دهند که یک سیستم‌عامل جدید را در یک محیط ایزوله و بدون تأثیرگذاری روی سیستم‌عامل اصلی نصب و استفاده کنید.
 
-Create a file at `blog/2021-02-28-greetings.md`:
+ماشین‌های مجازی برای اهداف مختلفی مانند تست نرم‌افزارها، اجرای چندین سیستم‌عامل بر روی یک دستگاه، و امنیت بالاتر در مقابل بدافزارها استفاده می‌شوند.
 
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
+## معرفی نرم‌افزارهای VMware و VirtualBox
 
-Congratulations, you have made your first post!
+### VMware
 
-Feel free to play around and edit this post as much as you like.
-```
+VMware یکی از معروف‌ترین و قدرتمندترین نرم‌افزارهای مجازی‌سازی است که به کاربران امکان می‌دهد تا ماشین‌های مجازی را بر روی سیستم‌های خود اجرا کنند. VMware نسخه‌های مختلفی از نرم‌افزارهای خود را برای استفاده‌های شخصی و سازمانی ارائه می‌دهد، که شامل VMware Workstation برای کاربران دسکتاپ و VMware ESXi برای سرورها می‌شود.
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+- **ویژگی‌های کلیدی:**
+  - کارایی بالا و پشتیبانی گسترده از سخت‌افزار.
+  - قابلیت‌های پیشرفته مجازی‌سازی شبکه و ذخیره‌سازی.
+  - مدیریت ساده و امکانات حرفه‌ای برای کاربران حرفه‌ای و سازمان‌ها.
+
+<br/><div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px' , }}>
+  <div style= {{ width: '100px' }}>
+  ![Vmware](Images/Vmware_workstation_16_icon.svg.png)
+  </div>
+</div><br/>
+
+### VirtualBox
+
+VirtualBox نرم‌افزار رایگان و متن‌باز دیگری برای مجازی‌سازی است که توسط شرکت اوراکل توسعه داده شده است. این نرم‌افزار در بسیاری از سیستم‌عامل‌ها مانند ویندوز، مک، لینوکس، و سولاریس قابل استفاده است. VirtualBox به دلیل سادگی و رایگان بودن، انتخاب محبوبی برای کاربرانی است که می‌خواهند به سرعت و به‌طور آسان یک ماشین مجازی راه‌اندازی کنند.
+
+- **ویژگی‌های کلیدی:**
+  - رایگان و متن‌باز بودن.
+  - رابط کاربری ساده و کاربرپسند.
+  - پشتیبانی از طیف وسیعی از سیستم‌عامل‌های مهمان.
+
+<br/><div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px'  , }}>
+  <div style= {{ width: '120px' }}>
+  ![Virtualbox](Images/Virtualbox_logo.png)
+  </div>
+</div><br/>
+
+## لینک آموزش نصب با ماشین مجازی
+
+- [VMware](https://www.makeuseof.com/tag/install-linux-windows-vmware-virtual-machine/)
+- [VirtualBox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview)
+

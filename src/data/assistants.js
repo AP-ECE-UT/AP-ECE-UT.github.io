@@ -5,21 +5,21 @@ export default [
             {
                 name: "الهه خداوردی",
                 title: "دستیار ارشد",
-                email: "elahe@gmail.com",
-                imageURL: "https://github.com/wgao19.png",
+                email: "elahekhodavrdi@gmail.com",
+                imageURL: "https://avatars.githubusercontent.com/u/102658681?v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/elahekhodaverdi",
+                    linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
                 },
             },
             {
                 name: "شهریار عطار",
                 title: "دستیار ارشد",
-                email: "shahriar@gmail.com",
+                email: "attarshahriar@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/u/77535132?v=4",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/Shahriar-0",
+                    linkedin: "https://www.linkedin.com/in/shahriar-attar/",
                 },
             },
         ],
@@ -58,13 +58,13 @@ export default [
                 },
             },
             {
-                name: "میثاق محقق",
-                title: "تمرین 2 و 3",
-                email: "erfanasgari@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/u/87766065?s=96&v=4",
+                name: "سروش صحرائی",
+                title: "تمرین ۴ و ۵",
+                email: "soroush.sahraei@gmail.com",
+                imageURL: "https://ut-acm.ir/wp-content/uploads/2024/07/soroush.jpg",
                 socials: {
-                    github: "https://github.com/wgao19.png",
-                    linkedin: "https://github.com/wgao19.png",
+                    github: "https://github.com/sahroush",
+                    linkedin: "https://www.linkedin.com/in/sahroush/",
                 },
             },
             {
