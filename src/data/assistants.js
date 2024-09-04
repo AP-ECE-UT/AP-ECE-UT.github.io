@@ -16,7 +16,7 @@ export default [
                 name: "شهریار عطار",
                 title: "دستیار ارشد",
                 email: "attarshahriar@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/u/77535132?v=4",
+                imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzUlcYL688IP9tabwN_-Yb1dY8Lh6hEGQ2tw&s",
                 socials: {
                     github: "https://github.com/Shahriar-0",
                     linkedin: "https://www.linkedin.com/in/shahriar-attar/",
