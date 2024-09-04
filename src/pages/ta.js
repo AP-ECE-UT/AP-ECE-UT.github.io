@@ -30,7 +30,7 @@ export default function Home() {
             <main>
                 <section className={styles.tas}>
                     {assistantsData.map((sec, idx) => (
-                        <div key={idx} className="container margin-top--lg">
+                        <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>
                             <Heading as="h1" className="margin-bottom--lg">
                                 {sec.section}
                             </Heading>

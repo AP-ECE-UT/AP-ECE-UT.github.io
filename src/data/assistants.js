@@ -79,8 +79,9 @@ export default [
             },
         ],
     },
-    /*{
+    {
         section: "دستیاران سابق",
+        opacity: 0.7,
         list: [
             {
                 name: "عرفان",
@@ -128,5 +129,5 @@ export default [
                 },
             },
         ],
-    },*/
+    },
 ];

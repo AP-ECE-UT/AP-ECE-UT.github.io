@@ -4,52 +4,27 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
     {
-        title: "Easy to Use",
-        Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-        description: (
-            <>
-                Docusaurus was designed from the ground up to be easily installed and used to get your website up and
-                running quickly.
-            </>
-        ),
+        title: "آموزش ها",
+        imageSrc: "img/duck-laptop.png",
+        description: <>آموزش های آماده شده توسط دستیاران آموزشی لورم ایپسوم و دورت کاپاسی</>,
     },
     {
-        title: "Focus on What Matters",
-        Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-        description: (
-            <>
-                Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into
-                the <code>docs</code> directory.
-            </>
-        ),
+        title: "ویدیوهای درس",
+        imageSrc: "img/duck-video.png",
+        description: <>آرشیو ویدیوهای فصل بندی شده تدریس استاد با قابلیت لورم ایپسوم و دورت کاپاسی</>,
     },
     {
-        title: "Powered by React",
-        Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-        description: (
-            <>
-                Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
-                same header and footer.
-            </>
-        ),
-    },
-    {
-        title: "Powered by React",
-        Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-        description: (
-            <>
-                Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the
-                same header and footer.
-            </>
-        ),
+        title: "مجله",
+        imageSrc: "img/duck-magazine.png",
+        description: <>مجله "سی به علاوه یک" محتوی لورم ایپسوم و دورت کاپاسی</>,
     },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ imageSrc, title, description }) {
     return (
         <div className={clsx("col col--4")}>
             <div className="text--center">
-                <Svg className={styles.featureSvg} role="img" />
+                <img className={styles.featureSvg} src={imageSrc} />
             </div>
             <div className="text--center padding-horiz--md">
                 <Heading as="h3">{title}</Heading>
@@ -63,11 +38,11 @@ export default function HomepageFeatures() {
     return (
         <section className={styles.features}>
             <div className="container">
-                {/* <div className="row">
+                <div className="row">
                     {FeatureList.map((props, idx) => (
                         <Feature key={idx} {...props} />
                     ))}
-                </div> */}
+                </div>
             </div>
         </section>
     );
