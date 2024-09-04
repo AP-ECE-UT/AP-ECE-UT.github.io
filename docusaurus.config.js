@@ -90,6 +90,11 @@ const config = {
                     },
                     { to: "/blog", label: "مجله", position: "left" },
                     {
+                        to: "/projects",
+                        label: "پروژه‌ها",
+                        position: "right",
+                    },
+                    {
                         to: "/ta",
                         label: "دستیاران",
                         position: "right",
