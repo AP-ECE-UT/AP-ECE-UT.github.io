@@ -20,7 +20,7 @@ const Footer = () => {
                         {"پاییز ۱۴۰۳"}
                     </div>
                 </div>
-                <img src="img/duck-waving.webp" style={{ top: -40, left: 40 }} className={styles.duck} alt="wave" />
+                <img src="img/duck-waving.webp" className={styles.duck} alt="wave" />
                 {/* <motion.img
                 className={styles.duck}
                 src={"img/duck-waving.webp"}
