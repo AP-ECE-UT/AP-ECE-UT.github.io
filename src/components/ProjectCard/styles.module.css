@@ -55,4 +55,17 @@
   width: 20px;
   height: 20px;
   margin-right: 4px;
+  
+}
+
+.themeInvert {
+  filter: var(--ifm-svg-filter);
+}
+
+:root {
+  --ifm-svg-filter: none;
+}
+
+[data-theme="dark"] {
+  --ifm-svg-filter: invert();
 }

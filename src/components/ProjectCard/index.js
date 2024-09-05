@@ -43,7 +43,7 @@ function CardLayout({ icon, title, description, number, pdf, code }) {
                 </div>
                 <div className={styles.linkItem}>
                     <Link href={code}>
-                        <img src="icon/code.svg" style={{ filter: colorMode === "dark" ? "invert()" : "" }} />
+                        <img src="icon/code.svg" className={styles.themeInvert}/>
                         <span>پاسخ نمونه</span>
                     </Link>
                 </div>

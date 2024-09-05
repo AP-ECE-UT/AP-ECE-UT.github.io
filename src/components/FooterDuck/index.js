@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 // Import your SVGs here
 
@@ -21,20 +20,6 @@ const Footer = () => {
                     </div>
                 </div>
                 <img src="img/duck-waving.webp" className={styles.duck} alt="wave" />
-                {/* <motion.img
-                className={styles.duck}
-                src={"img/duck-waving.webp"}
-                alt="duck"
-                initial={{ left: "100%" }}
-                animate={{ left: "-10%" }}
-                transition={{
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 80,
-                    ease: "linear",
-                }}
-                style={{ top: "-40px" }}
-            /> */}
             </div>
         </>
     );
