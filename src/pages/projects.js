@@ -5,19 +5,12 @@ import Layout from "@theme/Layout";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "@site/src/components/FooterDuck";
 import { useParams } from "react-router-dom";
-import { Document } from "react-pdf";
 
 import Heading from "@theme/Heading";
 import styles from "./ta.module.css";
 import projectsData from "../data/projectsData";
 import { useLocation } from "react-router-dom";
-import { pdfjs } from "react-pdf";
 
-import { Worker } from "@react-pdf-viewer/core";
-import { Viewer } from "@react-pdf-viewer/core";
-
-// Import the styles
-import "@react-pdf-viewer/core/lib/styles/index.css";
 
 // Your render function
 
