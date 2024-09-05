@@ -31,7 +31,7 @@ export default [
             {
                 name: "عرفان عسگری",
                 title: "تمرین 1 و 2",
-                email: "erfanasgari@gmail.com",
+                email: "erfanasgari21@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/u/71347381?v=4",
                 socials: {
                     github: "https://github.com/erfanasgari21",

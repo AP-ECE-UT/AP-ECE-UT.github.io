@@ -26,3 +26,33 @@
   height: 2rem;
   font-size: 0.8rem;
 }
+
+.linkItems {
+  margin-top: 16px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+
+.linkItem {
+  margin-top: 8px; 
+  margin-left: 16px;
+  display: inline;
+}
+
+.linkItem span {
+  color: var(--ifm-color-emphasis-900)
+}
+
+.linkItem:hover span {
+  color: var(--ifm-color-primary);
+  text-decoration: var(--ifm-link-hover-decoration);;
+}
+
+.linkItem img {
+  transform: translateY(6px);
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

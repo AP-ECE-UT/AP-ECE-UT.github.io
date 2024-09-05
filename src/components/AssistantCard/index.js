@@ -3,12 +3,14 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import BlogAuthor from "@theme/Blog/Components/Author";
 import Link from "@docusaurus/Link";
+import toFaNum from "@site/utils/toFaNum";
 
 function CardContainer({ children }) {
     return <div className={clsx("card padding--lg", styles.cardContainer)}>{children}</div>;
 }
 
 function CardLayout({ author }) {
+    author.title = toFaNum(author.title);
     return (
         <CardContainer>
             <BlogAuthor author={author} />

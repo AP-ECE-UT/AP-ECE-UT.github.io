@@ -10,7 +10,7 @@ import Heading from "@theme/Heading";
 import styles from "./ta.module.css";
 import projectsData from "../data/projectsData";
 import { useLocation } from "react-router-dom";
-
+import toFaNum from "@site/utils/toFaNum";
 
 // Your render function
 
@@ -38,23 +38,24 @@ export default function Home() {
     if (projectId) {
         project = projectsData[0].list.find((pr) => pr.projectId == projectId);
     }
-    return project ? (
-        <Layout title={project.title} description={project.description}>
-            {mode == "iframe" ? (
-                <iframe src={`https://docs.google.com/viewer?url=${project.pdf}`} width="100%" height="600px">
-                    This browser does not support iframes.
-                </iframe>
-            ) : mode == "embed" ? (
-                <embed src={project.pdf} width="100%" height="600px" type="application/pdf"></embed>
-            ) : (
-                <object data={project.pdf} type="application/pdf" width="100%" height="100%">
-                    <p>
-                        <a href={project.pdf}>لینک فایل صورت پروژه</a>
-                    </p>
-                </object>
-            )}
-        </Layout>
-    ) : (
+    return (
+        // return project ? (
+        //     <Layout title={project.title} description={project.description}>
+        //         {mode == "iframe" ? (
+        //             <iframe src={`https://docs.google.com/viewer?url=${project.pdf}`} width="100%" height="600px">
+        //                 This browser does not support iframes.
+        //             </iframe>
+        //         ) : mode == "embed" ? (
+        //             <embed src={project.pdf} width="100%" height="600px" type="application/pdf"></embed>
+        //         ) : (
+        //             <GoogleDocsViewer
+        //                 width="600px"
+        //                 height="780px"
+        //                 fileUrl="https://raw.githubusercontent.com/PashaBarahimi/CPS-Course-Projects/main/CA2-Motion-Based-Authentication/description.pdf"
+        //             />
+        //         )}
+        //     </Layout>
+        // ) : (
         <Layout title={" آرشیو پروژه‌ها"} description="آرشیو صورت مسئله و کد پاسخ پروژه‌های درس">
             <HomepageHeader />
             <main>
@@ -62,7 +63,7 @@ export default function Home() {
                     {projectsData.map((sec, idx) => (
                         <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>
                             <Heading as="h1" className="margin-bottom--lg">
-                                {sec.section}
+                                {toFaNum(sec.section)}
                             </Heading>
                             <div className="row">
                                 {sec.list.map((project, idx) => (
