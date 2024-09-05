@@ -13,7 +13,7 @@ const Footer = () => {
                     <div className={styles.text}>
                         <span style={{ marginTop: "10px" }}>{"©"}</span>
                         {" برنامه سازی پیشرفته"}
-                        <br />
+                        <br className={styles.footerBreak} />
                         <span className={styles.dash}>{" - "}</span>
                         {" دانشکده مهندسی برق و کامپیوتر  - دانشکدگان فنی دانشگاه تهران - "}
                         {"پاییز ۱۴۰۳"}
