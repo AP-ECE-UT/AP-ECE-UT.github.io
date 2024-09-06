@@ -1,8 +1,7 @@
 .footerContainer {
   position: relative;
-  margin-top: 100px;
-    height: fit-content; /* Adjust based on your wave SVG height */
-    width: 100%;
+  width: 100%;
+  min-height: 50px;
 }
 
 .wave { 

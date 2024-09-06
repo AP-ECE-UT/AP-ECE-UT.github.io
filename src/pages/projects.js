@@ -56,9 +56,13 @@ export default function Home() {
         //         )}
         //     </Layout>
         // ) : (
-        <Layout title={" آرشیو پروژه‌ها"} description="آرشیو صورت مسئله و کد پاسخ پروژه‌های درس">
+        <Layout
+            title={" آرشیو پروژه‌ها"}
+            description="آرشیو صورت مسئله و کد پاسخ پروژه‌های درس"
+            wrapperClassName={styles.wrapper}
+        >
             <HomepageHeader />
-            <main>
+            <main style={{ flex: 1 }}>
                 <section className={styles.tas}>
                     {projectsData.map((sec, idx) => (
                         <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>

@@ -7,6 +7,7 @@ import FooterDuck from "@site/src/components/FooterDuck";
 
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
+import Footer from "@theme/Footer";
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -25,11 +26,17 @@ function HomepageHeader() {
 export default function Home() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout title={" صفحه اصلی"} description="سایت درس برنامه سازی پیشرفته دانشگاه تهران">
+        <Layout
+            wrapperClassName={styles.wrapper}
+            title={" صفحه اصلی"}
+            description="سایت درس برنامه سازی پیشرفته دانشگاه تهران"
+            noFooter={false}
+        >
             <HomepageHeader />
-            <main>
+            <main style={{ flex: 1 }}>
                 <HomepageFeatures />
             </main>
+
             <FooterDuck />
         </Layout>
     );

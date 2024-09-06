@@ -26,9 +26,13 @@ function HomepageHeader() {
 export default function Home() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout title={" دستیاران آموزشی"} description="معرفی و راه های ارتباطی دستیاران آموزشی درس">
+        <Layout
+            title={" دستیاران آموزشی"}
+            description="معرفی و راه های ارتباطی دستیاران آموزشی درس"
+            wrapperClassName={styles.wrapper}
+        >
             <HomepageHeader />
-            <main>
+            <main style={{ flex: 1 }}>
                 <section className={styles.tas}>
                     {assistantsData.map((sec, idx) => (
                         <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>

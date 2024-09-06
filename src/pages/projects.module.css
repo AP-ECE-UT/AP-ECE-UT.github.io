@@ -31,3 +31,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.wrapper {
+  height: 100%;
+}
