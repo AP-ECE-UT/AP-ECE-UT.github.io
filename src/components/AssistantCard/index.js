@@ -17,14 +17,6 @@ function CardLayout({ author }) {
             <Link href={"mailto:" + author.email} className={styles.email}>
                 {author.email}
             </Link>
-            {/* <Heading as="h2" className={clsx("text--truncate", styles.cardTitle)} title={title}>
-                {icon} {title}
-            </Heading>
-            {description && (
-                <p className={clsx("text--truncate", styles.cardDescription)} title={description}>
-                    {description}
-                </p>
-            )} */}
         </CardContainer>
     );
 }
