@@ -32,7 +32,7 @@ export default [
                 name: "علی پادیاو",
                 title: "ورودی 99",
                 email: "apadyav@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/alumpish",
+                imageURL: "./img/TAs/AliPadyav.jpg",
                 socials: {
                     "github": "https://github.com/alumpish",
                 }
@@ -70,7 +70,7 @@ export default [
                 name: "آرین باستانی",
                 title: "ورودی 1400",
                 email: "Bastanyaryn@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/AryanBastani",
+                imageURL: "./img/TAs/AryanBastani.jpg",
                 socials: {
                     "github": "https://github.com/AryanBastani",
                 }
@@ -79,7 +79,7 @@ export default [
                 name: "آوا میر محمد مهدی",
                 title: "ورودی 99",
                 email: "avamir80@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/avamirm",
+                imageURL: "./img/TAs/AvaMirmohammadmahdi.jpg",
                 socials: {
                     "github": "https://github.com/avamirm",
                 }
@@ -88,7 +88,7 @@ export default [
                 name: "عرفان عسگری",
                 title: "ورودی 99",
                 email: "erfanasgari21@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/erfanasgari21",
+                imageURL: "./img/TAs/ErfanAsgari.jpg",
                 socials: {
                     "github": "https://github.com/erfanasgari21",
                     "linkedin": "https://www.linkedin.com/in/erfan-asgari-b748701b4/"
@@ -107,7 +107,7 @@ export default [
                 name: "هادی بابالو",
                 title: "ورودی 99",
                 email: "m.h.babalu@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/Hadi-loo",
+                imageURL: "./img/TAs/HadiBabalou.jpg",
                 socials: {
                     "github": "https://github.com/Hadi-loo",
                     "linkedin": "https://www.linkedin.com/in/hadi-babaloo/"
@@ -127,7 +127,7 @@ export default [
                 name: "کوروش علی‌نقی",
                 title: "ورودی 1401",
                 email: "kouroshalinaghi@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/kouroshalinaghi",
+                imageURL: "./img/TAs/KouroshAlinaghi.jpg",
                 socials: {
                     "github": "https://github.com/kouroshalinaghi",
                     "linkedin": "https://www.linkedin.com/in/kouroshalinaghi"
@@ -233,7 +233,7 @@ export default [
                 name: "عرفان میرشمس",
                 title: "ورودی 1401",
                 email: "erfan.mirshams@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/erfan-mirshams",
+                imageURL: "./img/TAs/ErfanMirshams.jpg",
                 socials: {
                     "github": "https://github.com/erfan-mirshams",
                     "linkedin": "https://www.linkedin.com/in/erfan-mirshams"

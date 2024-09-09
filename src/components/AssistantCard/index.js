@@ -13,7 +13,9 @@ function CardLayout({ author }) {
     author.title = toFaNum(author.title);
     return (
         <CardContainer>
-            <BlogAuthor author={author} />
+            <div className={styles.blogAuthorImage}>
+                <BlogAuthor author={author} />
+            </div>
             <Link href={"mailto:" + author.email} className={styles.email}>
                 {author.email}
             </Link>

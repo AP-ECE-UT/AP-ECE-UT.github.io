@@ -42,3 +42,8 @@
   text-align: right;
   align-self: flex-end;
 }
+
+.blogAuthorImage img[class~='avatar__photo'] {
+  width: 6rem;
+  height: 6rem;
+}
