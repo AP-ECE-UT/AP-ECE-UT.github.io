@@ -48,7 +48,7 @@ export default [
                 }
             },
             {
-                name: "امیرحسین عارف زاده",
+                name: "امیرحسین عارف‌زاده",
                 title: "ورودی 1401",
                 email: "amirrfz2003@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/Amir-rfz",
@@ -76,7 +76,7 @@ export default [
                 }
             },
             {
-                name: "آوا میر محمد مهدی",
+                name: "آوا میرمحمدمهدی",
                 title: "ورودی 1399",
                 email: "avamir80@gmail.com",
                 imageURL: "./img/TAs/AvaMirmohammadmahdi.jpg",
@@ -143,7 +143,7 @@ export default [
                 }
             },
             {
-                name: "مجید صادقی نژاد",
+                name: "مجید صادقی‌نژاد",
                 title: "ورودی 1401",
                 email: "majid0sadeghinejad@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/msns83",
@@ -191,7 +191,7 @@ export default [
                 }
             },
             {
-                name: "پریسا یحیی پور",
+                name: "پریسا یحیی‌پور",
                 title: "ورودی 1401",
                 email: "parisa.yahyapour.fatideh@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/parisa-yahyapour",
@@ -201,7 +201,7 @@ export default [
                 }
             },
             {
-                name: "سهیل حاجیان منش",
+                name: "سهیل حاجیان‌منش",
                 title: "ورودی 1400",
                 email: "soheilhm1381@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/SoheilHajianManesh",
