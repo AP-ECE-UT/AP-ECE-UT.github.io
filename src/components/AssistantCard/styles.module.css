@@ -47,3 +47,8 @@
   width: 6rem;
   height: 6rem;
 }
+ 
+
+.blogAuthorImage div[class~='avatar__intro'] { 
+  padding-bottom: 12px;
+}
