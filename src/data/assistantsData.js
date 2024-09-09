@@ -6,7 +6,7 @@ export default [
                 name: "الهه خداوردی",
                 title: "ورودی 1400",
                 email: "elahekhodavrdi@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/elahekhodaverdi",
+                imageURL: "./img/TAs/ElaheKhodaverdi.jpg",
                 socials: {
                     github: "https://github.com/elahekhodaverdi",
                     linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
