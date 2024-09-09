@@ -35,7 +35,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/alumpish",
                 socials: {
                     "github": "https://github.com/alumpish",
-                    "linkedin": null
                 }
             },
             {
@@ -65,7 +64,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/AmirrezaNadiCH",
                 socials: {
                     "github": "https://github.com/AmirrezaNadiCH",
-                    "linkedin": null
                 }
             },
             {
@@ -75,7 +73,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/AryanBastani",
                 socials: {
                     "github": "https://github.com/AryanBastani",
-                    "linkedin": null
                 }
             },
             {
@@ -85,7 +82,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/avamirm",
                 socials: {
                     "github": "https://github.com/avamirm",
-                    "linkedin": null
                 }
             },
             {
@@ -105,7 +101,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/FereshteBagheri",
                 socials: {
                     "github": "https://github.com/FereshteBagheri",
-                    "linkedin": null
                 }
             },
             {
@@ -145,7 +140,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/naienim",
                 socials: {
                     "github": "https://github.com/naienim",
-                    "linkedin": null
                 }
             },
             {
@@ -175,7 +169,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/MisaghM",
                 socials: {
                     "github": "https://github.com/MisaghM",
-                    "linkedin": null
                 }
             },
             {
@@ -195,7 +188,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/Nesabbasi",
                 socials: {
                     "github": "https://github.com/Nesabbasi",
-                    "linkedin": null
                 }
             },
             {
@@ -235,7 +227,6 @@ export default [
                 imageURL: "https://avatars.githubusercontent.com/tahamajs",
                 socials: {
                     "github": "https://github.com/tahamajs",
-                    "linkedin": null
                 }
             },
             {
