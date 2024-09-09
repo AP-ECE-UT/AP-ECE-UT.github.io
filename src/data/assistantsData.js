@@ -30,7 +30,7 @@ export default [
         list: [
             {
                 name: "علی پادیاو",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "apadyav@gmail.com",
                 imageURL: "./img/TAs/AliPadyav.jpg",
                 socials: {
@@ -39,7 +39,7 @@ export default [
             },
             {
                 name: "امیرعلی وحیدی",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "amirali.vahidi01@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/Mohta3b",
                 socials: {
@@ -77,7 +77,7 @@ export default [
             },
             {
                 name: "آوا میر محمد مهدی",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "avamir80@gmail.com",
                 imageURL: "./img/TAs/AvaMirmohammadmahdi.jpg",
                 socials: {
@@ -86,7 +86,7 @@ export default [
             },
             {
                 name: "عرفان عسگری",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "erfanasgari21@gmail.com",
                 imageURL: "./img/TAs/ErfanAsgari.jpg",
                 socials: {
@@ -105,7 +105,7 @@ export default [
             },
             {
                 name: "هادی بابالو",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "m.h.babalu@gmail.com",
                 imageURL: "./img/TAs/HadiBabalou.jpg",
                 socials: {
@@ -164,7 +164,7 @@ export default [
             },
             {
                 name: "میثاق محقق",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "misagh.mhgg@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/MisaghM",
                 socials: {
@@ -183,7 +183,7 @@ export default [
             },
             {
                 name: "نسا عباسی",
-                title: "ورودی 99",
+                title: "ورودی 1399",
                 email: "nesaabbasi4@gmail.com",
                 imageURL: "https://avatars.githubusercontent.com/Nesabbasi",
                 socials: {
