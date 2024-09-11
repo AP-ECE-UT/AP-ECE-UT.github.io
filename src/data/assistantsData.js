@@ -51,7 +51,7 @@ export default [
                 name: "امیرحسین عارف‌زاده",
                 title: "ورودی 1401",
                 email: "amirrfz2003@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/Amir-rfz",
+                imageURL: "./img/TAs/AmirhosseinArefzadeh.jpg",
                 socials: {
                     "github": "https://github.com/Amir-rfz",
                     "linkedin": "https://www.linkedin.com/in/amirhossein-arefzadeh-8612812ba/"
@@ -61,7 +61,7 @@ export default [
                 name: "امیررضا نادی",
                 title: "ورودی 1401",
                 email: "ut.amirreza.nadi.chaghadari@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/AmirrezaNadiCH",
+                imageURL: "./img/TAs/AmirrezaNadi.jpg",
                 socials: {
                     "github": "https://github.com/AmirrezaNadiCH",
                 }
@@ -98,7 +98,7 @@ export default [
                 name: "فرشته باقری",
                 title: "ورودی 1400",
                 email: "fereshte12bagheri@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/FereshteBagheri",
+                imageURL: "./img/TAs/FereshteBagheri.jpg",
                 socials: {
                     "github": "https://github.com/FereshteBagheri",
                 }
@@ -117,7 +117,7 @@ export default [
                 name: "حسام رمضانیان",
                 title: "ورودی 1400",
                 email: "hesamhrf@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/hesamhrf",
+                imageURL: "./img/TAs/HesamRamezanian.jpg",
                 socials: {
                     "github": "https://github.com/hesamhrf",
                     "linkedin": "https://ir.linkedin.com/in/hesam-ramezanian-b5a47a245"
@@ -127,7 +127,7 @@ export default [
                 name: "کوروش علی‌نقی",
                 title: "ورودی 1401",
                 email: "kouroshalinaghi@gmail.com",
-                imageURL: "./img/TAs/KouroshAlinaghi.jpg",
+                imageURL: "./img/TAs/KoroushAlinaghi.jpg",
                 socials: {
                     "github": "https://github.com/kouroshalinaghi",
                     "linkedin": "https://www.linkedin.com/in/kouroshalinaghi"
@@ -146,7 +146,7 @@ export default [
                 name: "مجید صادقی‌نژاد",
                 title: "ورودی 1401",
                 email: "majid0sadeghinejad@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/msns83",
+                imageURL: "./img/TAs/MajidSadeghinejad.jpeg",
                 socials: {
                     "github": "https://github.com/msns83",
                     "linkedin": "https://www.linkedin.com/in/majid-sadeghinejad-5abb082b6/"
@@ -156,7 +156,7 @@ export default [
                 name: "مهراد لیویان",
                 title: "ورودی 1401",
                 email: "mehradliviyan@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/mehradliviyan",
+                imageURL: "./img/TAs/MehradLiviyan.jpg",
                 socials: {
                     "github": "https://github.com/mehradliviyan",
                     "linkedin": "https://www.linkedin.com/in/mehrad-liviyan-a88462283"
@@ -166,7 +166,7 @@ export default [
                 name: "میثاق محقق",
                 title: "ورودی 1399",
                 email: "misagh.mhgg@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/MisaghM",
+                imageURL: "./img/TAs/MisaghMohaghegh.jpg",
                 socials: {
                     "github": "https://github.com/MisaghM",
                 }
@@ -175,7 +175,7 @@ export default [
                 name: "مبینا مهرآذر",
                 title: "ورودی 1400",
                 email: "mobinamehrazar81@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/MobinaMhr",
+                imageURL: "./img/TAs/MobinaMehrazar.jpg",
                 socials: {
                     "github": "https://github.com/MobinaMhr",
                     "linkedin": "https://www.linkedin.com/in/mobinamehrazar/"
@@ -185,7 +185,7 @@ export default [
                 name: "نسا عباسی",
                 title: "ورودی 1399",
                 email: "nesaabbasi4@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/Nesabbasi",
+                imageURL: "./img/TAs/NesaAbbasi.jpg",
                 socials: {
                     "github": "https://github.com/Nesabbasi",
                 }
@@ -194,7 +194,7 @@ export default [
                 name: "پریسا یحیی‌پور",
                 title: "ورودی 1401",
                 email: "parisa.yahyapour.fatideh@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/parisa-yahyapour",
+                imageURL: "./img/TAs/ParisaYahyapour.jpg",
                 socials: {
                     "github": "https://github.com/parisa-yahyapour",
                     "linkedin": "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284"
@@ -204,7 +204,7 @@ export default [
                 name: "سهیل حاجیان‌منش",
                 title: "ورودی 1400",
                 email: "soheilhm1381@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/SoheilHajianManesh",
+                imageURL: "./img/TAs/SoheilHajianmanesh.jpg",
                 socials: {
                     "github": "https://github.com/SoheilHajianManesh",
                     "linkedin": "https://linkedin.com/in/SoheilHajianManesh"
@@ -214,7 +214,7 @@ export default [
                 name: "سروش صحرایی",
                 title: "ورودی 1401",
                 email: "Soroush.sahraei@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/sahroush",
+                imageURL: "./img/TAs/SoroushSahraei.jpg",
                 socials: {
                     "github": "https://github.com/sahroush",
                     "linkedin": "https://linkdin.com/in/sahroush"
