@@ -41,7 +41,7 @@ export default [
                 name: "امیرعلی وحیدی",
                 title: "ورودی 1399",
                 email: "amirali.vahidi01@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/Mohta3b",
+                imageURL: "./img/TAs/AmiraliVahidi.jpg",
                 socials: {
                     "github": "https://github.com/Mohta3b",
                     "linkedin": "https://www.linkedin.com/in/amirali-vahidi-b53094227/"
