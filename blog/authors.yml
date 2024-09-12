@@ -32,5 +32,23 @@ ShahriarAttar:
     github: "https://github.com/Shahriar-0"
     linkedin: "https://www.linkedin.com/in/shahriar-attar/"
 
+SamanEN:
+  name: سامان اسلامی نظری
+  title: ورودی ۱۳۹۹
+  url: mailto:samaneslami78@gmail.com
+  imageURL: "https://avatars.githubusercontent.com/username"
+  socials:
+    github: "https://github.com/SamanEN"
+    linkedin: "https://www.linkedin.com/in/saman-eslami-nazari"
+
+AliAtaollahi:
+  name: علی اعطااللهی
+  title: ورودی ۱۳۹۹
+  url: mailto:aliataollahi40@gmail.com
+  imageURL: "https://avatars.githubusercontent.com/username"
+  socials:
+    github: "https://github.com/AliAtaollahi"
+    linkedin: "https://www.linkedin.com/in/ali-ataollahi-b46302281"
+
 Guest:
   name: Guest Writer
