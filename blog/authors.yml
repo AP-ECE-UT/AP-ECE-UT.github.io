@@ -1,29 +1,36 @@
 AliPadyav:
   name: علی پادیاو
   title: ورودی ۱۳۹۹
-  url: https://github.com/alumpish
-  image_url: "/img/TAs/AliPadyav.jpg" 
+  url: "mailto:apadyav@gmail.com"
+  image_url: "/img/TAs/AliPadyav.jpg"
+  socials:
+    github: alumpish
 
-Misagh:
+MisaghMohaghegh:
   name: میثاق محقق
   title: ورودی ۱۳۹۹
-  url: https://github.com/MisaghM
-  image_url: "/img/TAs/MisaghMohaghegh.jpg" 
+  url: "mailto:misagh.mhgg@gmail.com"
+  image_url: "/img/TAs/MisaghMohaghegh.jpg"
+  socials:
+    github: MisaghM
 
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+ElaheKhodaverdi:
+  name: الهه خداوردی
+  title: ورودی ۱۴۰۰
+  url: mailto:elahekhodavrdi@gmail.com
+  imageURL: "/img/TAs/ElaheKhodaverdi.jpg"
+  socials:
+    github: "https://github.com/elahekhodaverdi"
+    linkedin: "https://www.linkedin.com/in/elahekhodaverdi"
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+ShahriarAttar:
+  name: شهریار عطار
+  title: ورودی ۱۴۰۰
+  url: mailto:attarshahriar@gmail.com
+  imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzUlcYL688IP9tabwN_-Yb1dY8Lh6hEGQ2tw&s"
+  socials:
+    github: "https://github.com/Shahriar-0"
+    linkedin: "https://www.linkedin.com/in/shahriar-attar/"
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+Guest:
+  name: Guest Writer
