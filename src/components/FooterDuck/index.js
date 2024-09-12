@@ -1,11 +1,19 @@
-import React from "react";
-
+import React, { useEffect } from "react";  // Add useEffect import
+import { data } from "../AssistantCard/data.js"
 // Import your SVGs here
 
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
 const Footer = () => {
+
+    useEffect(() => {
+        data();
+        return () => {
+            window.removeEventListener("beforeunload", () => observer.disconnect());
+        }
+    }, []);
+
     return (
         <div className={styles.footerContainer}>
             <div className={styles.wave} alt="wave">
