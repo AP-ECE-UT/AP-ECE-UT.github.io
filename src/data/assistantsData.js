@@ -224,7 +224,7 @@ export default [
                 name: "طاها مجلسی",
                 title: "ورودی 1401",
                 email: "tahamaj4@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/tahamajs",
+                imageURL: "./img/TAs/TahaMajlesi.jpg",
                 socials: {
                     "github": "https://github.com/tahamajs",
                 }
