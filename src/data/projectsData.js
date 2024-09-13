@@ -139,7 +139,7 @@ export default [
             {
                 icon: "🎶",
                 number: 7,
-                title: "فیلترگذاری روی عکس",
+                title: "اسپاتیفای",
                 pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F02/main/A7%20-%20web%20(sputify)/description.pdf",
                 code: "https://github.com/AP-ECE-UT/Archive-F02/tree/main/A7%20-%20web%20(sputify)",
                 description:
