@@ -35,7 +35,7 @@ export default [
             {
                 icon: "💸",
                 number: 3,
-                title: "مدیریت بیمارستان",
+                title: "مدیریت هزینه",
                 pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-S03/main/A3%20-%20splitwise/APS03-A3-Description.pdf",
                 code: "https://github.com/AP-ECE-UT/Archive-S03/tree/main/A3%20-%20splitwise",
                 description:
