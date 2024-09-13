@@ -5,7 +5,7 @@ authors: [ElaheKhodaverdi, ShahriarAttar]
 draft: false
 image: "./image.png"
 description: "what is Regex"
-tags: [cpp]
+tags: [cpp,regex]
 ---
 
 احتمالا تا الآن با تعدادی از regular expression-ها برخورد کرده‌اید. در این مطلب قصد داریم ابتدا با تعاریف کلی و کاربرد‌های آن آشنا شویم و سپس به شیوه نوشتن و قواعد آن‌ها بپردازیم. در نهایت کتابخانه استاندارد regex در ++C را معرفی می‌کنیم.

@@ -3,7 +3,7 @@ title: قانون سه/پنج/صفر، مدیریت منابع، Move Semantics
 authors: [AliPadyav, MisaghMohaghegh]
 image: "./image.png"
 description: "قانون سه/پنج/صفر، مدیریت منابع، Move Semantics"
-tags: [cpp]
+tags: [cpp,three/five/zero]
 ---
 
 در این مطلب قصد داریم به موضوعات قانون سه/پنج/صفر، مدیریت منابع و Move Semantics بپردازیم.
