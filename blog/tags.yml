@@ -3,3 +3,17 @@ cpp:
   permalink: /c++
   description: c++ tag description
 
+solidPrinciples:
+  label: SOLID Principles
+  permalink: /solidPrinciples
+  description: Principles of SOLID for better object-oriented programming and clean code practices
+
+designPatterns:
+  label: Design Patterns
+  permalink: /designPatterns
+  description: Design patterns in object-oriented programming for solving common software development problems
+
+oopDesign:
+  label: OOP Design
+  permalink: /oopDesign
+  description: Object-oriented programming design principles for writing flexible and maintainable code
