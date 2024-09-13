@@ -38,24 +38,27 @@ export default function Home() {
     if (projectId) {
         project = projectsData[0].list.find((pr) => pr.projectId == projectId);
     }
+
+    // TODO: #6 add pdf viewer
+    // return project ? (
+    //     <Layout title={project.title} description={project.description}>
+    //         {mode == "iframe" ? (
+    //             <iframe src={`https://docs.google.com/viewer?url=${project.pdf}`} width="100%" height="600px">
+    //                 This browser does not support iframes.
+    //             </iframe>
+    //         ) : mode == "embed" ? (
+    //             <embed src={project.pdf} width="100%" height="600px" type="application/pdf"></embed>
+    //         ) : (
+    //             <GoogleDocsViewer
+    //                 width="600px"
+    //                 height="780px"
+    //                 fileUrl="https://raw.githubusercontent.com/PashaBarahimi/CPS-Course-Projects/main/CA2-Motion-Based-Authentication/description.pdf"
+    //             />
+    //         )}
+    //     </Layout>
+    // )
+
     return (
-        // return project ? (
-        //     <Layout title={project.title} description={project.description}>
-        //         {mode == "iframe" ? (
-        //             <iframe src={`https://docs.google.com/viewer?url=${project.pdf}`} width="100%" height="600px">
-        //                 This browser does not support iframes.
-        //             </iframe>
-        //         ) : mode == "embed" ? (
-        //             <embed src={project.pdf} width="100%" height="600px" type="application/pdf"></embed>
-        //         ) : (
-        //             <GoogleDocsViewer
-        //                 width="600px"
-        //                 height="780px"
-        //                 fileUrl="https://raw.githubusercontent.com/PashaBarahimi/CPS-Course-Projects/main/CA2-Motion-Based-Authentication/description.pdf"
-        //             />
-        //         )}
-        //     </Layout>
-        // ) : (
         <Layout
             title={" آرشیو پروژه‌ها"}
             description="آرشیو صورت مسئله و کد پاسخ پروژه‌های درس"
