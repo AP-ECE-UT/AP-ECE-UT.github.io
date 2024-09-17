@@ -16,7 +16,7 @@ const UtterancesComments = () => {
             src: "https://utteranc.es/client.js",
             repo: "AP-ECE-UT/AP-ECE-UT.github.io",
             "issue-term": "pathname",
-            label: "💬",
+            label: "💬Comment",
             theme: themes[colorMode],
             crossOrigin: "anonymous",
             defer: true,
@@ -33,7 +33,7 @@ const UtterancesComments = () => {
 
     return (
         <div style={{ paddingTop: 60 }}>
-            <Heading as="h1">نظرات</Heading>
+            <Heading as="h2">نظرات</Heading>
             <div ref={ref} />
         </div>
     );
