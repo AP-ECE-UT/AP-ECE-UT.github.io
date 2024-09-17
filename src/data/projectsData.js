@@ -112,7 +112,7 @@ export default [
             {
                 icon: "🏦",
                 number: 4,
-                title: "مدیریت بیمارستان",
+                title: "بانکداری الکترونیکی",
                 pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F02/main/A4%20-%20bank%20manager/description.pdf",
                 code: "https://github.com/AP-ECE-UT/Archive-F02/tree/main/A4%20-%20bank%20manager",
                 description:
