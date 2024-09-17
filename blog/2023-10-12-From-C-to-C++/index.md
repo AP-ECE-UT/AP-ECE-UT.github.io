@@ -1,6 +1,6 @@
 ---
 title: از سی به سی++
-authors: [MisaghMohaghegh ,ElaheKhodaverdi]
+authors: [MisaghMohaghegh ,PashaBarahimi]
 image: "./image.png"
 description: "آشنایی با تفاوت‌های زبان‌های C و C++ و اشتباهات رایج برنامه‌نویسان تازه‌کار"
 tags: [C++, C, Programming, Differences, BestPractices]
