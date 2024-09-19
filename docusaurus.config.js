@@ -120,6 +120,15 @@ const config = {
         },
         "https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap",
     ],
+    plugins: [
+        [
+          'vercel-analytics',
+          {
+            debug: true,
+            mode: 'auto',
+          },
+        ],
+      ],
 };
 
 export default config;
