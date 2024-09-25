@@ -137,7 +137,7 @@ export default [
                 name: "مهدی نائینی",
                 title: "ورودی 1401",
                 email: "mhd.naeeni@gmail.com",
-                imageURL: "https://avatars.githubusercontent.com/naienim",
+                imageURL: "./img/TAs/MahdiNaeeni.jpg",
                 socials: {
                     "github": "https://github.com/naienim",
                 }
