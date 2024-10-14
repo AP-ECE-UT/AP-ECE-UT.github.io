@@ -1,54 +1,41 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import AssistantCard from "@site/src/components/AssistantCard";
-import Footer from "@site/src/components/FooterDuck";
-
 import Heading from "@theme/Heading";
-import styles from "./ta.module.css";
-import assistantsData from "../data/assistantsData";
+import HomepageHeader from "@site/src/components/HomepageHeader";
+import AssistantCard from "@site/src/components/AssistantCard";
+import FooterDuck from "@site/src/components/FooterDuck";
 
-function HomepageHeader() {
-    const { siteConfig } = useDocusaurusContext();
+import assistantsData from "@site/src/data/assistantsData";
+
+const title = "دستیاران آموزشی";
+const desc = "معرفی و راه‌های ارتباطی دستیاران آموزشی درس";
+
+function TAList() {
     return (
-        <header className={clsx("hero hero--primary", styles.heroBanner)}>
-            <div className="container">
-                <Heading as="h1" className="hero__title">
-                    دستیاران آموزشی
-                </Heading>
-                <p className="hero__subtitle">معرفی و راه های ارتباطی دستیاران آموزشی درس</p>
-            </div>
-        </header>
+        <section style={{ padding: "2rem 0" }}>
+            {assistantsData.map((sec, idx) => (
+                <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>
+                    <Heading as="h2" className="margin-bottom--lg">
+                        {sec.section}
+                    </Heading>
+                    <div className="row">
+                        {sec.list.map((ta, idx) => (
+                            <AssistantCard key={idx} ta={ta} />
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </section>
     );
 }
 
-export default function Home() {
-    const { siteConfig } = useDocusaurusContext();
+export default function TAPage() {
     return (
-        <Layout
-            title={" دستیاران آموزشی"}
-            description="معرفی و راه های ارتباطی دستیاران آموزشی درس"
-            wrapperClassName={styles.wrapper}
-        >
-            <HomepageHeader />
-            <main style={{ flex: 1 }}>
-                <section className={styles.tas}>
-                    {assistantsData.map((sec, idx) => (
-                        <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>
-                            <Heading as="h1" className="margin-bottom--lg">
-                                {sec.section}
-                            </Heading>
-                            <div className="row">
-                                {sec.list.map((ta, idx) => (
-                                    <AssistantCard key={idx} ta={ta} />
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </section>
+        <Layout title={title} description={desc}>
+            <HomepageHeader title={title} subtitle={desc} />
+            <main style={{ flexGrow: 1 }}>
+                <TAList />
             </main>
-            <Footer />
+            <FooterDuck />
         </Layout>
     );
 }

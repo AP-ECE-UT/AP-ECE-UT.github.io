@@ -7,7 +7,7 @@ import Footer from "@site/src/components/FooterDuck";
 import { useParams } from "react-router-dom";
 
 import Heading from "@theme/Heading";
-import styles from "./ta.module.css";
+import styles from "./projects.module.css";
 import projectsData from "../data/projectsData";
 import { useLocation } from "react-router-dom";
 import toFaNum from "@site/src/utils/toFaNum";
