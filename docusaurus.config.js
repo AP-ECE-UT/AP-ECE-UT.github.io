@@ -117,8 +117,7 @@ const config = {
             type: "text/css",
             integrity: "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
             crossorigin: "anonymous",
-        },
-        "https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap",
+        }
     ],
 };
 
