@@ -11,9 +11,9 @@ const desc = "معرفی و راه‌های ارتباطی دستیاران آم
 
 function TAList() {
     return (
-        <section style={{ padding: "2rem 0" }}>
+        <section className="padding-vert--lg">
             {assistantsData.map((sec, idx) => (
-                <div key={idx} className="container margin-top--lg" style={{ opacity: sec.opacity }}>
+                <div key={idx} className="container margin-top--lg">
                     <Heading as="h2" className="margin-bottom--lg">
                         {sec.section}
                     </Heading>

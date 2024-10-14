@@ -8,14 +8,13 @@ import FooterDuck from "@site/src/components/FooterDuck";
 
 import projectsData from "@site/src/data/projectsData";
 import toFaNum from "@site/src/utils/toFaNum";
-import styles from "./projects.module.css";
 
 const title = "آرشیو پروژه‌ها";
 const desc = "آرشیو صورت مسئله و کد پاسخ پروژه‌های درس";
 
 function ProjectList() {
     return (
-        <section className={styles['main-section']}>
+        <section className="padding-vert--lg">
             {projectsData.map((sec, idx) => (
                 <div key={idx} className="container margin-top--lg">
                     <Heading as="h2" className="margin-bottom--lg">
@@ -65,7 +64,7 @@ export default function ProjectsPage() {
     return (
         <Layout title={title} description={desc}>
             <HomepageHeader title={title} subtitle={desc} />
-            <main style={{ flex: 1 }}>
+            <main style={{ flexGrow: 1 }}>
                 <ProjectList />
             </main>
             <FooterDuck />
