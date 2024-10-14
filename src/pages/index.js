@@ -1,13 +1,12 @@
 import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
 import Layout from "@theme/Layout";
+import Heading from "@theme/Heading";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import FooterDuck from "@site/src/components/FooterDuck";
 
-import Heading from "@theme/Heading";
 import styles from "./index.module.css";
-import Footer from "@theme/Footer";
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -24,19 +23,16 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-    const { siteConfig } = useDocusaurusContext();
     return (
         <Layout
-            wrapperClassName={styles.wrapper}
-            title={" صفحه اصلی"}
-            description="سایت درس برنامه سازی پیشرفته دانشگاه تهران"
+            title={"صفحه اصلی"}
+            description="سایت درس برنامه‌سازی پیشرفته دانشگاه تهران"
             noFooter={false}
         >
             <HomepageHeader />
-            <main style={{ flex: 1 }}>
+            <main style={{ flexGrow: 1 }}>
                 <HomepageFeatures />
             </main>
-
             <FooterDuck />
         </Layout>
     );
