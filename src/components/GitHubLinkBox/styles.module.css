@@ -1,27 +1,20 @@
-/* Light Theme */
 .githubLinkBox {
-  background-color: #f5f5f5;
+  background-color: var(--ifm-hover-overlay);
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: var(--ifm-global-radius);
   text-align: center;
   padding: 1rem;
   margin: 1rem 0;
-  transition: background-color 0.3s, border-color 0.3s;
+  transition-property: background-color, border-color;
+  transition-duration: var(--ifm-transition-fast);
+  transition-timing-function: var(--ifm-transition-timing-default);
 }
 
-.githubLink {
-  color: #0366d6;
-  font-weight: bold;
+.githubLink:hover {
+  color: var(--ifm-color-primary-darker);
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-/* Dark Theme */
 html[data-theme="dark"] .githubLinkBox {
-  background-color: #2d2d2d;
   border: 1px solid #444;
-}
-
-html[data-theme="dark"] .githubLink {
-  color: #58a6ff;
 }
