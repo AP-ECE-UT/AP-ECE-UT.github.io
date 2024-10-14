@@ -10,7 +10,7 @@ import Heading from "@theme/Heading";
 import styles from "./ta.module.css";
 import projectsData from "../data/projectsData";
 import { useLocation } from "react-router-dom";
-import toFaNum from "@site/utils/toFaNum";
+import toFaNum from "@site/src/utils/toFaNum";
 
 // Your render function
 

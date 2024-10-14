@@ -5,7 +5,7 @@ import BlogAuthor from "@theme/Blog/Components/Author";
 import Link from "@docusaurus/Link";
 import ClampLines from "react-clamp-lines";
 import { useColorMode } from "@docusaurus/theme-common";
-import toFaNum from "@site/utils/toFaNum";
+import toFaNum from "@site/src/utils/toFaNum";
 
 function CardContainer({ children }) {
     return <div className={clsx("card padding--lg", styles.cardContainer)}>{children}</div>;

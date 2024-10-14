@@ -3,7 +3,7 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import BlogAuthor from "@theme/Blog/Components/Author";
 import Link from "@docusaurus/Link";
-import toFaNum from "@site/utils/toFaNum";
+import toFaNum from "@site/src/utils/toFaNum";
 
 function CardContainer({ children }) {
     return <div className={clsx("card padding--lg", styles.cardContainer)}>{children}</div>;
