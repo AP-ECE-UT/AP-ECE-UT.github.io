@@ -168,6 +168,7 @@ export default [
                 imageURL: "/img/TAs/MisaghMohaghegh.jpg",
                 socials: {
                     "github": "https://github.com/MisaghM",
+                    "linkedin": "https://www.linkedin.com/in/misaghm"
                 }
             },
             {

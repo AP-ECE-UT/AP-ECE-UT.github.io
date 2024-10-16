@@ -9,13 +9,13 @@ const featureList = [
         imageSrc: "/img/duck-laptop.png",
         description:
             "چندین آموزش جامع تهیه شده توسط دستیاران آموزشی درس درباره کار با لینوکس، تمیزی کد، گیت و گیت‌هاب و...",
-        link: "/docs/course/intro",
+        link: "/docs/tutorials/intro",
     },
     {
         title: "ویدیوهای درس",
         imageSrc: "/img/duck-video.png",
         description: "آرشیو کامل ویدیوهای درس که توسط استاد ضبط شده‌ است به همراه کدهای مربوط به هر بخش",
-        link: "/docs/tutorials/intro",
+        link: "/docs/course/intro",
     },
     {
         title: "مجله",
