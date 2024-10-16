@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
+
 import Heading from "@theme/Heading";
 
-const UtterancesComments = () => {
+export default function UtterancesComments() {
     const { colorMode, setColorMode } = useColorMode();
     const ref = useRef();
 
@@ -37,6 +38,4 @@ const UtterancesComments = () => {
             <div ref={ref} />
         </div>
     );
-};
-
-export default UtterancesComments;
+}
