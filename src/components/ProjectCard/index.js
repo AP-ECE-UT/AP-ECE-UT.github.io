@@ -1,21 +1,17 @@
 import clsx from "clsx";
+
 import Heading from "@theme/Heading";
-import styles from "./styles.module.css";
-import BlogAuthor from "@theme/Blog/Components/Author";
 import Link from "@docusaurus/Link";
 import ClampLines from "react-clamp-lines";
-import { useColorMode } from "@docusaurus/theme-common";
-import toFaNum from "@site/src/utils/toFaNum";
 
-function CardContainer({ children }) {
-    return <div className={clsx("card padding--lg", styles.cardContainer)}>{children}</div>;
-}
+import toFaNum from "@site/src/utils/toFaNum";
+import styles from "./styles.module.css";
+import "@site/src/css/card.css";
 
 function CardLayout({ icon, title, description, number, pdf, code }) {
-    const { colorMode, setColorMode } = useColorMode();
     return (
-        <CardContainer>
-            <Heading as="h2" className={clsx("text--truncate", styles.cardTitle)} title={title}>
+        <div className="card padding--lg cardContainer">
+            <Heading as="h3" className={clsx("text--truncate", styles.cardTitle)} title={title}>
                 {icon}
                 {" پروژه "}
                 {toFaNum(number.toString())}
@@ -25,7 +21,7 @@ function CardLayout({ icon, title, description, number, pdf, code }) {
             {description && (
                 <ClampLines
                     text={description}
-                    id="really-unique-id"
+                    id={`cl-${icon}${number}`}
                     lines={2}
                     ellipsis="..."
                     buttons={false}
@@ -34,28 +30,28 @@ function CardLayout({ icon, title, description, number, pdf, code }) {
                     innerElement="p"
                 />
             )}
-            <div className={styles.linkItems}>
+            <div className={clsx("margin-top--sm", styles.linkItems)}>
                 <div className={styles.linkItem}>
                     <Link href={pdf}>
-                        <img src="icon/document.svg" />
+                        <img src="/icon/document.svg" alt="Description" />
                         <span>صورت پروژه</span>
                     </Link>
                 </div>
                 <div className={styles.linkItem}>
                     <Link href={code}>
-                        <img src="icon/code.svg" className={styles.themeInvert}/>
+                        <img src="/icon/code.svg" alt="Code" className={styles.themeInvert}/>
                         <span>پاسخ نمونه</span>
                     </Link>
                 </div>
             </div>
-        </CardContainer>
+        </div>
     );
 }
 
-export default function ProjectCard({ key, project }) {
+export default function ProjectCard({ project }) {
     return (
         <div className="col col--4 margin-bottom--lg">
-            <CardLayout key={key} {...project} />
+            <CardLayout {...project} />
         </div>
     );
 }

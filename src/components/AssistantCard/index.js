@@ -1,13 +1,12 @@
-import clsx from "clsx";
-
 import BlogAuthor from "@theme/Blog/Components/Author";
 
 import toFaNum from "@site/src/utils/toFaNum";
 import styles from "./styles.module.css";
+import "@site/src/css/card.css";
 
 function CardLayout({ author }) {
     return (
-        <div className={clsx("card padding--lg", styles.cardContainer)}>
+        <div className="card padding--lg cardContainer">
             <div className={styles.blogAuthor}>
                 <BlogAuthor author={author} />
             </div>
