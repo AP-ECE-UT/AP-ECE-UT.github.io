@@ -6,9 +6,11 @@ sidebar_position: 5
 
 ## نکات مهمی در مورد طراحی بالا به پایین
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/wxm3bvsotwy41.png" alt="thinking about programming meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+    ![Tips](./images/05-tips/Tips.jpg)
+  </div>
+</div>
 
 متاسفانه طراحی بالا به پایین با تمام مزیت‌هایی که تا اینجا صحبت کردیم چالش‌هایی هم در پیش دارد که در اینجا به آن می‌پردازیم و برای مواجهه با آنها راه‌حل ویشنهاد می‌دهیم.
 

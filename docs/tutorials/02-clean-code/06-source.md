@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # منابع
@@ -14,8 +14,7 @@ sidebar_position: 7
 
 [قسمت سوم](https://www.aparat.com/v/rYOpM/clean_coding_-_part_3)
 
-برای مباحث تخصصی‌تر درباره کد با کیفیت و تمیز مطالعه این کتاب را پیشنهاد می‌کنیم:
-
+برای مباحث تخصصی‌تر درباره کد با کیفیت و تمیز مطالعه این کتاب را پیشنهاد می‌کنیم:  
 **Clean Code: A Handbook of Agile Software Craftsmanship: Robert C. Martin**
 
-![book](https://m.media-amazon.com/images/I/51E2055ZGUL._AC_UF1000,1000_QL80_.jpg)
+![Clean Code Book](https://m.media-amazon.com/images/I/51E2055ZGUL._AC_UF1000,1000_QL80_.jpg)

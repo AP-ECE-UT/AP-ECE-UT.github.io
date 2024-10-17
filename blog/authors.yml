@@ -1,54 +1,55 @@
 AliPadyav:
   name: علی پادیاو
   title: ورودی ۱۳۹۹
-  url: "mailto:apadyav@gmail.com"
-  image_url: "/img/TAs/AliPadyav.jpg"
+  url: mailto:apadyav@gmail.com
+  image_url: /img/TAs/AliPadyav.jpg
   socials:
     github: alumpish
 
 MisaghMohaghegh:
   name: میثاق محقق
   title: ورودی ۱۳۹۹
-  url: "mailto:misagh.mhgg@gmail.com"
-  image_url: "/img/TAs/MisaghMohaghegh.jpg"
+  url: mailto:misagh.mhgg@gmail.com
+  image_url: /img/TAs/MisaghMohaghegh.jpg
   socials:
     github: MisaghM
+    linkedin: misaghm
 
 ElaheKhodaverdi:
   name: الهه خداوردی
   title: ورودی ۱۴۰۰
   url: mailto:elahekhodavrdi@gmail.com
-  imageURL: "/img/TAs/ElaheKhodaverdi.jpg"
+  imageURL: /img/TAs/ElaheKhodaverdi.jpg
   socials:
-    github: "https://github.com/elahekhodaverdi"
-    linkedin: "https://www.linkedin.com/in/elahekhodaverdi"
+    github: elahekhodaverdi
+    linkedin: elahekhodaverdi
 
 ShahriarAttar:
   name: شهریار عطار
   title: ورودی ۱۴۰۰
   url: mailto:attarshahriar@gmail.com
-  imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzUlcYL688IP9tabwN_-Yb1dY8Lh6hEGQ2tw&s"
+  imageURL: /img/TAs/ShahriarAttar.jpg
   socials:
-    github: "https://github.com/Shahriar-0"
-    linkedin: "https://www.linkedin.com/in/shahriar-attar/"
+    github: Shahriar-0
+    linkedin: shahriar-attar
 
 SamanEN:
   name: سامان اسلامی نظری
   title: ورودی ۱۳۹۹
   url: mailto:samaneslami78@gmail.com
-  imageURL: "https://avatars.githubusercontent.com/username"
+  imageURL: https://avatars.githubusercontent.com/SamanEN
   socials:
-    github: "https://github.com/SamanEN"
-    linkedin: "https://www.linkedin.com/in/saman-eslami-nazari"
+    github: SamanEN
+    linkedin: saman-eslami-nazari
 
 AliAtaollahi:
-  name: علی اعطااللهی
+  name: علی عطااللهی
   title: ورودی ۱۳۹۹
   url: mailto:aliataollahi40@gmail.com
-  imageURL: "https://avatars.githubusercontent.com/username"
+  imageURL: https://avatars.githubusercontent.com/AliAtaollahi
   socials:
-    github: "https://github.com/AliAtaollahi"
-    linkedin: "https://www.linkedin.com/in/ali-ataollahi-b46302281"
+    github: AliAtaollahi
+    linkedin: ali-ataollahi-b46302281
 
 PashaBarahimi:
   name: پاشا براهیمی 

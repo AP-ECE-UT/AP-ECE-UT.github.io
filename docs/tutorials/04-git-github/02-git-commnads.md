@@ -16,9 +16,9 @@ git status
 
 فایل‌های untracked فایل‌هایی هستند که هنوز به مخزن اضافه نشده‌اند و تغییرات آن‌ها ثبت نمی‌شود.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://programmerhumor.io/wp-content/uploads/2023/03/programmerhumor-io-linux-memes-backend-memes-7f5ca6f5d2d9293.jpg" alt="version control"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  ![Git Status](./images/02-git-commands/Git-Status.webp)
+</div>
 
 ### Stage
 
@@ -71,9 +71,9 @@ git restore --staged <path to file>
 git commit -m "<This message should describe the commit>"
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://miro.medium.com/v2/resize:fit:880/0*cesFJY5JFpI0Rl4v.jpg" alt="version control"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  ![Git Commit](./images/02-git-commands/Git-Commit.jpg)
+</div>
 
 برای اضافه کردن توضیحات اضافی به کامیت نیز می‌توانید از دستور زیر استفاده کنید:
 
@@ -81,9 +81,11 @@ git commit -m "<This message should describe the commit>"
 git commit -m "<commit message>" -m "<description>"
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/zouykvhs1a681.jpg" alt="version control" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+    ![Long Time Commit](./images/02-git-commands/Long-Time-Commit.jpg)
+  </div>
+</div>
 
 ### Log
 
@@ -132,9 +134,11 @@ git diff
 git diff <src commit> <dst commit>
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--O3K1kbDQ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ob4tl88f6rsgsm90da2e.png" alt="version control" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '500px' }}>
+    ![Git Diff](./images/02-git-commands/Git-Diff.jpg)
+  </div>
+</div>
 
 ### Checkout
 

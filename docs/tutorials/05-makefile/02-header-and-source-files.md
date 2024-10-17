@@ -11,8 +11,8 @@ sidebar_position: 2
 ## مثال
 
 ```cpp title="myclass.hpp"
-#ifndef MYCLASS_H
-#define MYCLASS_H
+#ifndef MYCLASS_HPP
+#define MYCLASS_HPP
 
 class MyClass {
 public:
@@ -36,12 +36,16 @@ void MyClass::myFunction() {
 
 با استفاده از دستورات `include#` و header guard، کد در فایل‌های هدر می‌تواند بدون ایجاد هیچ مشکلی در فایل‌های منبع متعدد استفاده شود.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://preview.redd.it/qpdn02pk14w51.png?width=640&crop=smart&auto=webp&s=c5d9bd09fc9837818957f5d58789dcd2a9acf8ac" alt="header files cpp" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+  ![Header Files](./images/02-header-and-source-files/Header-Files.webp)
+  </div>
+</div>
 
 البته توجه داشته باشید که تغییر فایل‌های هدر می‌تواند زمان کامپایل را افزایش دهد، زیرا هر بار که فایل هدر تغییر می‌کند، تمام فایل‌های منبعی که آن را شامل می‌شوند باید مجددا کامپایل شوند. این می‌تواند زمان توسعه را افزایش دهد.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/366x5w8sxeea1.jpg" alt="header files change cpp" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+  ![Editing Headers](./images/02-header-and-source-files/Editing-Headers.jpg)
+  </div>
+</div>

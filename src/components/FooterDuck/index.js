@@ -1,16 +1,13 @@
 import React from "react";
 
-// Import your SVGs here
-
-import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
-const Footer = () => {
+export default function FooterDuck() {
     return (
-        <div className={styles.footerContainer}>
-            <div className={styles.wave} alt="wave">
+        <footer className={styles.footerContainer}>
+            <div className={styles.wave}>
                 <div className={styles.text}>
-                    <span style={{ marginTop: "10px" }}>{"©"}</span>
+                    &copy;
                     {" برنامه سازی پیشرفته"}
                     <br className={styles.footerBreak} />
                     <span className={styles.dash}>{" - "}</span>
@@ -18,9 +15,7 @@ const Footer = () => {
                     {"پاییز ۱۴۰۳"}
                 </div>
             </div>
-            <img src="img/duck-waving.webp" className={styles.duck} alt="duck" />
-        </div>
+            <img src="/img/duck-waving.webp" className={styles.duck} alt="Duck" />
+        </footer>
     );
-};
-
-export default Footer;
+}

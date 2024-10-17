@@ -1,59 +1,49 @@
 cpp:
-  label: C++
-  permalink: /cpp
-  description: The C++ programming language and its features
+  label: ++C
+  permalink: /c++
+  description: The C++ programming language
+
+solid:
+  label: SOLID Principles
+  permalink: /solid-principles
+  description: Principles of SOLID for better object-oriented programming and clean code practices
+
+design-patterns:
+  label: Design Patterns
+  permalink: /design-patterns
+  description: Design patterns in object-oriented programming for solving common software development problems
+
+ood:
+  label: OOD
+  permalink: /object-oriented-design
+  description: Object-oriented programming design principles for writing flexible and maintainable code
 
 compilation:
   label: Compilation
   permalink: /compilation
-  description: Concepts and steps involved in compiling code
+  description: Converting source code into an executable through preprocessing, compiling, assembling, and linking
 
 make:
-  label: Make
-  permalink: /make
-  description: Using Make and Makefiles for build automation
+  label: Makefile
+  permalink: /makefile
+  description: A tool for automating program build process and managing dependencies
 
 cmake:
   label: CMake
   permalink: /cmake
-  description: Cross-platform build system CMake and its usage
+  description: A cross-platform tool for generating platform-specific build files from a high-level project configuration
 
 regex:
-  label: Regular Expressions
+  label: Regex
   permalink: /regex
-  description: Using regular expressions for pattern matching in programming
+  description: Forming search patterns for matching and manipulating strings in text processing
 
-solidPrinciples:
-  label: SOLID Principles
-  permalink: /solidPrinciples
-  description: Principles of SOLID for better object-oriented programming and clean code practices
+resource:
+  label: Resource Management
+  permalink: /resource-management
+  description: Efficiently allocating and monitoring resources like memory and files in software development
 
-designPatterns:
-  label: Design Patterns
-  permalink: /designPatterns
-  description: Design patterns in object-oriented programming for solving common software development problems
-
-oopDesign:
-  label: OOP Design
-  permalink: /oopDesign
-  description: Object-oriented programming design principles for writing flexible and maintainable code
-
-programming:
-  label: Programming
-  permalink: /programming
-  description: General programming concepts and practices
-
-differences:
-  label: Differences
-  permalink: /differences
-  description: Exploring differences between programming languages and technologies
-
-bestPractices:
-  label: Best Practices
-  permalink: /best-practices
-  description: Recommended practices for writing clean and efficient code
-  
-threeFiveZero:
-  label: قانون سه/پنج/صفر
+three-five-zero:
+  label: Three/Five/Zero
   permalink: /three-five-zero
-  description: قانون سه، پنج و صفر در سی++ برای مدیریت منابع و Move Semantics
+  description: Guideline for effective resource management using destructors, copy semantics, and move semantics

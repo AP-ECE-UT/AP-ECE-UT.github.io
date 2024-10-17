@@ -18,21 +18,27 @@ sidebar_position: 0
 
 پروژه **GNU** (که مخفف "GNU's Not Unix" است) در سال ۱۹۸۳ توسط **ریچارد استالمن** (Richard Stallman) آغاز شد. هدف اصلی این پروژه ایجاد یک سیستم‌عامل آزاد و متن‌باز بود که به کاربران اجازه دهد بدون محدودیت‌های نرم‌افزارهای اختصاصی، از نرم‌افزارها استفاده، آنها را مطالعه، تغییر و توزیع کنند. استالمن برای این منظور، بنیاد نرم‌افزار آزاد (Free Software Foundation - FSF) را تأسیس کرد و به تدریج اجزای مختلفی از یک سیستم‌عامل مانند کامپایلر GCC، ویرایشگر متن Emacs و هسته‌هایی مانند Hurd را توسعه داد.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://media.wired.com/photos/5d815ffe46103c0009de8d56/master/pass/science_stallman_473688628.jpg" alt="richard stallman" width="500"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '500px' }}>
+    ![Richard Stallman](./images/00-intro/Richard-Stallman.jpg)
+  </div>
+</div>
 
 ### تاریخچه Linux
 
 **لینوکس** در سال ۱۹۹۱ توسط **لینوس توروالدز** (Linus Torvalds) به عنوان یک پروژه شخصی آغاز شد. توروالدز که در آن زمان دانشجوی دانشگاه هلسینکی بود، یک هسته (kernel) جدید برای سیستم‌عامل شبیه به Unix نوشت و آن را تحت مجوز GNU GPL منتشر کرد. او این پروژه را "Linux" نامید.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://miro.medium.com/v2/resize:fit:1200/1*lEX-oCv0yLOnEWrHPlO4KA.png" alt="linus torvalds" width="500"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '500px' }}>
+    ![Linux Torvalds](./images/00-intro/Linus-Torvalds.jpg)
+  </div>
+</div>
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/e79xc1ewkwr61.png" alt="linux as hobby" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '500px' }}>
+    ![Linux Email](./images/00-intro/Linux-Email.png)
+  </div>
+</div>
 
 ### ترکیب GNU و Linux
 

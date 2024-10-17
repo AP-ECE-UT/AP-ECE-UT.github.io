@@ -1,32 +1,27 @@
-import clsx from "clsx";
-import Heading from "@theme/Heading";
-import styles from "./styles.module.css";
 import BlogAuthor from "@theme/Blog/Components/Author";
-import Link from "@docusaurus/Link";
-import toFaNum from "@site/utils/toFaNum";
 
-function CardContainer({ children }) {
-    return <div className={clsx("card padding--lg", styles.cardContainer)}>{children}</div>;
-}
+import toFaNum from "@site/src/utils/toFaNum";
+import styles from "./styles.module.css";
+import "@site/src/css/card.css";
 
 function CardLayout({ author }) {
-    author.title = toFaNum(author.title);
     return (
-        <CardContainer>
-            <div className={styles.blogAuthorImage}>
+        <div className="card padding--lg cardContainer">
+            <div className={styles.blogAuthor}>
                 <BlogAuthor author={author} />
             </div>
-            <Link href={"mailto:" + author.email} className={styles.email}>
+            <a href={"mailto:" + author.email} className={styles.email}>
                 {author.email}
-            </Link>
-        </CardContainer>
+            </a>
+        </div>
     );
 }
 
-export default function AssistantCard({ key, ta }) {
+export default function AssistantCard({ ta }) {
+    const author = { ...ta, title: toFaNum(ta.title) };
     return (
         <div className="col col--4 margin-bottom--lg">
-            <CardLayout key={key} author={ta} />
+            <CardLayout author={author} />
         </div>
     );
 }

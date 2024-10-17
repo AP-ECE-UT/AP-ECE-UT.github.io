@@ -1,17 +1,18 @@
 .footerContainer {
   position: relative;
-  width: 100%;
-  min-height: 50px;
   margin-top: 50px;
 }
 
-.wave { 
+.wave {
   background-color: var(--ifm-color-primary);
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: flex; 
-  min-height: 50px;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+}
+
+.text {
+  color: var(--ifm-color-emphasis-100);
+  text-align: center;
 }
 
 .duck {
@@ -22,29 +23,20 @@
   right: 40px;
 }
 
-.text { 
-  color: var(--ifm-color-emphasis-100);
-  font-size: 16px;
-  align-content: center;
-  text-align: center;
-  width: 100%;
+.footerBreak {
+  display: none;
 }
 
-@media only screen and (min-width: 800px) {
-  .footerBreak { 
-   display: none;
+@media screen and (max-width: 820px) {
+  .footerBreak {
+    display: block;
   }
-}
 
-@media only screen and (max-width: 800px) {
   .dash {
     display: none;
   }
+
   .duck {
     right: 20px;
-  }
-  .wave { 
-    padding: 10px;
-    min-height: 100px;
   }
 }
