@@ -65,9 +65,11 @@ clean:
     rm -f music_player *.o
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/nbezrlsjl6oa1.jpg" alt="make file syntax" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+    ![Makefile Syntax](./images/03-makefile/Makefile-Syntax.jpg)
+  </div>
+</div>
 
 در این `makefile`، متغیر `CXX` کامپایلر ++C را مشخص می‌کند و متغیر `CXXFLAGS` پرچم‌های کامپایلر را مشخص می‌کند. هدف `all` مشخص می‌کند که فایل اجرایی `music_player` باید ساخته شود. خط `music_player: main.o audio_player.o playlist.o song.o` وابستگی‌ها بین فایل اجرایی و فایل‌های شی و دستور لینک کردن فایل‌های شی به فایل اجرایی را مشخص می‌کند. خط `main.o: main.cpp audio_player.hpp playlist.hpp song.hpp` وابستگی‌ها بین فایل‌های منبع و فایل‌های شی و دستور کامپایل فایل‌های منبع به فایل‌های شی را مشخص می‌کند. هدف `clean` دستور حذف فایل‌های شی و فایل اجرایی را مشخص می‌کند. این `makefile` می‌تواند برای کامپایل و لینک کردن فایل‌ها در پروژه `music_player` استفاده شود. دستور `make` می‌تواند برای ساخت پروژه استفاده شود و دستور `make clean` می‌تواند برای پاکسازی پروژه استفاده شود.
 
