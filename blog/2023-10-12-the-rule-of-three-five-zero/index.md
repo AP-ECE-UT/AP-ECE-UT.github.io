@@ -1,9 +1,10 @@
 ---
 title: قانون سه/پنج/صفر، مدیریت منابع، Move Semantics
+slug: resource
 authors: [AliPadyav, MisaghMohaghegh]
-image: "./image.png"
-description: "قانون سه/پنج/صفر، مدیریت منابع، Move Semantics"
-tags: [cpp,three/five/zero]
+image: ./image.png
+description: قانون سه/پنج/صفر، مدیریت منابع، Move Semantics
+tags: [cpp, resource, three-five-zero]
 ---
 
 در این مطلب قصد داریم به موضوعات قانون سه/پنج/صفر، مدیریت منابع و Move Semantics بپردازیم.
@@ -11,10 +12,8 @@ tags: [cpp,three/five/zero]
 <!--truncate-->
 
 :::tip
-می تونید نسخه pdf مجله رو از [اینجا](./The%20Rule%20of%20Three-Five-Zero.pdf) دانلود کنید !
+می‌توانید نسخه pdf مجله را از [اینجا](./The%20Rule%20of%20Three-Five-Zero.pdf) دانلود کنید!
 :::
-
-# قانون سه/پنج/صفر، مدیریت منابع، Move Semantics
 
 ## قانون سه/پنج/صفر
 

@@ -93,7 +93,7 @@ const config = {
             prism: {
                 theme: prismThemes.github,
                 darkTheme: prismThemes.dracula,
-                additionalLanguages: ["makefile", "bash"],
+                additionalLanguages: ["makefile", "bash", "cmake"],
             },
         }),
 };
