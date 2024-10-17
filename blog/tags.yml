@@ -1,7 +1,7 @@
 cpp:
-  label: ++c
+  label: ++C
   permalink: /c++
-  description: c++ tag description
+  description: The C++ programming language
 
 solidPrinciples:
   label: SOLID Principles
