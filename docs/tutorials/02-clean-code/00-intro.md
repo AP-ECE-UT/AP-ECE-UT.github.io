@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 # مقدمه
 
-![intro image](Images/intro.png)
+![Intro](./images/00-intro/Intro.png)
 
 هدف کد نوشتن فقط حل کردن یک مسئله نیست. چرا که با بزرگتر شدن مسئله، حجم کد ها افزایش پیدا می­‌کند و باعث می­‌شود کد ها تبدیل به یک کلاف درهم پیچیده شوند. قضیه جایی پیچیده­‌تر می­‌شود که بخواهیم کد قدیمی را گسترش بدهیم یا در یک گروه و به همراه برنامه نویسان دیگر کد بنویسیم.
 برای جلوگیری از این مسائل می­‌توانیم از ابتدا کد با کیفیت بنویسیم که یکی از ملاک‌­های مهم کد با کیفیت، تمیزی کد است.
@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ## کد تمیز چیست؟
 
-![](Images/clean.png)
+![Clean Coding](./images/00-intro/Clean-Coding.png)
 
 به کدی که قابل خواندن، قابل نگهداری و قابل توسعه باشد کد تمیز می‌گوییم. در اینجا به برخی از مهم‌ترین اصول و روش‌های کد تمیز اشاره می‌کنیم و در بخش های بعدی به طور مفصل به هر کدام می پردازیم:
 
@@ -28,15 +28,13 @@ sidebar_position: 1
     5. آزمون‌پذیری (Testability):
 آزمون‌پذیری کد به معنای سهولت و امکان‌پذیری انجام تست‌ها و آزمون‌های مختلف بر روی کد برای اطمینان از صحت و عملکرد درست آن است. کدی که آزمون‌پذیر باشد، به راحتی می‌توان آن را تست کرد تا اطمینان حاصل شود که بدون اشکال کار می‌کند و به راحتی می‌توان مشکلات را پیدا و رفع کرد.
 
-
 با رعایت این اصول و روش‌ها، می‌توانید کدی بنویسید که نه تنها به راحتی قابل فهم و نگهداری باشد، بلکه کیفیت و بهره‌وری کلی پروژه‌های نرم‌افزاری شما را نیز افزایش دهد.
 
-![](Images/Bjarne%20Stroustrup.JPG)
+![Bjarne Stroustrup](./images/00-intro/Bjarne-Stroustrup.jpg)
 
 > **Bjarne Stroustrup, inventor of C++ and author of The C++ Programming Language**: *I like my code to be elegant and efficient. The logic should be straightforward to make it hard for bugs to hide, the dependencies minimal to ease maintenance, error handling complete according to an articulated strategy, and performance
 close to optimal so as not to tempt people to make the code messy with unprincipled optimizations. Clean code does one thing well.*
 
-![](Images/Grady%20Booch.JPG)
+![Grady Booch](./images/00-intro/Grady-Booch.jpg)
 
 > **Grady Booch, author of Object Oriented Analysis and Design with Applications**: *Clean code is simple and direct. Clean code reads like well-written prose. Clean code never obscures the designer’s intent but rather is full of crisp abstractions and straightforward lines of control.*
-

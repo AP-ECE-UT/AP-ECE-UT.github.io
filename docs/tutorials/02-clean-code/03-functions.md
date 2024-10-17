@@ -1,10 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # توابع
 
-![function intro](https://miro.medium.com/v2/resize:fit:674/0*7v-0al0GxrfQeOo_.png)
+![Functions](./images/03-functions/Functions.png)
 
 در این قسمت ویژگی‌های تابع خوب را یاد می‌گیریم. به طور کلی تابعی خوب نوشته شده که خواندن و فهمیدن وظیفه آن به سادگی انجام شود.
 
@@ -14,7 +14,7 @@ sidebar_position: 4
 
 ## یک وظیفه، یک تعهد!
 
-![](https://static.vecteezy.com/system/resources/thumbnails/005/142/663/small_2x/cute-soldier-army-vector.jpg)
+![Single Responsibility](./images/03-functions/Single-Responsibility.jpg)
 
 هر تابع باید یک وظیفه داشته باشد که آن وظیفه را به بهترین شکل ممکن انجام دهد و **فقط** همان وظیفه را انجام دهد نه کار دیگر!
 اما چگونه تشخیص دهیم؟ به تابع نگاه کنید. اگر توانستید یک تابع دیگر از دل آن استخراج کنید، تابع شما بیش از یک وظیفه دارد.
@@ -26,7 +26,6 @@ sidebar_position: 4
 #include <string>
 
 void processInput() {
-
     // Reading input
     std::string input;
     std::cout << "Enter your name: ";
@@ -60,34 +59,34 @@ std::string readInput() {
     return input;
 }
 
-std::string processInput(const std::string &input) {
+std::string processInput(const std::string& input) {
     std::string processedInput = input;
-    for (char &c : processedInput) {
+    for (char& c : processedInput) {
         c = toupper(c);
     }
     return processedInput;
 }
 
-void displayOutput(const std::string &output) {
+void displayOutput(const std::string& output) {
     std::cout << "Hello, " << output << "!" << std::endl;
 }
 
 int main() {
-    std::string input = readInput();           
-    std::string processedInput = processInput(input); 
-    displayOutput(processedInput);             
+    std::string input = readInput();
+    std::string processedInput = processInput(input);
+    displayOutput(processedInput);
     return 0;
 }
 ```
 
 ## تعداد آرگومان‌های ورودی
 
-بهتر است آرگومان‌های ورودی یک تابع کم باشند. تعداد آرگومان بین صفر تا سه منطقی است و در شرایط خاص می‌توان چهار یا پنج هم در نظر گرفت اما معمولا هر چه تعداد آرگومان‌ها بیشتر شود نشان‌دهنده این است که تابع شما تک وظیفه‌ای نیست و بتوان ساده‌تر هم آن را پیاده‌سازی کرد. 
+بهتر است آرگومان‌های ورودی یک تابع کم باشند. تعداد آرگومان بین صفر تا سه منطقی است و در شرایط خاص می‌توان چهار یا پنج هم در نظر گرفت اما معمولا هر چه تعداد آرگومان‌ها بیشتر شود نشان‌دهنده این است که تابع شما تک وظیفه‌ای نیست و بتوان ساده‌تر هم آن را پیاده‌سازی کرد.
 تست کردن تابع با تعداد آرگومان زیاد خیلی سخت است. تعداد حالت‌ها افزایش پیدا می‌کند و در هر تست باید تعداد زیادی آرگومان حاضر کنید.
 
 ## توابع خیانتکار: حواستان به پشت پرده باشد!
 
-![](https://static.vecteezy.com/system/resources/previews/013/489/038/original/betrayal-and-foul-play-concept-one-man-friend-trying-to-kill-another-one-with-knife-to-back-standing-backwards-making-betrayal-illustration-free-vector.jpg)
+![Betrayal](./images/03-functions/Betrayal.jpg)
 
 ممکن است تابع به ظاهر یک کار انجام دهد اما در باطن خیر! این حالت زمانی رخ می‌دهد که تابع ناخواسته یک سری اطلاعات را تغییر دهد. این مشکل به ویژه در حالتی رخ می‌دهد که آرگومان‌های تابع با آدرس یا رفرنس باشند. برای جلوگیری از تغییر، حتما آرگومان را به شکل const برای تابع تعریف کنید.
 
@@ -95,43 +94,39 @@ int main() {
 
 ```cpp
 #include <iostream>
-using namespace std;
 
-int calculateDouble(int &x)
-{
+int calculateDouble(int& x) {
   x = x * 2;
   return x;
 }
 
 int main() {
   int x = 2;
-  cout << "double: " << calculateDouble(x) << endl;
-  cout << "x: " << x << endl;
+  std::cout << "double: " << calculateDouble(x) << std::endl;
+  std::cout << "x: " << x << std::endl;
   return 0;
 }
-
 ```
+
 خروجی
 
-```
+```text
 double: 4
 x: 4
 ```
+
 برای حل این مشکل از const استفاده می‌کنیم:
 
 ```cpp
-using namespace std;
-
-int calculateDouble(const int &x)
-{
+int calculateDouble(const int& x) {
   x = x * 2;
   return x;
 }
 
 int main() {
   int x = 2;
-  cout << "double: " << calculateDouble(x) << endl;
-  cout << "x: " << x << endl;
+  std::cout << "double: " << calculateDouble(x) << std::endl;
+  std::cout << "x: " << x << std::endl;
   return 0;
 }
 ```
@@ -140,7 +135,7 @@ int main() {
 
 خروجی:
 
-```
+```text
 prog.cpp: In function ‘int calculateDouble(const int&)’:
 prog.cpp:6:4: error: assignment of read-only reference ‘x’
     6 |  x = x * 2;
@@ -151,7 +146,7 @@ prog.cpp:6:4: error: assignment of read-only reference ‘x’
 
 ## برای یک کار چند نفر را استخدام نکنید!
 
-![](https://static.vecteezy.com/system/resources/previews/020/811/045/original/hiring-employee-open-recruitment-concept-job-vacancy-illustration-free-vector.jpg)
+![Recruitment](./images/03-functions/Recruitment.jpg)
 
 در مسیر شکستن برنامه به توابع، ممکن است حالتی پیش بیاید که در ظاهر وظیفه دو تابع متفاوت است ولی در باطن یک کار انجام می دهند. فرض کنید برنامه یک رستوران را می‌نویسیم. این رستوران به مشتریان وفادار خود ۱۰ درصد تخفیف می‌دهد. بنابراین یک تابع برای این مورد می‌نویسیم که برای مشتریان وفادار ۱۰ درصد تخفیف اعمال کند و هزینه نهایی را اعلام کند.
 همچنین برای جذب مشتری، برای کسانی که برای اولین بار خرید می‌کنند هم ۱۰ درصد تخفیف در نظر می‌گیریم. پس یک تابع برای اعمال این تخفیف برای مشتریان جدید می‌نویسیم.
@@ -182,7 +177,7 @@ int main() {
 
 خروجی:
 
-```
+```text
 Price after loyalty discount: 90
 Price for new customer discount: 90
 ```
@@ -212,7 +207,7 @@ int main() {
 
 خروجی:
 
-```
+```text
 Price after loyalty discount: 90
 Price for new customer discount: 90
 ```

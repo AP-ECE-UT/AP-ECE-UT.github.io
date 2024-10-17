@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # سادگی
 
-![simplicity](https://media.licdn.com/dms/image/D5612AQHJcv2vhkq85Q/article-cover_image-shrink_720_1280/0/1671646445344?e=2147483647&v=beta&t=AqqOXU_qWkdDTT2EWDEoj2-KRFFwoNB2T4foTulD-VA)
+![Simplicity](./images/02-simplicity/Simplicity.jpg)
 
 ## طراحی ساده
 
@@ -14,23 +14,20 @@ sidebar_position: 3
 
 ## چگونه ساده کد بزنیم؟
 
-![kent beck](Images/beck.png)
+![Kent Beck](./images/02-simplicity/Kent-Beck.jpg)
 
 برای این کار چهار قانون تعریف می کنیم:
 
-    ۱. کد همه تست‌ها را به درستی اجرا کند
+1. کد همه تست‌ها را به درستی اجرا کند
+1. قسمت‌های تکراری نداشته باشد
+1. قصد و منظور برنامه‌نویس را نشان دهد
+1. تعداد کلاس‌ها و method ها و توابع کم و معقول باشد
 
-    ۲. قسمت‌های تکراری نداشته باشد
-
-    ۳. قصد و منظور برنامه‌نویس را نشان دهد
-
-    ۴. تعداد کلاس‌ها و method ها و توابع کم و معقول باشد
-    
 این قوانین توسط کنت بک (Kent Beck) **به ترتیب اولویت** مطرح شده‌اند.
 
 ### قانون اول
 
-![test](Images/test.jpeg)
+![Bugs](./images/02-simplicity/Bugs.jpeg)
 
 ایده‌ای که برای پیاده سازی یک برنامه داریم ممکن است خیلی شگفت انگیز باشد، اما در عمل خیر!
 در واقع کدی که نتوان آن را تست کرد قابل استفاده نیست و نباید کدی بنویسیم که نتوانیم عملکرد آن را بررسی کنیم.
@@ -39,61 +36,53 @@ sidebar_position: 3
 
 ### قانون دوم
 
-![duplication](https://assets.codegrip.tech/wp-content/uploads/2019/10/03143434/image1.jpg)
+![Duplication](./images/02-simplicity/Duplication.jpg)
 
 **دشمن** یک برنامه خوب، کد تکراری است. چون کد تکراری برنامه را پیچیده‌تر می کند. خط هایی در کد که کاملا شبیه به هم هستند یا قسمت‌هایی که عملیات یکسان انجام می‌دهند، تکراری محسوب می‌شوند و باید به گونه‌ای این مشکلات را رفع کنیم. معمولا با تعریف یک تابع یا اضافه کردن یک method به کلاس می توان قسمت‌های تکراری را حذف کرد.
 مثلا در یک بازی برای حرکت بازیکن به جای اینکه برای هر جهت یک تابع بنویسیم:
 
 ```cpp
-Position Player:: WalkNorth()
-{
+Position Player::WalkNorth() {
    Player player = GetPlayer();
    player.Move("N");
    return player.NewPosition;
 }
  
-Position Player:: WalkSouth()
-{
+Position Player::WalkSouth() {
    Player player = GetPlayer();
    player.Move("S");
    return player.NewPosition;
 }
  
-Position Player:: WalkEast()
-{
+Position Player::WalkEast() {
    Player player = GetPlayer();
    player.Move("E");
    return player.NewPosition;
 }
  
-Position Player:: WalkWest()
-{
+Position Player::WalkWest() {
    Player player = GetPlayer();
    player.Move("W");
    return player.NewPosition;
 }
-
 ```
 
 می توان یک تابع نوشت که به عنوان ورودی جهت بگیرد و حرکت را انجام دهد:
 
 ```cpp
-Position Player:: Walk(string direction)
-{
+Position Player::Walk(string direction) {
    Player player = GetPlayer();
    player.Move(direction);
    return player.NewPosition;
-} 
-
+}
 ```
 
 ### قانون سوم
 
-![expressive](https://miro.medium.com/v2/resize:fit:1358/1*fbLOk37-QdvxUaYWai3Cog.png)
+![Expressive](./images/02-simplicity/Expressive.jpg)
 
 کد معرف ماست. برای اینکه راه حل خودمان را برای یک مسئله بیان کنیم باید کدی بنویسیم که این کار را انجام دهد و هر کسی با دیدن کد منظور و راه‌حل ما را متوجه شود. چون ما ضمیمه کد نیستیم که آن را توضیح بدهیم!
 
 ### قانون چهارم
 
 اولویت این قانون از بقیه **کمتر** است. بنابراین سعی می کنیم در کد نوشتن بیشتر به موارد بالا بپردازیم. اما به طور کلی کوچک بودن کلاس‌ها و توابع و در کل برنامه از پیچیدگی آن کم می کند. فهمیدن کد طولانی طاقت فرساست و از آن بدتر پیدا کردن مشکل. در قسمت بعد به طور مفصل به توابع می پردازیم.
-
