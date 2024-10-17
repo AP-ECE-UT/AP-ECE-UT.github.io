@@ -3,6 +3,11 @@ cpp:
   permalink: /c++
   description: The C++ programming language
 
+best-practices:
+  label: Best Practices
+  permalink: /best-practices
+  description: Recommended practices for writing clean and efficient code
+
 solid:
   label: SOLID Principles
   permalink: /solid-principles
