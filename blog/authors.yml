@@ -52,18 +52,13 @@ AliAtaollahi:
     linkedin: ali-ataollahi-b46302281
 
 PashaBarahimi:
-  name: پاشا براهیمی 
+  name: پاشا براهیمی
   title: ورودی ۱۳۹۹
   url: mailto:pashabarahimi@gmail.com
-  imageURL: "https://avatars.githubusercontent.com/u/19799172?v=4"
+  imageURL: https://avatars.githubusercontent.com/PashaBarahimi
   socials:
-    github: "https://github.com/PashaBarahimi"
-    linkedin: "https://www.linkedin.com/in/PashaBarahimi/"
-
-
-
-
-
+    github: PashaBarahimi
+    linkedin: PashaBarahimi
 
 Guest:
   name: Guest Writer
