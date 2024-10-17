@@ -51,8 +51,7 @@ LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 
-int main()
-{
+int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
 
     sf::CircleShape circle(100);
