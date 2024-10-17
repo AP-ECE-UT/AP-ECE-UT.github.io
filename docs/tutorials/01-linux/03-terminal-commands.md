@@ -8,9 +8,11 @@ sidebar_position: 3
 
 دستورات لینوکس ابزارهای قدرتمندی هستند که به شما امکان می‌دهند به‌طور مستقیم از طریق ترمینال با سیستم خود تعامل کنید. آشنایی با این دستورات برای مدیریت فایل‌ها، دایرکتوری‌ها و نرم‌افزارها در سیستم‌عامل لینوکس بسیار حیاتی است. در ادامه، توضیحات و مثال‌های ساده‌ای از مهم‌ترین دستورات لینوکس، مرتب‌شده بر اساس سطح مبتدی تا پیشرفته، ارائه شده است.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://www.tecmint.com/wp-content/uploads/2013/05/aafire.png" alt="linux command meme" width="700"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+  ![Terminal Fire](./images/03-terminal/Terminal-Fire.jpg)
+  </div>
+</div>
 
 ## دستورات ابتدایی
 
@@ -44,9 +46,11 @@ ls
 cd /home/user/Downloads
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://programmerhumor.io/wp-content/uploads/2021/08/programmerhumor-io-linux-memes-programming-memes-4b1097dde00a6cb-758x758.png" alt="linux command meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+  ![Alias Meme](./images/03-terminal/Alias-Ls.jpg)
+  </div>
+</div>
 
 ### 4. `mkdir` (ساخت دایرکتوری)
 
@@ -78,9 +82,11 @@ rmdir old_directory
 nano filename.txt
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.imgur.com/0qq3ptq.jpeg" alt="linux command meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+  ![Text Editors Meme](./images/03-terminal/Text-Editors.jpg)
+  </div>
+</div>
 
 ### 7. `cat` (نمایش و ترکیب فایل‌ها)
 
@@ -130,9 +136,11 @@ rm filename.txt
 rm -r directory_name
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://preview.redd.it/a-small-difference-makes-you-a-good-administrator-v0-r0pba4mur9ea1.jpg?width=640&crop=smart&auto=webp&s=d465e04eb57eacaadef7c9e19eb2e277472a934c" alt="linux command meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+  ![Sudo Remove](./images/03-terminal/Sudo-Rm.webp)
+  </div>
+</div>
 
 ### 11. `grep` (جستجو در فایل‌ها)
 
@@ -186,9 +194,11 @@ chmod 755 script.sh
 df -h
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://linuxhandbook.com/content/images/2020/06/screenshot_11.png" alt="linux command meme" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+  ![df command](./images/03-terminal/df.webp)
+  </div>
+</div>
 
 ### 16. `du` (کاربرد دیسک)
 
@@ -210,9 +220,11 @@ du -sh /home/user/Documents/
 sudo apt-get update
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.redd.it/jhrwbys7pb151.jpg" alt="linux command meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+  ![Sudo Brain](./images/03-terminal/Sudo-Brain.jpg)
+  </div>
+</div>
 
 ### 18. `apt-get` (مدیریت بسته‌ها)
 
@@ -254,9 +266,11 @@ ps
 kill 1234
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://programmerhumor.io/wp-content/uploads/2021/06/programmerhumor-io-linux-memes-programming-memes-e7ccef9ccdab3ac.jpg" alt="linux command meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+  ![Linux Power](./images/03-terminal/Linux-Power.webp)
+  </div>
+</div>
 
 ### 22. `top` (مدیریت وظایف)
 
@@ -298,14 +312,18 @@ wget https://example.com/file.zip
 ssh user@remote_server
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://linuxhandbook.com/content/images/2021/07/copy-files-to-remote-system-over-ssh-using-scp.webp" alt="linux command meme" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+  ![SSH](./images/03-terminal/SSH.webp)
+  </div>
+</div>
 
 ## دستورهای مخرب
 
 توجه کنید که هیچگاه دستوری را که از کارکرد آن اطمینان ندارید اجرا نکنید.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://preview.redd.it/4fz6ngn43m691.jpg?width=1080&crop=smart&auto=webp&s=6582c7e6ad7097851bb84c8a78740c9c4058efb3" alt="linux command meme" width="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+  ![Fork Bomb](./images/03-terminal/Fork-Bomb.webp)
+  </div>
+</div>

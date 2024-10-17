@@ -21,11 +21,11 @@ VMware یکی از معروف‌ترین و قدرتمندترین نرم‌اف
   - قابلیت‌های پیشرفته مجازی‌سازی شبکه و ذخیره‌سازی.
   - مدیریت ساده و امکانات حرفه‌ای برای کاربران حرفه‌ای و سازمان‌ها.
 
-<br/><div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px' , }}>
-  <div style= {{ width: '100px' }}>
-  ![Vmware](Images/Vmware_workstation_16_icon.svg.png)
+<div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px' }}>
+  <div style={{ width: '100px' }}>
+  ![Vmware](./images/02-vm/Vmware-Logo.png)
   </div>
-</div><br/>
+</div>
 
 ### VirtualBox
 
@@ -36,14 +36,13 @@ VirtualBox نرم‌افزار رایگان و متن‌باز دیگری برا
   - رابط کاربری ساده و کاربرپسند.
   - پشتیبانی از طیف وسیعی از سیستم‌عامل‌های مهمان.
 
-<br/><div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px'  , }}>
-  <div style= {{ width: '120px' }}>
-  ![Virtualbox](Images/Virtualbox_logo.png)
+<div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px'  }}>
+  <div style={{ width: '120px' }}>
+  ![VirtualBox](./images/02-vm/VirtualBox-Logo.png)
   </div>
-</div><br/>
+</div>
 
 ## لینک آموزش نصب با ماشین مجازی
 
 - [VMware](https://www.makeuseof.com/tag/install-linux-windows-vmware-virtual-machine/)
 - [VirtualBox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview)
-
