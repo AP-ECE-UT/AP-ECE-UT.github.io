@@ -23,7 +23,7 @@ VMware یکی از معروف‌ترین و قدرتمندترین نرم‌اف
 
 <div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px' }}>
   <div style={{ width: '100px' }}>
-  ![Vmware](./images/02-vm/Vmware-Logo.png)
+    ![Vmware](./images/02-vm/Vmware-Logo.png)
   </div>
 </div>
 
@@ -38,7 +38,7 @@ VirtualBox نرم‌افزار رایگان و متن‌باز دیگری برا
 
 <div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '100px'  }}>
   <div style={{ width: '120px' }}>
-  ![VirtualBox](./images/02-vm/VirtualBox-Logo.png)
+    ![VirtualBox](./images/02-vm/VirtualBox-Logo.png)
   </div>
 </div>
 

@@ -10,7 +10,7 @@ sidebar_position: 3
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '600px' }}>
-  ![Terminal Fire](./images/03-terminal/Terminal-Fire.jpg)
+    ![Terminal Fire](./images/03-terminal/Terminal-Fire.jpg)
   </div>
 </div>
 
@@ -48,7 +48,7 @@ cd /home/user/Downloads
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '400px' }}>
-  ![Alias Meme](./images/03-terminal/Alias-Ls.jpg)
+    ![Alias Meme](./images/03-terminal/Alias-Ls.jpg)
   </div>
 </div>
 
@@ -84,7 +84,7 @@ nano filename.txt
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '400px' }}>
-  ![Text Editors Meme](./images/03-terminal/Text-Editors.jpg)
+    ![Text Editors Meme](./images/03-terminal/Text-Editors.jpg)
   </div>
 </div>
 
@@ -138,7 +138,7 @@ rm -r directory_name
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '400px' }}>
-  ![Sudo Remove](./images/03-terminal/Sudo-Rm.webp)
+    ![Sudo Remove](./images/03-terminal/Sudo-Rm.webp)
   </div>
 </div>
 
@@ -196,7 +196,7 @@ df -h
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '600px' }}>
-  ![df command](./images/03-terminal/df.webp)
+    ![df command](./images/03-terminal/df.webp)
   </div>
 </div>
 
@@ -222,7 +222,7 @@ sudo apt-get update
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '400px' }}>
-  ![Sudo Brain](./images/03-terminal/Sudo-Brain.jpg)
+    ![Sudo Brain](./images/03-terminal/Sudo-Brain.jpg)
   </div>
 </div>
 
@@ -268,7 +268,7 @@ kill 1234
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '400px' }}>
-  ![Linux Power](./images/03-terminal/Linux-Power.webp)
+    ![Linux Power](./images/03-terminal/Linux-Power.webp)
   </div>
 </div>
 
@@ -314,7 +314,7 @@ ssh user@remote_server
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '600px' }}>
-  ![SSH](./images/03-terminal/SSH.webp)
+    ![SSH](./images/03-terminal/SSH.webp)
   </div>
 </div>
 
@@ -324,6 +324,6 @@ ssh user@remote_server
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '400px' }}>
-  ![Fork Bomb](./images/03-terminal/Fork-Bomb.webp)
+    ![Fork Bomb](./images/03-terminal/Fork-Bomb.webp)
   </div>
 </div>

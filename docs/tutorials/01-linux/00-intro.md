@@ -20,7 +20,7 @@ sidebar_position: 0
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '500px' }}>
-  ![Richard Stallman](./images/00-intro/Richard-Stallman.jpg)
+    ![Richard Stallman](./images/00-intro/Richard-Stallman.jpg)
   </div>
 </div>
 
@@ -30,13 +30,13 @@ sidebar_position: 0
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '500px' }}>
-  ![Linux Torvalds](./images/00-intro/Linus-Torvalds.jpg)
+    ![Linux Torvalds](./images/00-intro/Linus-Torvalds.jpg)
   </div>
 </div>
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ width: '500px' }}>
-  ![Linux Email](./images/00-intro/Linux-Email.png)
+    ![Linux Email](./images/00-intro/Linux-Email.png)
   </div>
 </div>
 
