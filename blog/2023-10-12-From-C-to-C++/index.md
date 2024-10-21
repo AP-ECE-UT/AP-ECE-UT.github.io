@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: از سی به سی++
 slug: ctocpp
 authors: [MisaghMohaghegh, PashaBarahimi]
