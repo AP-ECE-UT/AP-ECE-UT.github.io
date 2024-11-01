@@ -1,9 +1,9 @@
 ---
-title: مراحل کامپایل, Make & CMake
+title: مراحل کامپایل، Make & CMake
 slug: make
 authors: [SamanEN, MisaghMohaghegh]
 image: ./image.png
-description: مراحل کامپایل, Make & CMake
+description: مراحل کامپایل، Make & CMake
 tags: [cpp, compilation, make, cmake]
 ---
 
