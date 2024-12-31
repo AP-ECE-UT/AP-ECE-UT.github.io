@@ -1,44 +1,18 @@
-.cardContainer {
-  --ifm-link-color: var(--ifm-color-emphasis-800);
-  --ifm-link-hover-color: var(--ifm-color-emphasis-700);
-  --ifm-link-hover-decoration: none;
-
-  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  transition: all var(--ifm-transition-fast) ease;
-  transition-property: border, box-shadow;
-}
-
-.cardContainer:hover {
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
-}
-
-.cardContainer *:last-child {
-  margin-bottom: 0;
-}
-
 .cardTitle {
   font-size: 1.2rem;
 }
 
-.cardDescription {
-  height: 2rem;
+.cardDescription>p {
+  height: 3rem;
+  margin-bottom: 0;
   font-size: 0.8rem;
 }
 
 .linkItems {
-  margin-top: 16px;
   display: flex;
   justify-content: end;
   align-items: center;
-  width: 100%;
-}
-
-.linkItem {
-  margin-top: 8px; 
-  margin-left: 16px;
-  display: inline;
+  gap: 16px;
 }
 
 .linkItem span {
@@ -55,17 +29,8 @@
   width: 20px;
   height: 20px;
   margin-right: 4px;
-  
 }
 
 .themeInvert {
-  filter: var(--ifm-svg-filter);
-}
-
-:root {
-  --ifm-svg-filter: none;
-}
-
-[data-theme="dark"] {
-  --ifm-svg-filter: invert();
+  filter: var(--dark-mode-invert);
 }

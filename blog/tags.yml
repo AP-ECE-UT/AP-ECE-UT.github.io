@@ -1,5 +1,54 @@
 cpp:
-  label: ++c
+  label: ++C
   permalink: /c++
-  description: c++ tag description
+  description: The C++ programming language
 
+best-practices:
+  label: Best Practices
+  permalink: /best-practices
+  description: Recommended practices for writing clean and efficient code
+
+solid:
+  label: SOLID Principles
+  permalink: /solid-principles
+  description: Principles of SOLID for better object-oriented programming and clean code practices
+
+design-patterns:
+  label: Design Patterns
+  permalink: /design-patterns
+  description: Design patterns in object-oriented programming for solving common software development problems
+
+ood:
+  label: OOD
+  permalink: /object-oriented-design
+  description: Object-oriented programming design principles for writing flexible and maintainable code
+
+compilation:
+  label: Compilation
+  permalink: /compilation
+  description: Converting source code into an executable through preprocessing, compiling, assembling, and linking
+
+make:
+  label: Makefile
+  permalink: /makefile
+  description: A tool for automating program build process and managing dependencies
+
+cmake:
+  label: CMake
+  permalink: /cmake
+  description: A cross-platform tool for generating platform-specific build files from a high-level project configuration
+
+regex:
+  label: Regex
+  permalink: /regex
+  description: Forming search patterns for matching and manipulating strings in text processing
+
+resource:
+  label: Resource Management
+  permalink: /resource-management
+  description: Efficiently allocating and monitoring resources like memory and files in software development
+
+three-five-zero:
+  label: Three/Five/Zero
+  permalink: /three-five-zero
+  description: Guideline for effective resource management using destructors, copy semantics, and move semantics

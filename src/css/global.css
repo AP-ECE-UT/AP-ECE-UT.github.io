@@ -1,0 +1,40 @@
+:root {
+  --ifm-font-family-base: 'Vazirmatn', sans-serif;
+  --ifm-code-font-size: 95%;
+  --dark-mode-invert: none;
+
+  --ifm-color-primary: #008ae0; /*#0066a4*/
+  --ifm-color-primary-dark: #007ecc;
+  --ifm-color-primary-darker: #0071b8;
+  --ifm-color-primary-darkest: #00588f;
+  --ifm-color-primary-light: #0097f5;
+  --ifm-color-primary-lighter: #0aa1ff;
+  --ifm-color-primary-lightest: #1fa9ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --dark-mode-invert: invert();
+  
+  --ifm-color-primary: #3bcbbf;
+  --ifm-color-primary-dark: #1fa9ff;
+  --ifm-color-primary-darker: #0aa1ff;
+  --ifm-color-primary-darkest: #0097f5;
+  --ifm-color-primary-light: #47b9ff;
+  --ifm-color-primary-lighter: #5cc0ff;
+  --ifm-color-primary-lightest: #70c8ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn.woff2') format('woff2 supports variations'),
+       url('/fonts/Vazirmatn.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class*="codeBlockTitle"] {
+  text-align: right;
+}

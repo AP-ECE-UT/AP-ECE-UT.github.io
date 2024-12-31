@@ -6,9 +6,11 @@ sidebar_position: 4
 
 ابزارهای کاربردی برای طراحی بالا به پایین
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/UML_logo.svg/640px-UML_logo.svg.png" alt="UML" width="500"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+    ![UML](./images/04-tools/UML-Logo.png)
+  </div>
+</div>
 
 برای طراحی بالا به پایین می‌توان با تصویر سازی درک بهتری از فرآیند و بخش‌های مختلف به دست آورد. در این قسمت به ابزاری می‌پردازیم که در این زمینه به ما کمک می‌کند.
 
@@ -16,9 +18,9 @@ UML (Unified Modeling Language) یک زبان مدل‌سازی استاندار
 
 یکی از برنامه‌هایی که می‌توان برای طراحی بصری برنامه استفاده کرد Microsoft Visio است. ابزاری برای طراحی نمودارهای UML و سایر نمودارهای مهندسی نرم‌افزار. این ابزار به شما اجازه می‌دهد تا دیاگرام‌های کلاس، توالی، و استفاده را طراحی کنید.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://mspoweruser.com/wp-content/uploads/2021/10/visio-web-app.png" alt="make file syntax"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  ![Microsoft Visio](./images/04-tools/MS-Visio.webp)
+</div>
 
 برای نمایش یک نمونه از نمودارهای UML (Unified Modeling Language)، معمولاً از نوع‌های مختلف نمودارها استفاده می‌شود. در اینجا یک نمونه از نمودار کلاس UML برای یک سیستم ساده مدیریت کتابخانه را نمایش می‌دهیم. این نمودار به شما کمک می‌کند تا ساختار کلی کلاس‌ها و ارتباطات بین آن‌ها را مشاهده کنید.
 
@@ -65,25 +67,21 @@ UML (Unified Modeling Language) یک زبان مدل‌سازی استاندار
 
 توضیحات:
 
-* Library Class:
-  * Attributes: name, address
-  * Methods: addBook(), removeBook(), findBook()
-  * این کلاس نمایانگر کتابخانه است و دارای روش‌هایی برای اضافه کردن، حذف و جستجوی کتاب‌ها است
-* Book Class:
-  * Attributes: title, author, isbn
-  * Methods: getTitle(), getAuthor(), getIsbn()
-  * این کلاس نمایانگر کتاب‌ها است و شامل ویژگی‌ها و متدهایی برای دریافت جزئیات کتاب است
-* Member Class:
-  * Attributes: memberId, name, email
-  * Methods: borrowBook(), returnBook()
-  * این کلاس نمایانگر اعضای کتابخانه است و شامل متدهایی برای قرض کردن و بازگرداندن کتاب‌ها است    
-
-<br/>
+- Library Class:
+  - Attributes: name, address
+  - Methods: addBook(), removeBook(), findBook()
+  - این کلاس نمایانگر کتابخانه است و دارای روش‌هایی برای اضافه کردن، حذف و جستجوی کتاب‌ها است
+- Book Class:
+  - Attributes: title, author, isbn
+  - Methods: getTitle(), getAuthor(), getIsbn()
+  - این کلاس نمایانگر کتاب‌ها است و شامل ویژگی‌ها و متدهایی برای دریافت جزئیات کتاب است
+- Member Class:
+  - Attributes: memberId, name, email
+  - Methods: borrowBook(), returnBook()
+  - این کلاس نمایانگر اعضای کتابخانه است و شامل متدهایی برای قرض کردن و بازگرداندن کتاب‌ها است
 
 نمودار کلاس UML به شما کمک می‌کند تا:
 
-۱. ساختار کلی سیستم را ببینید: چگونه کلاس‌ها و اشیاء مختلف در سیستم به هم مرتبط هستند
-
-۲. ویژگی‌ها و متدها را تعریف کنید: مشخص کنید که هر کلاس چه داده‌ها و رفتارهایی دارد
-
-۳. رابطه‌ها را شبیه‌سازی کنید: ارتباطات و وابستگی‌ها بین کلاس‌ها را درک کنید
+1. ساختار کلی سیستم را ببینید: چگونه کلاس‌ها و اشیاء مختلف در سیستم به هم مرتبط هستند
+1. ویژگی‌ها و متدها را تعریف کنید: مشخص کنید که هر کلاس چه داده‌ها و رفتارهایی دارد
+1. رابطه‌ها را شبیه‌سازی کنید: ارتباطات و وابستگی‌ها بین کلاس‌ها را درک کنید

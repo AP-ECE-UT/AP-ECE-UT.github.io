@@ -6,9 +6,9 @@ sidebar_position: 1
 
 ## مراحل روش طراحی بالا به پایین
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://programmerhumor.io/wp-content/uploads/2023/03/programmerhumor-io-programming-memes-83d346868e68a1f.jpg" alt="complexity" width="350" height="500"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  ![Complexity](./images/01-steps/Complexity.webp)
+</div>
 
 مراحل روش طراحی بالا به پایین (Top-Down Design) به طور کلی به این صورت است:
 
@@ -44,61 +44,57 @@ sidebar_position: 1
 
 خوب است پس از تکمیل برنامه، مستندات لازم برای آن را تهیه کنیم. این مستندات شامل توضیحات مربوط به طراحی، پیاده‌سازی و نحوه استفاده از برنامه است. همچنین، برنامه را باید به گونه‌ای طراحی کنیم که نگهداری و به‌روزرسانی‌های آینده به سادگی انجام شود.
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://www.christianhomeschoolersofhawaii.org/w/wp-content/uploads/2022/08/4263b2ddbba3d7536372ae1d5c058feb.png" alt="grade" width="400" height="400"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '400px' }}>
+    ![Documentation](./images/01-steps/Documentation.png)
+  </div>
+</div>
 
 فرض کنید می‌خواهیم برنامه‌ای بنویسیم که میانگین نمرات چند دانش‌آموز را محاسبه کند. حالا این مسئله را با روش طراحی بالا به پایین حل می‌کنیم.
 
 هدف ما نوشتن برنامه‌ای است که نمرات چند دانش‌آموز را دریافت کند و میانگین آنها را محاسبه و نمایش دهد.
 برنامه باید دارای چند بخش کلی باشد:
-        ۱. دریافت تعداد دانش‌آموزان و نمرات آنها
-        ۲. محاسبه میانگین نمرات
-        ۳. نمایش میانگین
+
+1. دریافت تعداد دانش‌آموزان و نمرات آنها
+1. محاسبه میانگین نمرات
+1. نمایش میانگین
+
 پس برای هر بخش یک تابع می‌نویسیم:
 
 ```cpp
 #include <iostream>
 #include <vector>
-using namespace std;
 
-vector<int> getInput()
-{
+std::vector<int> getInput() {
     int n;
-    vector<int> grades;
-    cout << "Enter the number of students: ";
-    cin >> n;
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Enter grade for student " << i + 1 << ": ";
+    std::vector<int> grades;
+    std::cout << "Enter the number of students: ";
+    std::cin >> n;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Enter grade for student " << i + 1 << ": ";
         double grade;
-        cin >> grade;
+        std::cin >> grade;
         grades.push_back(grade);
     }
     return grades;
 }
 
-double calculateAverage(vector<int> grades)
-{
+double calculateAverage(vector<int> grades) {
     double sum = 0;
-    for (int i = 0; i < grades.size(); i++)
-    {
+    for (int i = 0; i < grades.size(); i++) {
         sum += grades[i];
     }
     return sum / grades.size();
 }
 
-void displayAverage(double average)
-{
-    cout << "The average grade is: " << average << endl;
+void displayAverage(double average) {
+    std::cout << "The average grade is: " << average << std::endl;
 }
 
-int main()
-{
-    vector<int> grades = getInput();
+int main() {
+    std::vector<int> grades = getInput();
     double average = calculateAverage(grades);
     displayAverage(average);
-
     return 0;
 }
 ```

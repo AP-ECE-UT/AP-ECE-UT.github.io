@@ -27,7 +27,7 @@ sidebar_position: 3
 کلید SSH یک راه ایمن اتصال به Github است که با کمک دو کلید برای احراز هویت انجام می شود.
 ثبت کردن کلید SSH به شما این امکان را می دهید که بدون وارد کردن نام کاربری و رمز خود تغییرات را push کنید.
 
-- **راه اندازی کلید SSH:**  
+- **راه اندازی کلید SSH:**
 
 ابتدا کلید SSH را ایجاد کنید.
 
@@ -93,9 +93,11 @@ git pull
 git clone <remote url>
 ```
 
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://i.pinimg.com/originals/a5/c3/f0/a5c3f030db3069211d4aa4a672d6c48e.jpg" alt="version control" width="600"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <div style={{ width: '600px' }}>
+    ![Contributions](./images/03-github/Contributions.jpg)
+  </div>
+</div>
 
 ## همکاری (Contributing)
 

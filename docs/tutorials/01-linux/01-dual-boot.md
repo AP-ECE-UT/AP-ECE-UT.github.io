@@ -53,4 +53,4 @@ sidebar_position: 1
 ## لینک آموزش نصب لینوکس در کنار ویندوز (Dual Boot)
 
 - [Dual Boot (itsfoss)](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)
-- [Dual Boot tecmint](https://www.tecmint.com/install-ubuntu-alongside-with-windows-dual-boot/)
+- [Dual Boot (tecmint)](https://www.tecmint.com/install-ubuntu-alongside-with-windows-dual-boot/)

@@ -33,7 +33,7 @@ git config --global user.email "<your email>"
 ```bash
 git init
 ```
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://pbs.twimg.com/media/Fr7GWJ0WcBIvCIc.jpg" alt="git meme"/>
-</div><br/>
 
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  ![Git](./images/01-git/Git.jpg)
+</div>

@@ -14,8 +14,6 @@ Ctrl + Z
 
 راه‌حل مناسب برای این موضوع، استفاده از گیت و گیت‌هاب است.
 
-<!-- ![versionControl](Images/versionControl.png) -->
-
-<br/><div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://pbs.twimg.com/media/GIAs1PpWsAE0gzU?format=jpg&name=900x900" alt="version control"/>
-</div><br/>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  ![Version Control](./images/00-intro/Version-Control.jpg)
+</div>
