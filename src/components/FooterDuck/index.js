@@ -1,24 +1,13 @@
-import React, { useEffect } from "react";  // Add useEffect import
-import { data } from "../AssistantCard/data.js"
-// Import your SVGs here
+import React from "react";
 
-import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
-const Footer = () => {
-
-    useEffect(() => {
-        data();
-        return () => {
-            window.removeEventListener("beforeunload", () => observer.disconnect());
-        }
-    }, []);
-
+export default function FooterDuck() {
     return (
-        <div className={styles.footerContainer}>
-            <div className={styles.wave} alt="wave">
+        <footer className={styles.footerContainer}>
+            <div className={styles.wave}>
                 <div className={styles.text}>
-                    <span style={{ marginTop: "10px" }}>{"©"}</span>
+                    &copy;
                     {" برنامه سازی پیشرفته"}
                     <br className={styles.footerBreak} />
                     <span className={styles.dash}>{" - "}</span>
@@ -26,9 +15,7 @@ const Footer = () => {
                     {"پاییز ۱۴۰۳"}
                 </div>
             </div>
-            <img src="img/duck-waving.webp" className={styles.duck} alt="duck" />
-        </div>
+            <img src="/img/duck-waving.webp" className={styles.duck} alt="Duck" />
+        </footer>
     );
-};
-
-export default Footer;
+}
