@@ -15,7 +15,7 @@
 
 [data-theme="dark"] {
   --dark-mode-invert: invert();
-  
+
   --ifm-color-primary: #3bcbbf;
   --ifm-color-primary-dark: #1fa9ff;
   --ifm-color-primary-darker: #0aa1ff;
@@ -37,4 +37,104 @@
 
 [class*="codeBlockTitle"] {
   text-align: right;
+}
+
+/* Toggle Section */
+.toggle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-primary-light);
+  border-radius: 8px;
+  direction: rtl;
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-color-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-section:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darker);
+}
+
+.toggle-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.toggle-icon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Collapsible Content */
+.collapsible-content {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+}
+
+.collapsible-content.show {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.collapsible-content.hide {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Row Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+/* Card Layout */
+.row > * {
+  flex: 0 0 33.333333%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.row img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 996px) {
+  .row > * {
+    flex: 0 0 50%;
+  }
+
+  .toggle-section {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .toggle-title {
+    font-size: 1rem;
+  }
+
+  .toggle-icon {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .row > * {
+    flex: 0 0 100%;
+  }
 }
