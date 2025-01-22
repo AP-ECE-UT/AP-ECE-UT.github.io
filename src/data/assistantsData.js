@@ -1,6 +1,6 @@
 export default [
     {
-        section: "دستیاران ارشد",
+        section: "دستیار ارشد",
         list: [
             {
                 name: "الهه خداوردی",
@@ -12,6 +12,11 @@ export default [
                     linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
                 },
             },
+        ],
+    },
+    {
+        section: "مسئول پروژه",
+        list: [
             {
                 name: "شهریار عطار",
                 title: "ورودی 1400",
