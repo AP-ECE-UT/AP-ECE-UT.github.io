@@ -30,7 +30,7 @@ export default [
         ],
     },
     {
-        section: "سایر دستیاران",
+        section: "دستیاران آموزشی",
         list: [
             {
                 name: "امیرحسین عارف‌زاده",
@@ -151,7 +151,7 @@ export default [
         ],
     },
     {
-        section: "دستیاران پیشین",
+        section: "دستیاران آموزشی پیشین",
         list: [
             {
                 name: "هادی بابالو",
