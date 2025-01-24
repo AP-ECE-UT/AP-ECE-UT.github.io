@@ -24,7 +24,7 @@ function TAList() {
   return (
     <section className="padding-vert--lg">
       {assistantsData.map((sec, idx) => {
-        if (sec.section === "دستیاران پیشین") {
+        if (sec.section === "دستیاران آموزشی پیشین") {
           return (
             <div key={idx} className="container margin-top--lg">
               <div
