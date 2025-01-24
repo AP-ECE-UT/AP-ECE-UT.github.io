@@ -2,6 +2,74 @@
 
 export default [
     {
+        section: "ترم پاییز 1403",
+        list: [
+            {
+                icon: "🔑",
+                number: 0,
+                title: "دست‌گرمی",
+                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F03/main/A0%20-%20warm%20up/APF03-A0-Description.pdf",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A0%20-%20warm%20up",
+                description:
+                "در این پروژه شما یک برنامه ساده برای دیکود کردن یک رشته پیاده‌سازی خواهید کرد."
+            },
+            {
+                icon: "💸",
+                number: 1,
+                title: "برنامه مدیریت مالی",
+                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F03/main/A1%20-%20financial%20manager/APF03-A1-Description.pdf",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A1%20-%20financial%20manager",
+                description:
+                "در این پروژه شما یک برنامه ساده برای مدیریت مالی خواهید کرد."
+            },
+            {
+                icon: "🚓",
+                number: 2,
+                title: "مدیریت پارکینگ",
+                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F03/main/A2%20-%20parking%20manager/APF03-A2-Description.pdf",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A2%20-%20parking%20manager",
+                description:
+                "یک برنامه ساده برای مدیریت پارکینگ."
+            },
+            {
+                icon: "🔄",
+                number: 3,
+                title: "بازگشتی و پس‌گرد",
+                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F03/main/A3%20-%20recursive/APF03-A3-Description.pdf",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A3%20-%20recursive",
+                description:
+                "در این پروژه شما چند سوال بازگشتی حل خواهید کرد و با این موضوع بیشتر آشنا خواهید شد."
+            },
+            {
+                icon: "🗳️",
+                number: 4,
+                title: "جعبه لایتنر",
+                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F03/main/A4%20-%20leitner%20box/APF03-A4-Description.pdf",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A4%20-%20leitner%20box",
+                description:
+                "در این پروژه شما یک سیستم جعبه لایتنر طراحی خواهید کرد."
+            },
+            {
+                icon: "🐏",
+                number: 5,
+                title: "نبرد گوسفندان",
+                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F03/main/A5%20-%20game%20(sheep%20fight)/APF03-A5-Description.pdf",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A5%20-%20game%20(sheep%20fight)",
+                description:
+                "طراحی بازی ساده و معروف Sheeps Fight در فضای ++C و با کمک کتابخانه SFML."
+            },
+            {
+                icon: "🌐",
+                number: 6,
+                title: "سامانه رزرو رستوران",
+                pdf: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A6%20-%20web%20(utaste)/descriptions",
+                code: "https://github.com/AP-ECE-UT/Archive-F03/tree/main/A6%20-%20web%20(utaste)",
+                description:
+                "طراحی یک سامانه جامع و کامل به عنوان سامانه رزرو غذا و رستوران در بستر وب و با کمک ++C."
+            },
+        ],
+    },
+    {
         section: "ترم بهار 1403",
         list: [
             {
@@ -60,9 +128,9 @@ export default [
             },
             {
                 icon: "🌐",
-                number: 7,
+                number: 6,
                 title: "سامانه شبکه اجتماعی",
-                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-S03/main/A6%20-%20web%20(UTMS)/APS03-A6-Description.pdf",
+                pdf: "https://github.com/AP-ECE-UT/Archive-S03/tree/main/A6%20-%20web%20(UTMS)/descriptions",
                 code: "https://github.com/AP-ECE-UT/Archive-S03/tree/main/A6%20-%20web%20(UTMS)",
                 description:
                 "طراحی یک سامانه جامع و کامل به عنوان شبکه اجتماعی دانشگاه تهران در بستر وب و با کمک ++C."
@@ -139,7 +207,7 @@ export default [
                 icon: "🎶",
                 number: 7,
                 title: "اسپاتیفای",
-                pdf: "https://raw.githubusercontent.com/AP-ECE-UT/Archive-F02/main/A7%20-%20web%20(sputify)/description.pdf",
+                pdf: "https://github.com/AP-ECE-UT/Archive-F02/tree/main/A7%20-%20web%20(sputify)/descriptions",
                 code: "https://github.com/AP-ECE-UT/Archive-F02/tree/main/A7%20-%20web%20(sputify)",
                 description:
                 "در این پروژه شما برنامه معروف Spotify را شبیه‌سازی خواهید کرد و آن را در بستر وب بالا خواهید آورد."

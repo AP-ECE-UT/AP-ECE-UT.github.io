@@ -15,7 +15,7 @@ export default [
         ],
     },
     {
-        section: "مسئول پروژه",
+        section: "مسئول پروژه‌ها",
         list: [
             {
                 name: "شهریار عطار",
