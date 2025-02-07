@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import HomepageHeader from "@site/src/components/HomepageHeader";
@@ -12,13 +13,9 @@ const desc = "معرفی و راه‌های ارتباطی دستیاران آم
 
 function TAList() {
   const [showPreviousTAs, setShowPreviousTAs] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleToggle = () => {
-    setIsAnimating(true);
     setShowPreviousTAs(!showPreviousTAs);
-    // Reset animating state after animation completes
-    setTimeout(() => setIsAnimating(false), 300);
   };
 
   return (
@@ -27,18 +24,11 @@ function TAList() {
         if (sec.section === "دستیاران آموزشی پیشین") {
           return (
             <div key={idx} className="container margin-top--lg">
-              <div
-                onClick={handleToggle}
-                className="toggle-section"
-              >
-                <span className="toggle-icon-wrapper">
-                  <span className={`toggle-icon ${showPreviousTAs ? "open" : ""}`}>
-                    ▼
-                  </span>
-                </span>
-                <span className="toggle-title">{sec.section}</span>
+              <div onClick={handleToggle} className="padding-horiz--md padding-vert--sm toggle-section">
+                <h3 className="toggle-title">{sec.section}</h3>
+                <span className={`toggle-icon ${showPreviousTAs ? "open" : ""}`}>▼</span>
               </div>
-              <div className={`collapsible-content ${showPreviousTAs ? "show" : "hide"} ${isAnimating ? "animating" : ""}`}>
+              <div className={`padding-horiz--md margin-top--lg collapsible-content ${showPreviousTAs ? "show" : ""}`}>
                 <div className="row">
                   {sec.list.map((ta, idx) => (
                     <AssistantCard key={idx} ta={ta} />
