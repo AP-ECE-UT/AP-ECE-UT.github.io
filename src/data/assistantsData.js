@@ -52,61 +52,52 @@ export default [
                 }
             },
             {
-                name: "فرشته باقری",
-                title: "ورودی 1400",
-                email: "fereshte12bagheri@gmail.com",
-                imageURL: "/img/TAs/FereshteBagheri.jpg",
+                name: "امیرعلی دهقانی",
+                title: "ورودی 1402",
+                email: "amirali.dh84@gmail.com",
+                imageURL: "/img/TAs/AmirAliDehghani.jpg",
                 socials: {
-                    "github": "https://github.com/FereshteBagheri",
+                    "github": "https://github.com/dectre",
+                    "linkedin": "https://www.linkedin.com/in/amiralidh"
                 }
             },
             {
-                name: "حسام رمضانیان",
-                title: "ورودی 1400",
-                email: "hesamhrf@gmail.com",
-                imageURL: "/img/TAs/HesamRamezanian.jpg",
+                name: "بهاره عین اللهی",
+                title: "ورودی 1402",
+                email: "bahareheinollahi84@gmail.com",
+                imageURL: "/img/TAs/BahareEinollahi.png",
                 socials: {
-                    "github": "https://github.com/hesamhrf",
-                    "linkedin": "https://ir.linkedin.com/in/hesam-ramezanian-b5a47a245"
+                    "github": "https://github.com/rayspring2",
                 }
             },
             {
-                name: "کوروش علی‌نقی",
+                name: "پارسا دقیق",
                 title: "ورودی 1401",
-                email: "kouroshalinaghi@gmail.com",
-                imageURL: "/img/TAs/KoroushAlinaghi.jpg",
+                email: "daghighparsa@gmail.com",
+                imageURL: "/img/TAs/ParsaDaghigh.jpg",
                 socials: {
-                    "github": "https://github.com/kouroshalinaghi",
-                    "linkedin": "https://www.linkedin.com/in/kouroshalinaghi"
+                    "github": "https://github.com/ParsaExact",
+                    "linkedin": "https://www.linkedin.com/in/parsadaghigh"
                 }
             },
             {
-                name: "مهدی نائینی",
-                title: "ورودی 1401",
-                email: "mhd.naeeni@gmail.com",
-                imageURL: "/img/TAs/MahdiNaeeni.jpg",
+                name: "پارسا سعیدنیا",
+                title: "ورودی 1402",
+                email: "parsasaiednia@gmail.com",
+                imageURL: "/img/TAs/ParsaSaeednia.jpg",
                 socials: {
-                    "github": "https://github.com/naienim",
+                    "github": "https://github.com/Parsa-Saeednia",
+                    "linkedin": "https://www.linkedin.com/in/parsa-saeednia"
                 }
             },
             {
-                name: "مجید صادقی‌نژاد",
+                name: "پریا پاسه‌ورز",
                 title: "ورودی 1401",
-                email: "majid0sadeghinejad@gmail.com",
-                imageURL: "/img/TAs/MajidSadeghinejad.jpeg",
+                email: "pasehvarzparia@gmail.com",
+                imageURL: "/img/TAs/PariaPasevarz.jpg",
                 socials: {
-                    "github": "https://github.com/msns83",
-                    "linkedin": "https://www.linkedin.com/in/majid-sadeghinejad-5abb082b6/"
-                }
-            },
-            {
-                name: "مهراد لیویان",
-                title: "ورودی 1401",
-                email: "mehradliviyan@gmail.com",
-                imageURL: "/img/TAs/MehradLiviyan.jpg",
-                socials: {
-                    "github": "https://github.com/mehradliviyan",
-                    "linkedin": "https://www.linkedin.com/in/mehrad-liviyan-a88462283"
+                    "github": "https://github.com/PariaPasehvarz",
+                    "linkedin": "https://www.linkedin.com/in/paria-pasehvarz-7597bb2b6"
                 }
             },
             {
@@ -120,13 +111,22 @@ export default [
                 }
             },
             {
-                name: "سهیل حاجیان‌منش",
+                name: "حسام رمضانیان",
                 title: "ورودی 1400",
-                email: "soheilhm1381@gmail.com",
-                imageURL: "/img/TAs/SoheilHajianmanesh.jpg",
+                email: "hesamhrf@gmail.com",
+                imageURL: "/img/TAs/HesamRamezanian.jpg",
                 socials: {
-                    "github": "https://github.com/SoheilHajianManesh",
-                    "linkedin": "https://linkedin.com/in/SoheilHajianManesh"
+                    "github": "https://github.com/hesamhrf",
+                    "linkedin": "https://ir.linkedin.com/in/hesam-ramezanian-b5a47a245"
+                }
+            },
+            {
+                name: "ریحانه عین اللهی",
+                title: "ورودی 1402",
+                email: "rayhaneheinollahi@gmail.com",
+                imageURL: "/img/TAs/ReyhaneEinollahi.jpg",
+                socials: {
+                    "github": "https://github.com/Rayhaneh-Einollahi",
                 }
             },
             {
@@ -140,6 +140,36 @@ export default [
                 }
             },
             {
+                name: "سهیل حاجیان‌منش",
+                title: "ورودی 1400",
+                email: "soheilhm1381@gmail.com",
+                imageURL: "/img/TAs/SoheilHajianmanesh.jpg",
+                socials: {
+                    "github": "https://github.com/SoheilHajianManesh",
+                    "linkedin": "https://linkedin.com/in/SoheilHajianManesh"
+                }
+            },
+            {
+                name: "سید حمید محمودی",
+                title: "ورودی 1402",
+                email: "hamidmahmoodi1383@gmail.com",
+                imageURL: "/img/TAs/HamidMahmoudi.jpg",
+                socials: {
+                    "github": "https://github.com/hmdmhmd2004",
+                    "linkedin": "https://www.linkedin.com/in/seyed-hamid-mahmoudi-2248512b1"
+                }
+            },
+            {
+                name: "صادق صمدی",
+                title: "ورودی 1402",
+                email: "sadeghsamadi2483@gmail.com",
+                imageURL: "/img/TAs/SadeghSamadi.jpg",
+                socials: {
+                    "github": "https://github.com/imSaDy",
+                    "linkedin": "https://https://www.linkedin.com/in/sadegh-samadi-3643b11b7"
+                }
+            },
+            {
                 name: "طاها مجلسی",
                 title: "ورودی 1401",
                 email: "tahamaj4@gmail.com",
@@ -148,37 +178,104 @@ export default [
                     "github": "https://github.com/tahamajs",
                 }
             },
+            {
+                name: "عرفان فلاحتی",
+                title: "ورودی 1402",
+                email: "erfann.falahati@gmail.com",
+                imageURL: "/img/TAs/ErfanFelahati.jpg",
+                socials: {
+                    "github": "https://github.com/erfan-f",
+                }
+            },
+            {
+                name: "فرجاد فلاح",
+                title: "ورودی 1401",
+                email: "farjadfallah@gmail.com",
+                imageURL: "/img/TAs/FarjadFallah.jpg",
+                socials: {
+                    "github": "https://github.com/farjadfallah",
+                    "linkedin": "https://www.linkedin.com/in/farjad-fallah"
+                }
+            },
+            {
+                name: "فرشته باقری",
+                title: "ورودی 1400",
+                email: "fereshte12bagheri@gmail.com",
+                imageURL: "/img/TAs/FereshteBagheri.jpg",
+                socials: {
+                    "github": "https://github.com/FereshteBagheri",
+                }
+            },
+            {
+                name: "کوروش علی‌نقی",
+                title: "ورودی 1401",
+                email: "kouroshalinaghi@gmail.com",
+                imageURL: "/img/TAs/KoroushAlinaghi.jpg",
+                socials: {
+                    "github": "https://github.com/kouroshalinaghi",
+                    "linkedin": "https://www.linkedin.com/in/kouroshalinaghi"
+                }
+            },
+            {
+                name: "مجید صادقی‌نژاد",
+                title: "ورودی 1401",
+                email: "majid0sadeghinejad@gmail.com",
+                imageURL: "/img/TAs/MajidSadeghinejad.jpeg",
+                socials: {
+                    "github": "https://github.com/msns83",
+                    "linkedin": "https://www.linkedin.com/in/majid-sadeghinejad-5abb082b6/"
+                }
+            },
+            {
+                name: "محمدعرفان دانائی",
+                title: "ورودی 1402",
+                email: "medanaee@gmail.com",
+                imageURL: "/img/TAs/MohammadErfanDanaee.jpg",
+                socials: {
+                    "github": "https://github.com/medanaee",
+                }
+            },
+            {
+                name: "مهدی نائینی",
+                title: "ورودی 1401",
+                email: "mhd.naeeni@gmail.com",
+                imageURL: "/img/TAs/MahdiNaeeni.jpg",
+                socials: {
+                    "github": "https://github.com/naienim",
+                }
+            },
+            {
+                name: "مهدیس میرزائی",
+                title: "ورودی 1402",
+                email: "Mhdys5998@gmail.com",
+                imageURL: "/img/TAs/MahdisMirzaei.jpg",
+                socials: {
+                    "github": "https://github.com/mhieir",
+                    "linkedin": "https://www.linkedin.com/in/mhieir/"
+                }
+            },
+            {
+                name: "مهراد لیویان",
+                title: "ورودی 1401",
+                email: "mehradliviyan@gmail.com",
+                imageURL: "/img/TAs/MehradLiviyan.jpg",
+                socials: {
+                    "github": "https://github.com/mehradliviyan",
+                    "linkedin": "https://www.linkedin.com/in/mehrad-liviyan-a88462283"
+                }
+            },
         ],
     },
     {
         section: "دستیاران آموزشی پیشین",
         list: [
             {
-                name: "هادی بابالو",
-                title: "ورودی 1399",
-                email: "m.h.babalu@gmail.com",
-                imageURL: "/img/TAs/HadiBabalou.jpg",
+                name: "آرین باستانی",
+                title: "ورودی 1400",
+                email: "bastanyaryn@gmail.com",
+                imageURL: "/img/TAs/AryanBastani.jpg",
                 socials: {
-                    "github": "https://github.com/Hadi-loo",
-                    "linkedin": "https://www.linkedin.com/in/hadi-babaloo/"
-                }
-            },
-            {
-                name: "آوا میرمحمدمهدی",
-                title: "ورودی 1399",
-                email: "avamir80@gmail.com",
-                imageURL: "/img/TAs/AvaMirmohammadmahdi.jpg",
-                socials: {
-                    "github": "https://github.com/avamirm",
-                }
-            },
-            {
-                name: "علی پادیاو",
-                title: "ورودی 1399",
-                email: "apadyav@gmail.com",
-                imageURL: "/img/TAs/AliPadyav.jpg",
-                socials: {
-                    "github": "https://github.com/alumpish",
+                    "github": "https://github.com/AryanBastani",
                 }
             },
             {
@@ -192,12 +289,12 @@ export default [
                 }
             },
             {
-                name: "آرین باستانی",
-                title: "ورودی 1400",
-                email: "bastanyaryn@gmail.com",
-                imageURL: "/img/TAs/AryanBastani.jpg",
+                name: "آوا میرمحمدمهدی",
+                title: "ورودی 1399",
+                email: "avamir80@gmail.com",
+                imageURL: "/img/TAs/AvaMirmohammadmahdi.jpg",
                 socials: {
-                    "github": "https://github.com/AryanBastani",
+                    "github": "https://github.com/avamirm",
                 }
             },
             {
@@ -211,16 +308,6 @@ export default [
                 }
             },
             {
-                name: "میثاق محقق",
-                title: "ورودی 1399",
-                email: "misagh.mhgg@gmail.com",
-                imageURL: "/img/TAs/MisaghMohaghegh.jpg",
-                socials: {
-                    "github": "https://github.com/MisaghM",
-                    "linkedin": "https://www.linkedin.com/in/misaghm"
-                }
-            },
-            {
                 name: "عرفان میرشمس",
                 title: "ورودی 1401",
                 email: "erfan.mirshams@gmail.com",
@@ -228,6 +315,34 @@ export default [
                 socials: {
                     "github": "https://github.com/erfan-mirshams",
                     "linkedin": "https://www.linkedin.com/in/erfan-mirshams"
+                }
+            },
+            {
+                name: "علی پادیاو",
+                title: "ورودی 1399",
+                email: "apadyav@gmail.com",
+                imageURL: "/img/TAs/AliPadyav.jpg",
+                socials: {
+                    "github": "https://github.com/alumpish",
+                }
+            },
+            {
+                name: "مبینا مهرآذر",
+                title: "ورودی 1400",
+                email: "mobinamehrazar81@gmail.com",
+                imageURL: "/img/TAs/MobinaMehrazar.jpg",
+                socials: {
+                    "github": "https://github.com/MobinaMhr",
+                }
+            },
+            {
+                name: "میثاق محقق",
+                title: "ورودی 1399",
+                email: "misagh.mhgg@gmail.com",
+                imageURL: "/img/TAs/MisaghMohaghegh.jpg",
+                socials: {
+                    "github": "https://github.com/MisaghM",
+                    "linkedin": "https://www.linkedin.com/in/misaghm"
                 }
             },
             {
@@ -240,12 +355,13 @@ export default [
                 }
             },
             {
-                name: "مبینا مهرذر",
-                title: "ورودی 1400",
-                email: "mobinamehrazar81@gmail.com",
-                imageURL: "/img/TAs/MobinaMehrazar.jpg",
+                name: "هادی بابالو",
+                title: "ورودی 1399",
+                email: "m.h.babalu@gmail.com",
+                imageURL: "/img/TAs/HadiBabalou.jpg",
                 socials: {
-                    "github": "https://github.com/MobinaMhr",
+                    "github": "https://github.com/Hadi-loo",
+                    "linkedin": "https://www.linkedin.com/in/hadi-babaloo/"
                 }
             },
         ],
