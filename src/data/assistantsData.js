@@ -15,21 +15,6 @@ export default [
         ],
     },
     {
-        section: "مسئول پروژه‌ها",
-        list: [
-            {
-                name: "شهریار عطار",
-                title: "ورودی 1400",
-                email: "attarshahriar@gmail.com",
-                imageURL: "/img/TAs/ShahriarAttar.jpg",
-                socials: {
-                    github: "https://github.com/Shahriar-0",
-                    linkedin: "https://www.linkedin.com/in/shahriar-attar/",
-                },
-            },
-        ],
-    },
-    {
         section: "دستیاران آموزشی",
         list: [
             {
