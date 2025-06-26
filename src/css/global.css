@@ -74,6 +74,6 @@
   transition: all var(--ifm-transition-slow) var(--ifm-transition-timing-default);
 }
 .collapsible-content.show {
-  max-height: 2000px;
+  max-height: max-content;
   opacity: 1;
 }

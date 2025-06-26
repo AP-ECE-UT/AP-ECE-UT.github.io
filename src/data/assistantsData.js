@@ -24,8 +24,7 @@ export default [
                 imageURL: "/img/TAs/AmirhosseinArefzadeh.jpg",
                 socials: {
                     github: "https://github.com/Amir-rfz",
-                    linkedin:
-                        "https://www.linkedin.com/in/amirhossein-arefzadeh-8612812ba/",
+                    linkedin: "https://www.linkedin.com/in/amirhossein-arefzadeh-8612812ba/",
                 },
             },
             {
@@ -93,8 +92,7 @@ export default [
                 imageURL: "/img/TAs/ParisaYahyapour.jpg",
                 socials: {
                     github: "https://github.com/parisa-yahyapour",
-                    linkedin:
-                        "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
+                    linkedin: "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
                 },
             },
             {
@@ -143,8 +141,7 @@ export default [
                 imageURL: "/img/TAs/HamidMahmoudi.jpg",
                 socials: {
                     github: "https://github.com/hmdmhmd2004",
-                    linkedin:
-                        "https://www.linkedin.com/in/seyed-hamid-mahmoudi-2248512b1",
+                    linkedin: "https://www.linkedin.com/in/seyed-hamid-mahmoudi-2248512b1",
                 },
             },
             {
@@ -154,8 +151,7 @@ export default [
                 imageURL: "/img/TAs/SadeghSamadi.jpg",
                 socials: {
                     github: "https://github.com/imSaDy",
-                    linkedin:
-                        "https://https://www.linkedin.com/in/sadegh-samadi-3643b11b7",
+                    linkedin: "https://https://www.linkedin.com/in/sadegh-samadi-3643b11b7",
                 },
             },
             {
