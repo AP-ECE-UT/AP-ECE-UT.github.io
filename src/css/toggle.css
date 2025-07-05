@@ -1,0 +1,34 @@
+.toggleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: calc(1.5 * var(--ifm-global-radius));
+  cursor: pointer;
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+.toggleSection:hover {
+  color: var(--ifm-color-content-inverse);
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.toggleIcon {
+  display: block;
+  font-size: 1.25rem;
+  transition: transform var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+.toggleIcon.open {
+  transform: rotate(-180deg);
+}
+
+.collapsibleContent {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all var(--ifm-transition-slow) var(--ifm-transition-timing-default);
+}
+.collapsibleContent.show {
+  max-height: max-content;
+  opacity: 1;
+}

@@ -7,6 +7,7 @@ import AssistantCard from "@site/src/components/AssistantCard";
 import FooterDuck from "@site/src/components/FooterDuck";
 
 import assistantsData from "@site/src/data/assistantsData";
+import "@site/src/css/toggle.css";
 
 const title = "دستیاران آموزشی";
 const desc = "معرفی و راه‌های ارتباطی دستیاران آموزشی درس";
@@ -23,24 +24,24 @@ function TAList() {
       {assistantsData.map((sec, idx) => {
         if (sec.section === "دستیاران آموزشی پیشین") {
           return (
-            <div key={idx} className="container margin-top--lg">
-              <div onClick={handleToggle} className="padding-horiz--md padding-vert--sm toggle-section">
-                <h3 className="toggle-title">{sec.section}</h3>
-                <span className={`toggle-icon ${showPreviousTAs ? "open" : ""}`}>▼</span>
+            <article key={idx} className="container margin-top--lg">
+              <div onClick={handleToggle} className="padding-horiz--md padding-vert--sm toggleSection">
+                <h3 className="margin--none">{sec.section}</h3>
+                <span className={`toggleIcon ${showPreviousTAs ? "open" : ""}`}>▼</span>
               </div>
-              <div className={`padding-horiz--md margin-top--lg collapsible-content ${showPreviousTAs ? "show" : ""}`}>
+              <div className={`padding-horiz--md margin-top--lg collapsibleContent ${showPreviousTAs ? "show" : ""}`}>
                 <div className="row">
                   {sec.list.map((ta, idx) => (
                     <AssistantCard key={idx} ta={ta} />
                   ))}
                 </div>
               </div>
-            </div>
+            </article>
           );
         }
 
         return (
-          <div key={idx} className="container margin-top--lg">
+          <article key={idx} className="container margin-top--lg">
             <Heading as="h2" className="margin-bottom--lg">
               {sec.section}
             </Heading>
@@ -49,7 +50,7 @@ function TAList() {
                 <AssistantCard key={idx} ta={ta} />
               ))}
             </div>
-          </div>
+          </article>
         );
       })}
     </section>
