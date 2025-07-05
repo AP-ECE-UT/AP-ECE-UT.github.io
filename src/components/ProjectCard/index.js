@@ -1,8 +1,7 @@
 import clsx from "clsx";
-
-import Heading from "@theme/Heading";
-import Link from "@docusaurus/Link";
 import ClampLines from "react-clamp-lines";
+import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
 
 import toFaNum from "@site/src/utils/toFaNum";
 import styles from "./styles.module.css";

@@ -1,5 +1,5 @@
-import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
 
 import styles from "./styles.module.css";
 

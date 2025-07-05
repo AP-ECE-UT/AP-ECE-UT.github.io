@@ -1,7 +1,6 @@
-import { useLocation } from "react-router-dom";
-
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+
 import HomepageHeader from "@site/src/components/HomepageHeader";
 import ProjectCard from "@site/src/components/ProjectCard";
 import FooterDuck from "@site/src/components/FooterDuck";

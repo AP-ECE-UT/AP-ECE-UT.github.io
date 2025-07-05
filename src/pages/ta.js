@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+
 import HomepageHeader from "@site/src/components/HomepageHeader";
 import AssistantCard from "@site/src/components/AssistantCard";
 import FooterDuck from "@site/src/components/FooterDuck";

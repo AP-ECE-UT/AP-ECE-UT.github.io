@@ -1,6 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-
 import Layout from "@theme/Layout";
+
 import HomepageHeader from "@site/src/components/HomepageHeader";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import FooterDuck from "@site/src/components/FooterDuck";
