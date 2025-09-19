@@ -14,6 +14,7 @@ export default [
                         "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
                 },
                 presence: {
+                    chief: ["F04"],
                     assistant: ["S03", "F03", "S04"],
                 },
             },
@@ -27,6 +28,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/kouroshalinaghi",
                 },
                 presence: {
+                    chief: ["F04"],
                     assistant: ["S03", "F03", "S04"],
                 },
             },
@@ -58,7 +60,7 @@ export default [
                 },
                 presence: {
                     assistant: ["S03"],
-                    chief: ["F03", "S04"],
+                    chief: ["F03", "S04", "F04"],
                 },
             },
             {
@@ -72,7 +74,7 @@ export default [
                         "https://www.linkedin.com/in/amirhossein-arefzadeh-8612812ba/",
                 },
                 presence: {
-                    assistant: ["F03", "S04"],
+                    assistant: ["F03", "S04", "F04"],
                 },
             },
             {
@@ -84,7 +86,7 @@ export default [
                     github: "https://github.com/AmirrezaNadiCH",
                 },
                 presence: {
-                    assistant: ["S03", "F03", "S04"],
+                    assistant: ["S03", "F03", "S04", "F04"],
                 },
             },
             {
@@ -97,7 +99,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/amiralidh",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -109,7 +111,7 @@ export default [
                     github: "https://github.com/rayspring2",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -122,7 +124,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/parsadaghigh",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -135,7 +137,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/parsa-saeednia",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -148,7 +150,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/paria-pasehvarz-7597bb2b6",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -161,7 +163,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/reza-chehreghani-09455b269",
                 },
                 presence: {
-                    assistant: ["F04"],
+                    assistant: ["F04",],
                 },
             },
             {
@@ -173,7 +175,7 @@ export default [
                     github: "https://github.com/Rayhaneh-Einollahi",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -200,7 +202,7 @@ export default [
                         "https://www.linkedin.com/in/seyed-hamid-mahmoudi-2248512b1",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -214,7 +216,7 @@ export default [
                         "https://https://www.linkedin.com/in/sadegh-samadi-3643b11b7",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -226,7 +228,7 @@ export default [
                     github: "https://github.com/tahamajs",
                 },
                 presence: {
-                    assistant: ["F03", "S04"],
+                    assistant: ["F03", "S04", "F04"],
                 },
             },
             {
@@ -238,7 +240,7 @@ export default [
                     github: "https://github.com/erfan-f",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -251,7 +253,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/farjad-fallah",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -263,7 +265,7 @@ export default [
                     github: "https://github.com/FereshteBagheri",
                 },
                 presence: {
-                    assistant: ["F03", "S04"],
+                    assistant: ["F03", "S04", "F04"],
                 },
             },
             {
@@ -299,7 +301,7 @@ export default [
                     github: "https://github.com/medanaee",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -311,7 +313,7 @@ export default [
                     github: "https://github.com/naienim",
                 },
                 presence: {
-                    assistant: ["F03", "S04"],
+                    assistant: ["F03", "S04", "F04"],
                 },
             },
             {
@@ -324,7 +326,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/mhieir/",
                 },
                 presence: {
-                    assistant: ["S04"],
+                    assistant: ["S04", "F04"],
                 },
             },
             {
@@ -337,7 +339,7 @@ export default [
                     linkedin: "https://www.linkedin.com/in/mehrad-liviyan-a88462283",
                 },
                 presence: {
-                    assistant: ["F03", "S04"],
+                    assistant: ["F03", "S04", "F04"],
                 },
             },
         ],
