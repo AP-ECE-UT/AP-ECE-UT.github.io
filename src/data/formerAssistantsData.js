@@ -52,6 +52,19 @@ const formerAssistantsData = {
             },
         },
         {
+            name: "حسام رمضانیان",
+            title: "ورودی 1400",
+            email: "hesamhrf@gmail.com",
+            imageURL: "/img/TAs/HesamRamezanian.jpg",
+            socials: {
+                github: "https://github.com/hesamhrf",
+                linkedin: "https://ir.linkedin.com/in/hesam-ramezanian-b5a47a245",
+            },
+            presence: {
+                assistant: ["S03", "F03", "S04"],
+            },
+        },
+        {
             name: "سامان اسلامی نظری",
             title: "ورودی 1399",
             email: "samaneslami78@gmail.com",
@@ -62,6 +75,32 @@ const formerAssistantsData = {
             },
             presence: {
                 chief: ["S03"],
+            },
+        },
+        {
+            name: "سروش صحرایی",
+            title: "ورودی 1401",
+            email: "soroush.sahraei@gmail.com",
+            imageURL: "/img/TAs/SoroushSahraei.jpg",
+            socials: {
+                github: "https://github.com/sahroush",
+                linkedin: "https://linkedin.com/in/sahroush",
+            },
+            presence: {
+                assistant: ["S03", "F03", "S04"],
+            },
+        },
+        {
+            name: "سهیل حاجیان‌منش",
+            title: "ورودی 1400",
+            email: "soheilhm1381@gmail.com",
+            imageURL: "/img/TAs/SoheilHajianmanesh.jpg",
+            socials: {
+                github: "https://github.com/SoheilHajianManesh",
+                linkedin: "https://linkedin.com/in/SoheilHajianManesh",
+            },
+            presence: {
+                assistant: ["F03", "S04"],
             },
         },
         {
@@ -137,6 +176,19 @@ const formerAssistantsData = {
             },
             presence: {
                 assistant: ["S03", "F03"],
+            },
+        },
+        {
+            name: "مجید صادقی‌نژاد",
+            title: "ورودی 1401",
+            email: "majid0sadeghinejad@gmail.com",
+            imageURL: "/img/TAs/MajidSadeghinejad.jpeg",
+            socials: {
+                github: "https://github.com/msns83",
+                linkedin: "https://www.linkedin.com/in/majid-sadeghinejad-5abb082b6/",
+            },
+            presence: {
+                assistant: ["F03", "S04"],
             },
         },
         {
