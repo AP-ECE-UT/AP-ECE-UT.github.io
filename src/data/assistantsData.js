@@ -185,7 +185,7 @@ export default [
                 imageURL: "/img/TAs/SepantaGhonodi.jpg",
                 socials: {
                     github: "https://github.com/sepanta-ghonoodi",
-                    linkedin: "www.linkedin.com/in/sepanta-ghonoodi-24460b1a5",
+                    linkedin: "https://www.linkedin.com/in/sepanta-ghonoodi-24460b1a5",
                 },
                 presence: {
                     assistant: ["F04"],
