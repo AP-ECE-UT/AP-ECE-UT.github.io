@@ -272,7 +272,7 @@ export default [
                 name: "کوثر شیری",
                 title: "ورودی 1401",
                 email: "k.shiri82@gmail.com",
-                imageURL: "/img/TAs/KosarShiri.jpg",
+                imageURL: "/img/TAs/kosarShiri.jpg",
                 socials: {
                     github: "https://github.com/Kosar-sh",
                 },
