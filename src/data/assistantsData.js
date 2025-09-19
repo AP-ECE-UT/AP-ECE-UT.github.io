@@ -1,20 +1,33 @@
 import formerAssistantsData from "./formerAssistantsData";
 export default [
     {
-        section: "دستیار ارشد",
+        section: "دستیاران ارشد",
         list: [
             {
-                name: "الهه خداوردی",
-                title: "ورودی 1400",
-                email: "elahekhodavrdi@gmail.com",
-                imageURL: "/img/TAs/ElaheKhodaverdi.jpg",
+                name: "پریسا یحیی‌پور",
+                title: "ورودی 1401",
+                email: "parisa.yahyapour.fatideh@gmail.com",
+                imageURL: "/img/TAs/ParisaYahyapour.jpg",
                 socials: {
-                    github: "https://github.com/elahekhodaverdi",
-                    linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
+                    github: "https://github.com/parisa-yahyapour",
+                    linkedin:
+                        "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
                 },
                 presence: {
-                    assistant: ["S03"],
-                    chief: ["F03", "S04"],
+                    assistant: ["S03", "F03", "S04"],
+                },
+            },
+            {
+                name: "کوروش علی‌نقی",
+                title: "ورودی 1401",
+                email: "kouroshalinaghi@gmail.com",
+                imageURL: "/img/TAs/KoroushAlinaghi.jpg",
+                socials: {
+                    github: "https://github.com/kouroshalinaghi",
+                    linkedin: "https://www.linkedin.com/in/kouroshalinaghi",
+                },
+                presence: {
+                    assistant: ["S03", "F03", "S04"],
                 },
             },
         ],
@@ -32,6 +45,20 @@ export default [
                 },
                 presence: {
                     assistant: ["F04"],
+                },
+            },
+            {
+                name: "الهه خداوردی",
+                title: "ورودی 1400",
+                email: "elahekhodavrdi@gmail.com",
+                imageURL: "/img/TAs/ElaheKhodaverdi.jpg",
+                socials: {
+                    github: "https://github.com/elahekhodaverdi",
+                    linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
+                },
+                presence: {
+                    assistant: ["S03"],
+                    chief: ["F03", "S04"],
                 },
             },
             {
@@ -122,20 +149,6 @@ export default [
                 },
                 presence: {
                     assistant: ["S04"],
-                },
-            },
-            {
-                name: "پریسا یحیی‌پور",
-                title: "ورودی 1401",
-                email: "parisa.yahyapour.fatideh@gmail.com",
-                imageURL: "/img/TAs/ParisaYahyapour.jpg",
-                socials: {
-                    github: "https://github.com/parisa-yahyapour",
-                    linkedin:
-                        "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
-                },
-                presence: {
-                    assistant: ["S03", "F03", "S04"],
                 },
             },
             {
@@ -263,19 +276,6 @@ export default [
                 },
                 presence: {
                     assistant: ["F04"],
-                },
-            },
-            {
-                name: "کوروش علی‌نقی",
-                title: "ورودی 1401",
-                email: "kouroshalinaghi@gmail.com",
-                imageURL: "/img/TAs/KoroushAlinaghi.jpg",
-                socials: {
-                    github: "https://github.com/kouroshalinaghi",
-                    linkedin: "https://www.linkedin.com/in/kouroshalinaghi",
-                },
-                presence: {
-                    assistant: ["S03", "F03", "S04"],
                 },
             },
             {
