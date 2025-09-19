@@ -11,6 +11,10 @@ export default [
                     github: "https://github.com/elahekhodaverdi",
                     linkedin: "https://www.linkedin.com/in/elahekhodaverdi",
                 },
+                presence: {
+                    assistant: ["S03"],
+                    chief: ["F03", "S04"],
+                },
             },
         ],
     },
@@ -26,6 +30,9 @@ export default [
                     github: "https://github.com/Amir-rfz",
                     linkedin: "https://www.linkedin.com/in/amirhossein-arefzadeh-8612812ba/",
                 },
+                presence: {
+                    assistant: ["F03", "S04"],
+                },
             },
             {
                 name: "امیررضا نادی",
@@ -34,6 +41,9 @@ export default [
                 imageURL: "/img/TAs/AmirrezaNadi.jpg",
                 socials: {
                     github: "https://github.com/AmirrezaNadiCH",
+                },
+                presence: {
+                    assistant: ["S03", "F03", "S04"],
                 },
             },
             {
@@ -45,6 +55,9 @@ export default [
                     github: "https://github.com/dectre",
                     linkedin: "https://www.linkedin.com/in/amiralidh",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "بهاره عین اللهی",
@@ -53,6 +66,9 @@ export default [
                 imageURL: "/img/TAs/BahareEinollahi.png",
                 socials: {
                     github: "https://github.com/rayspring2",
+                },
+                presence: {
+                    assistant: ["S04"],
                 },
             },
             {
@@ -64,6 +80,9 @@ export default [
                     github: "https://github.com/ParsaExact",
                     linkedin: "https://www.linkedin.com/in/parsadaghigh",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "پارسا سعیدنیا",
@@ -73,6 +92,9 @@ export default [
                 socials: {
                     github: "https://github.com/Parsa-Saeednia",
                     linkedin: "https://www.linkedin.com/in/parsa-saeednia",
+                },
+                presence: {
+                    assistant: ["S04"],
                 },
             },
             {
@@ -84,6 +106,9 @@ export default [
                     github: "https://github.com/PariaPasehvarz",
                     linkedin: "https://www.linkedin.com/in/paria-pasehvarz-7597bb2b6",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "پریسا یحیی‌پور",
@@ -93,6 +118,9 @@ export default [
                 socials: {
                     github: "https://github.com/parisa-yahyapour",
                     linkedin: "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
+                },
+                presence: {
+                    assistant: ["S03", "F03", "S04"],
                 },
             },
             {
@@ -104,6 +132,9 @@ export default [
                     github: "https://github.com/hesamhrf",
                     linkedin: "https://ir.linkedin.com/in/hesam-ramezanian-b5a47a245",
                 },
+                presence: {
+                    assistant: ["S03", "F03", "S04"],
+                },
             },
             {
                 name: "ریحانه عین اللهی",
@@ -112,6 +143,9 @@ export default [
                 imageURL: "/img/TAs/ReyhaneEinollahi.jpg",
                 socials: {
                     github: "https://github.com/Rayhaneh-Einollahi",
+                },
+                presence: {
+                    assistant: ["S04"],
                 },
             },
             {
@@ -123,6 +157,9 @@ export default [
                     github: "https://github.com/sahroush",
                     linkedin: "https://linkdin.com/in/sahroush",
                 },
+                presence: {
+                    assistant: ["S03", "F03", "S04"],
+                },
             },
             {
                 name: "سهیل حاجیان‌منش",
@@ -132,6 +169,9 @@ export default [
                 socials: {
                     github: "https://github.com/SoheilHajianManesh",
                     linkedin: "https://linkedin.com/in/SoheilHajianManesh",
+                },
+                presence: {
+                    assistant: ["F03", "S04"],
                 },
             },
             {
@@ -143,6 +183,9 @@ export default [
                     github: "https://github.com/hmdmhmd2004",
                     linkedin: "https://www.linkedin.com/in/seyed-hamid-mahmoudi-2248512b1",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "صادق صمدی",
@@ -153,6 +196,9 @@ export default [
                     github: "https://github.com/imSaDy",
                     linkedin: "https://https://www.linkedin.com/in/sadegh-samadi-3643b11b7",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "طاها مجلسی",
@@ -162,6 +208,9 @@ export default [
                 socials: {
                     github: "https://github.com/tahamajs",
                 },
+                presence: {
+                    assistant: ["F03", "S04"],
+                },
             },
             {
                 name: "عرفان فلاحتی",
@@ -170,6 +219,9 @@ export default [
                 imageURL: "/img/TAs/ErfanFelahati.jpg",
                 socials: {
                     github: "https://github.com/erfan-f",
+                },
+                presence: {
+                    assistant: ["S04"],
                 },
             },
             {
@@ -181,6 +233,9 @@ export default [
                     github: "https://github.com/farjadfallah",
                     linkedin: "https://www.linkedin.com/in/farjad-fallah",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "فرشته باقری",
@@ -189,6 +244,9 @@ export default [
                 imageURL: "/img/TAs/FereshteBagheri.jpg",
                 socials: {
                     github: "https://github.com/FereshteBagheri",
+                },
+                presence: {
+                    assistant: ["F03", "S04"],
                 },
             },
             {
@@ -200,6 +258,9 @@ export default [
                     github: "https://github.com/kouroshalinaghi",
                     linkedin: "https://www.linkedin.com/in/kouroshalinaghi",
                 },
+                presence: {
+                    assistant: ["S03", "F03", "S04"],
+                },
             },
             {
                 name: "مجید صادقی‌نژاد",
@@ -210,6 +271,9 @@ export default [
                     github: "https://github.com/msns83",
                     linkedin: "https://www.linkedin.com/in/majid-sadeghinejad-5abb082b6/",
                 },
+                presence: {
+                    assistant: ["F03", "S04"],
+                },
             },
             {
                 name: "محمدعرفان دانائی",
@@ -219,6 +283,9 @@ export default [
                 socials: {
                     github: "https://github.com/medanaee",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "مهدی نائینی",
@@ -227,6 +294,9 @@ export default [
                 imageURL: "/img/TAs/MahdiNaeeni.jpg",
                 socials: {
                     github: "https://github.com/naienim",
+                },
+                presence: {
+                    assistant: ["F03", "S04"],
                 },
             },
             {
@@ -238,6 +308,9 @@ export default [
                     github: "https://github.com/mhieir",
                     linkedin: "https://www.linkedin.com/in/mhieir/",
                 },
+                presence: {
+                    assistant: ["S04"],
+                },
             },
             {
                 name: "مهراد لیویان",
@@ -247,6 +320,9 @@ export default [
                 socials: {
                     github: "https://github.com/mehradliviyan",
                     linkedin: "https://www.linkedin.com/in/mehrad-liviyan-a88462283",
+                },
+                presence: {
+                    assistant: ["F03", "S04"],
                 },
             },
         ],
@@ -262,6 +338,9 @@ export default [
                 socials: {
                     github: "https://github.com/AryanBastani",
                 },
+                presence: {
+                    assistant: ["F03"],
+                },
             },
             {
                 name: "امیرعلی وحیدی",
@@ -272,6 +351,9 @@ export default [
                     github: "https://github.com/Mohta3b",
                     linkedin: "https://www.linkedin.com/in/amirali-vahidi-b53094227/",
                 },
+                presence: {
+                    assistant: ["S03", "F03"],
+                },
             },
             {
                 name: "آوا میرمحمدمهدی",
@@ -280,6 +362,9 @@ export default [
                 imageURL: "/img/TAs/AvaMirmohammadmahdi.jpg",
                 socials: {
                     github: "https://github.com/avamirm",
+                },
+                presence: {
+                    assistant: ["S03", "F03"],
                 },
             },
             {
@@ -291,6 +376,9 @@ export default [
                     github: "https://github.com/PashaBarahimi",
                     linkedin: "https://www.linkedin.com/in/PashaBarahimi",
                 },
+                presence: {
+                    chief: ["S03"],
+                },
             },
             {
                 name: "سامان اسلامی نظری",
@@ -300,6 +388,9 @@ export default [
                 socials: {
                     github: "https://github.com/SamanEn",
                     linkedin: "https://www.linkedin.com/in/saman-eslami-nazari",
+                },
+                presence: {
+                    chief: ["S03"],
                 },
             },
             {
@@ -311,6 +402,9 @@ export default [
                     github: "https://github.com/erfanasgari21",
                     linkedin: "https://www.linkedin.com/in/erfan-asgari-b748701b4/",
                 },
+                presence: {
+                    assistant: ["S03", "F03"],
+                },
             },
             {
                 name: "عرفان میرشمس",
@@ -321,6 +415,9 @@ export default [
                     github: "https://github.com/erfan-mirshams",
                     linkedin: "https://www.linkedin.com/in/erfan-mirshams",
                 },
+                presence: {
+                    assistant: ["S03", "F03"],
+                },
             },
             {
                 name: "علی پادیاو",
@@ -330,6 +427,9 @@ export default [
                 socials: {
                     github: "https://github.com/alumpish",
                 },
+                presence: {
+                    assistant: ["S03", "F03"],
+                },
             },
             {
                 name: "علی حمزه‌پور",
@@ -338,6 +438,9 @@ export default [
                 imageURL: "/img/TAs/AliHamzepour.jpg",
                 socials: {
                     github: "https://github.com/AliHamze2002",
+                },
+                presence: {
+                    assistant: ["S03"],
                 },
             },
             {
@@ -349,6 +452,9 @@ export default [
                     github: "https://github.com/AliAtaollahi",
                     linkedin: "https://www.linkedin.com/in/ali-ataollahi-b46302281",
                 },
+                presence: {
+                    assistant: ["S03"],
+                },
             },
             {
                 name: "مبینا مهرآذر",
@@ -358,6 +464,9 @@ export default [
                 socials: {
                     github: "https://github.com/MobinaMhr",
                 },
+                presence: {
+                    assistant: ["S03", "F03"],
+                },
             },
             {
                 name: "مهدی نوری",
@@ -366,6 +475,9 @@ export default [
                 imageURL: "/img/TAs/MahdiNoori.jpg",
                 socials: {
                     github: "https://github.com/MahdiNoori2003",
+                },
+                presence: {
+                    assistant: ["S03"],
                 },
             },
             {
@@ -377,6 +489,9 @@ export default [
                     github: "https://github.com/MisaghM",
                     linkedin: "https://www.linkedin.com/in/misaghm",
                 },
+                presence: {
+                    assistant: ["S03", "F03"],
+                },
             },
             {
                 name: "نسا عباسی",
@@ -385,6 +500,9 @@ export default [
                 imageURL: "/img/TAs/NesaAbbasi.jpg",
                 socials: {
                     github: "https://github.com/Nesabbasi",
+                },
+                presence: {
+                    assistant: ["S03", "F03"],
                 },
             },
             {
@@ -395,6 +513,9 @@ export default [
                 socials: {
                     github: "https://github.com/Hadi-loo",
                     linkedin: "https://www.linkedin.com/in/hadi-babaloo/",
+                },
+                presence: {
+                    assistant: ["S03", "F03"],
                 },
             },
         ],
