@@ -22,6 +22,18 @@ export default [
         section: "دستیاران آموزشی",
         list: [
             {
+                name: "آرتین توسلی",
+                title: "ورودی 1402",
+                email: "artin.tavassoli2@gmail.com",
+                imageURL: "/img/TAs/ArtinTavassoli.jpg",
+                socials: {
+                    github: "https://github.com/Artin-Tavasoli",
+                },
+                presence: {
+                    assistant: ["F04"],
+                },
+            },
+            {
                 name: "امیرحسین عارف‌زاده",
                 title: "ورودی 1401",
                 email: "amirrfz2003@gmail.com",
@@ -137,6 +149,19 @@ export default [
                 },
             },
             {
+                name: "رضا چهرقانی",
+                title: "ورودی 1401",
+                email: "chehreghani.reza1@gmail.com",
+                imageURL: "/img/TAs/RezaChehreghani.jpg",
+                socials: {
+                    github: "https://github.com/reza-chehreghani",
+                    linkedin: "https://www.linkedin.com/in/reza-chehreghani-09455b269"
+                },
+                presence: {
+                    assistant: ["F04"],
+                },
+            },
+            {
                 name: "ریحانه عین اللهی",
                 title: "ورودی 1402",
                 email: "rayhaneheinollahi@gmail.com",
@@ -146,6 +171,19 @@ export default [
                 },
                 presence: {
                     assistant: ["S04"],
+                },
+            },
+            {
+                name: "سپنتا غنودی",
+                title: "ورودی 1402",
+                email: "sepanta.ghonoodi@gmail.com",
+                imageURL: "/img/TAs/SepantaGhonodi.jpg",
+                socials: {
+                    github: "https://github.com/sepanta-ghonoodi",
+                    linkedin: "www.linkedin.com/in/sepanta-ghonoodi-24460b1a5",
+                },
+                presence: {
+                    assistant: ["F04"],
                 },
             },
             {
@@ -250,6 +288,18 @@ export default [
                 },
             },
             {
+                name: "کوثر شیری",
+                title: "ورودی 1401",
+                email: "k.shiri82@gmail.com",
+                imageURL: "/img/TAs/KosarShiri.jpg",
+                socials: {
+                    github: "https://github.com/Kosar-sh",
+                },
+                presence: {
+                    assistant: ["F04"],
+                },
+            },
+            {
                 name: "کوروش علی‌نقی",
                 title: "ورودی 1401",
                 email: "kouroshalinaghi@gmail.com",
@@ -260,6 +310,18 @@ export default [
                 },
                 presence: {
                     assistant: ["S03", "F03", "S04"],
+                },
+            },
+            {
+                name: "مانی حسینی",
+                title: "ورودی 1402",
+                email: "manihosseini2005@gmail.com",
+                imageURL: "/img/TAs/ManiHosseini.jpg",
+                socials: {
+                    github: "https://github.com/manih1384",
+                },
+                presence: {
+                    assistant: ["F04"],
                 },
             },
             {
