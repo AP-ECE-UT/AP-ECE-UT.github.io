@@ -4,32 +4,31 @@ export default [
         section: "دستیاران ارشد",
         list: [
             {
-                name: "پریسا یحیی‌پور",
-                title: "ورودی 1401",
-                email: "parisa.yahyapour.fatideh@gmail.com",
-                imageURL: "/img/TAs/ParisaYahyapour.jpg",
+                name: "پارسا سعیدنیا",
+                title: "ورودی 1402",
+                email: "parsasaiednia@gmail.com",
+                imageURL: "/img/TAs/ParsaSaeednia.jpg",
                 socials: {
-                    github: "https://github.com/parisa-yahyapour",
-                    linkedin:
-                        "https://www.linkedin.com/in/parisa-yahyapour-fatideh-47418b284",
+                    github: "https://github.com/Parsa-Saeednia",
+                    linkedin: "https://www.linkedin.com/in/parsa-saeednia",
                 },
                 presence: {
-                    chief: ["F04"],
-                    assistant: ["S03", "F03", "S04"],
+                    chief: ["F05"],
+                    assistant: ["S04", "F04"],
                 },
             },
+            
             {
-                name: "کوروش علی‌نقی",
-                title: "ورودی 1401",
-                email: "kouroshalinaghi@gmail.com",
-                imageURL: "/img/TAs/KoroushAlinaghi.jpg",
+                name: "مانی حسینی",
+                title: "ورودی 1402",
+                email: "manihosseini2005@gmail.com",
+                imageURL: "/img/TAs/ManiHosseini.jpg",
                 socials: {
-                    github: "https://github.com/kouroshalinaghi",
-                    linkedin: "https://www.linkedin.com/in/kouroshalinaghi",
+                    github: "https://github.com/manih1384",
                 },
                 presence: {
-                    chief: ["F04"],
-                    assistant: ["S03", "F03", "S04"],
+                    chief: ["F05"],
+                    assistant: ["F04"],
                 },
             },
         ],
