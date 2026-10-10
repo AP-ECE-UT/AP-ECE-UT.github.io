@@ -102,7 +102,7 @@ export default [
             },
             {
                 name: "پارسا حسنی",
-                title: "ورودی 1402",
+                title: "ورودی 1403",
                 email: "parsa.hsn06@gmail.com",
                 imageURL: "/img/TAs/ParsaHasani.jpg",
                 socials: {
@@ -127,7 +127,7 @@ export default [
             },
             {
                 name: "رضا محمدی",
-                title: "ورودی 14XX",
+                title: "ورودی 1403",
                 email: "rz.mhm.2005@gmail.com",
                 imageURL: "/img/TAs/RezaMohammadi.jpg",
                 socials: {
@@ -140,7 +140,7 @@ export default [
             },
             {
                 name: "سارینا محمودی",
-                title: "ورودی 14XX",
+                title: "ورودی 1403",
                 email: "sarinam496@gmail.com",
                 imageURL: "/img/TAs/SarinaMahmoudi.jpg",
                 socials: {
@@ -152,7 +152,7 @@ export default [
             },
             {
                 name: "سامان رکرک",
-                title: "ورودی 14XX",
+                title: "ورودی 1403",
                 email: "saman.rokrok85@gmail.com",
                 imageURL: "/img/TAs/SamanRokrok.jpg",
                 socials: {
@@ -178,7 +178,7 @@ export default [
             },,
             {
                 name: "شایان ملکی",
-                title: "ورودی 14XX",
+                title: "ورودی 1402",
                 email: "malekishayan86@gmail.com",
                 imageURL: "/img/TAs/ShayanMaleki.jpg",
                 socials: {
@@ -190,7 +190,7 @@ export default [
             },
             {
                 name: "شهداد فاطمی",
-                title: "ورودی 14XX",
+                title: "ورودی 1403",
                 email: "shahdad.fatemi@gmail.com",
                 imageURL: "/img/TAs/ShahdadFatemi.jpg",
                 socials: {
@@ -203,7 +203,7 @@ export default [
             },
             {
                 name: "شهراد کیانی",
-                title: "ورودی 14XX",
+                title: "ورودی 1403",
                 email: "ShahradKiani2007@gmail.com",
                 imageURL: "/img/TAs/ShahradKiani.jpg",
                 socials: {
@@ -216,7 +216,7 @@ export default [
             },
             {
                 name: "علی دهقانی",
-                title: "ورودی 14XX",
+                title: "ورودی 1403",
                 email: "alidehghani8400@gmail.com",
                 imageURL: "/img/TAs/AliDehghani.jpg",
                 socials: {
@@ -229,7 +229,7 @@ export default [
             },
             {
                 name: "محمدحسین شفیعی",
-                title: "ورودی 14XX",
+                title: "ورودی 1402",
                 email: "mhmdhsinam.83@gmail.com",
                 imageURL: "/img/TAs/MohammadHosseinShafiei.jpg",
                 socials: {
@@ -319,7 +319,7 @@ export default [
                 name: "مونا شهرکی",
                 title: "ورودی 1402",
                 email: "monashahraki389@gmail.com",
-                imageURL: "/img/TAs/MonaShahraki.jpg",
+                imageURL: "/img/TAs/MonaShahraki.webp",
                 socials: {
                     github: "https://github.com/Mona-Shahraki",
                 },
