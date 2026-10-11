@@ -91,7 +91,7 @@ export default [
                 name: "امیرعلی دهقانی",
                 title: "ورودی 1403",
                 email: "amirali.dh84@gmail.com",
-                imageURL: "/img/TAs/AmirَliDehghani.jpg", 
+                imageURL: "/img/TAs/AmirAliDehghani.jpg", 
                 socials: {
                     github: "https://github.com/dectre",
                     linkedin: "https://www.linkedin.com/in/amiralidh/",
