@@ -116,7 +116,7 @@ export default [
                 name: "حسین فتحی",
                 title: "ورودی 1403",
                 email: "hoseinfthii@gmail.com",
-                imageURL: "/img/TAs/HosseinFathi.jpg",
+                imageURL: "/img/TAs/HosseinFathi.JPG",
                 socials: {
                     github: "https://github.com/HoseinFathi1",
                     linkedin: "https://www.linkedin.com/in/hossein-fathi-53b6a2436",
@@ -205,7 +205,7 @@ export default [
                 name: "شهراد کیانی",
                 title: "ورودی 1403",
                 email: "ShahradKiani2007@gmail.com",
-                imageURL: "/img/TAs/ShahradKiani.jpg",
+                imageURL: "/img/TAs/ShahradKiani.JPG",
                 socials: {
                     github: "https://github.com/ShahradKiani2007",
                     linkedin: "https://www.linkedin.com/in/shahradkiani/",
