@@ -10,7 +10,7 @@ export default function FooterDuck() {
                     <br className={styles.footerBreak} />
                     <span className={styles.dash}>{" - "}</span>
                     {" دانشکده مهندسی برق و کامپیوتر  - دانشکدگان فنی دانشگاه تهران - "}
-                    {"پاییز ۱۴۰۳"}
+                    {"پاییز 1405"}
                 </div>
             </div>
             <img src="/img/duck-waving.webp" className={styles.duck} alt="Duck" />
