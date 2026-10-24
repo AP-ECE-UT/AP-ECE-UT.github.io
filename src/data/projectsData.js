@@ -2,6 +2,8 @@
 
 export default [
     {
+        slug: "f03",
+        icon: "🍂",
         section: "ترم پاییز 1403",
         list: [
             {
@@ -70,6 +72,8 @@ export default [
         ],
     },
     {
+        slug: "s03",
+        icon: "🌱",
         section: "ترم بهار 1403",
         list: [
             {
@@ -138,6 +142,8 @@ export default [
         ],
     },
     {
+        slug: "f02",
+        icon: "🍂",
         section: "ترم پاییز 1402",
         list: [
             {
