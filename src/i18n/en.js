@@ -61,6 +61,9 @@ export default {
             spring: "Spring",
         },
     },
+        common: {
+        comments: "Comments",
+    },
     langToggle: {
         label: "فا",
         title: "Switch language to Persian",

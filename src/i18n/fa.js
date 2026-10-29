@@ -61,6 +61,9 @@ export default {
             spring: "بهار",
         },
     },
+        common: {
+        comments: "نظرات",
+    },
     langToggle: {
         label: "EN",
         title: "تغییر زبان به انگلیسی",
