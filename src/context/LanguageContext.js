@@ -5,6 +5,7 @@ import en from "@site/src/i18n/en";
 
 const STORAGE_KEY = "ap-lang";
 const DICTIONARIES = { fa, en };
+const DIRECTIONS = { fa: "rtl", en: "ltr" };
 const DEFAULT_LANG = "fa";
 
 function lookup(dict, key) {
@@ -31,6 +32,21 @@ export function LanguageProvider({ children }) {
             // localStorage may be unavailable (private mode, blocked storage)
         }
     }, []);
+
+    // Keep <html lang> and <html dir> in sync with the selected language.
+    // Docusaurus (react-helmet) may rewrite these attributes on navigation,
+    // so we re-apply them whenever they change.
+    useEffect(() => {
+        const root = document.documentElement;
+        const apply = () => {
+            if (root.lang !== lang) root.lang = lang;
+            if (root.dir !== DIRECTIONS[lang]) root.dir = DIRECTIONS[lang];
+        };
+        apply();
+        const observer = new MutationObserver(apply);
+        observer.observe(root, { attributes: true, attributeFilter: ["lang", "dir"] });
+        return () => observer.disconnect();
+    }, [lang]);
 
     const setLang = useCallback(next => {
         if (!DICTIONARIES[next]) return;
