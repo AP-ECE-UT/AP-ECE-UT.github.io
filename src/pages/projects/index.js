@@ -8,14 +8,14 @@ import { useLanguage } from "@site/src/context/LanguageContext";
 import projectsData from "@site/src/data/projectsData";
 
 export default function ProjectsIndexPage() {
-    const { t } = useLanguage();
+    const { t, lang } = useLanguage();
     const title = t("projects.archiveTitle");
     const desc = t("projects.archiveDescription");
 
     return (
         <Layout title={title} description={desc}>
             <HomepageHeader title={title} subtitle={desc} />
-            <main style={{ flexGrow: 1 }}>
+                        <main dir={lang === "en" ? "ltr" : "rtl"} style={{ flexGrow: 1 }}>
                 <section className="padding-vert--lg">
                     <div className="container margin-top--lg">
                         <div className="row">
