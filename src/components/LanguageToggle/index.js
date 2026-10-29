@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import IconLanguage from "@theme/Icon/Language";
 
 import { useLanguage } from "@site/src/context/LanguageContext";
 
@@ -14,7 +15,8 @@ export default function LanguageToggle({ mobile, className }) {
             onClick={toggleLang}
             title={t("langToggle.title")}
             aria-label={t("langToggle.title")}>
-            {t("langToggle.label")}
+            <IconLanguage width={20} height={20} />
+            <span className={styles.label}>{t("langToggle.label")}</span>
         </button>
     );
 }
