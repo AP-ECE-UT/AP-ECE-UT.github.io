@@ -1,18 +1,36 @@
 import Layout from "@theme/Layout";
 
 import HomepageHeader from "@site/src/components/HomepageHeader";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import TermCard from "@site/src/components/TermCard";
 import FooterDuck from "@site/src/components/FooterDuck";
 import { useLanguage } from "@site/src/context/LanguageContext";
 
-export default function HomePage() {
+import projectsData from "@site/src/data/projectsData";
+
+export default function ProjectsIndexPage() {
     const { t } = useLanguage();
+    const title = t("projects.archiveTitle");
+    const desc = t("projects.archiveDescription");
 
     return (
-        <Layout title={t("site.title")} description={t("home.tagline")}>
-            <HomepageHeader title={t("site.title")} subtitle={t("home.tagline")} />
+        <Layout title={title} description={desc}>
+            <HomepageHeader title={title} subtitle={desc} />
             <main style={{ flexGrow: 1 }}>
-                <HomepageFeatures />
+                <section className="padding-vert--lg">
+                    <div className="container margin-top--lg">
+                        <div className="row">
+                            {projectsData.map((term) => (
+                                <TermCard
+                                    key={term.slug}
+                                    slug={term.slug}
+                                    icon={term.icon}
+                                    section={term.section}
+                                    count={term.list.length}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
             </main>
             <FooterDuck />
         </Layout>
