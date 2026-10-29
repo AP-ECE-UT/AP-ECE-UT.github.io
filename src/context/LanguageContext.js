@@ -3,6 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import fa from "@site/src/i18n/fa";
 import en from "@site/src/i18n/en";
 import toFaNum from "@site/src/utils/toFaNum";
+import { notifyLang, syncLang } from "@site/src/i18n/langStore";
 const STORAGE_KEY = "ap-lang";
 const DICTIONARIES = { fa, en };
 const DIRECTIONS = { fa: "rtl", en: "ltr" };
@@ -33,7 +34,12 @@ export function LanguageProvider({ children }) {
             // localStorage may be unavailable (private mode, blocked storage)
         }
     }, []);
-
+        // Mirror the language outside React (see i18n/Translate.js). The value is assigned during
+    // render so that children rendered in this pass see it; listeners are notified in an effect.
+    syncLang(lang);
+    useEffect(() => {
+        notifyLang();
+    }, [lang]);
     // Keep <html lang> and <html dir> in sync with the selected language.
     // Docusaurus (react-helmet) may rewrite these attributes on navigation,
     // so we re-apply them whenever they change.
