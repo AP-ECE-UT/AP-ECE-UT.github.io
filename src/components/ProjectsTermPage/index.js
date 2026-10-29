@@ -14,7 +14,7 @@ import termLabel from "@site/src/utils/termLabel";
 
 export default function ProjectsTermPage({ slug }) {
     const language = useLanguage();
-    const { t } = language;
+    const { t, lang } = language;
     const term = projectsData.find((t) => t.slug === slug);
 
     if (!term) {
@@ -35,7 +35,7 @@ export default function ProjectsTermPage({ slug }) {
     return (
         <Layout title={title} description={desc}>
             <HomepageHeader title={label} subtitle={desc} />
-            <main style={{ flexGrow: 1 }}>
+                        <main dir={lang === "en" ? "ltr" : "rtl"} style={{ flexGrow: 1 }}>
                 <section className="padding-vert--lg">
                     <div className="container">
                         <Link to="/projects">{t("projects.backToTerms")}</Link>
