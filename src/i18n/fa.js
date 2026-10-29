@@ -44,6 +44,23 @@ export default {
         },
         entryYear: "ورودی",
     },
+        projects: {
+        archiveTitle: "آرشیو پروژه‌ها",
+        archiveDescription: "ترم موردنظر خود را برای مشاهده صورت مسئله و کد پاسخ پروژه‌ها انتخاب کنید",
+        termDescription: "آرشیو صورت مسئله و کد پاسخ پروژه‌های این ترم",
+        backToTerms: "← بازگشت به انتخاب ترم",
+        backToArchive: "بازگشت به آرشیو پروژه‌ها",
+        notFoundTitle: "ترم پیدا نشد",
+        notFoundHeading: "ترم موردنظر پیدا نشد",
+        project: "پروژه",
+        projectCount: "پروژه",
+        description: "صورت پروژه",
+        solution: "پاسخ نمونه",
+        terms: {
+            fall: "پاییز",
+            spring: "بهار",
+        },
+    },
     langToggle: {
         label: "EN",
         title: "تغییر زبان به انگلیسی",
