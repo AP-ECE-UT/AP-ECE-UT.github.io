@@ -1,5 +1,8 @@
 // Persian (default) dictionary. Keys are nested; use t("navbar.course") etc.
 export default {
+    site: {
+        title: "برنامه‌سازی پیشرفته",
+    },
     navbar: {
         course: "محتوای درس",
         tutorials: "آموزش‌ها",

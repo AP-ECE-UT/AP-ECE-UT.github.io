@@ -88,6 +88,10 @@ const config = {
                         label: "دستیاران",
                         position: "right",
                     },
+                    {
+                        type: "custom-languageToggle",
+                        position: "right",
+                    },
                 ],
             },
             prism: {
