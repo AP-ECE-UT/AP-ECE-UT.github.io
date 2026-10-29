@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 
 import fa from "@site/src/i18n/fa";
 import en from "@site/src/i18n/en";
-
+import toFaNum from "@site/src/utils/toFaNum";
 const STORAGE_KEY = "ap-lang";
 const DICTIONARIES = { fa, en };
 const DIRECTIONS = { fa: "rtl", en: "ltr" };
@@ -17,6 +17,7 @@ const LanguageContext = createContext({
     setLang: () => {},
     toggleLang: () => {},
     t: key => lookup(fa, key) ?? key,
+    num: value => toFaNum(String(value)),
 });
 
 export function LanguageProvider({ children }) {
@@ -64,7 +65,10 @@ export function LanguageProvider({ children }) {
         [lang]
     );
 
-    const value = useMemo(() => ({ lang, setLang, toggleLang, t }), [lang, setLang, toggleLang, t]);
+        // Digits: Persian digits in fa mode, Latin digits in en mode.
+    const num = useCallback(value => (lang === "fa" ? toFaNum(String(value)) : String(value)), [lang]);
+
+    const value = useMemo(() => ({ lang, setLang, toggleLang, t, num }), [lang, setLang, toggleLang, t, num]);
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
