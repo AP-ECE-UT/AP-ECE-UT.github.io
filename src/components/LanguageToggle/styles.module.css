@@ -1,0 +1,21 @@
+.toggle {
+  padding: 0.25rem 0.65rem;
+  margin-inline: 0.25rem;
+  color: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.toggle:hover {
+  color: var(--ifm-color-content-inverse);
+  background-color: var(--ifm-color-primary);
+}
+
+.mobile {
+  margin: 0.5rem var(--ifm-menu-link-padding-horizontal);
+}
