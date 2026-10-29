@@ -40,11 +40,10 @@ export function LanguageProvider({ children }) {
         const root = document.documentElement;
         const apply = () => {
             if (root.lang !== lang) root.lang = lang;
-            if (root.dir !== DIRECTIONS[lang]) root.dir = DIRECTIONS[lang];
         };
         apply();
         const observer = new MutationObserver(apply);
-        observer.observe(root, { attributes: true, attributeFilter: ["lang", "dir"] });
+        observer.observe(root, { attributes: true, attributeFilter: ["lang"] });
         return () => observer.disconnect();
     }, [lang]);
 
