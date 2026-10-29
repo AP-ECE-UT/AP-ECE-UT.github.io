@@ -54,8 +54,8 @@ export default {
         notFoundHeading: "The requested term was not found",
         project: "Project",
         projectCount: "projects",
-        description: "Project description",
-        solution: "Sample solution",
+        description: "Description",
+        solution: "Solution",
         terms: {
             fall: "Fall",
             spring: "Spring",
