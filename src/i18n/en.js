@@ -44,6 +44,23 @@ export default {
         },
         entryYear: "Entry year",
     },
+        projects: {
+        archiveTitle: "Projects Archive",
+        archiveDescription: "Choose a term to view the project descriptions and sample solutions",
+        termDescription: "Archive of the project descriptions and sample solutions for this term",
+        backToTerms: "← Back to term selection",
+        backToArchive: "Back to the projects archive",
+        notFoundTitle: "Term not found",
+        notFoundHeading: "The requested term was not found",
+        project: "Project",
+        projectCount: "projects",
+        description: "Project description",
+        solution: "Sample solution",
+        terms: {
+            fall: "Fall",
+            spring: "Spring",
+        },
+    },
     langToggle: {
         label: "فا",
         title: "Switch language to Persian",
