@@ -1,3 +1,4 @@
+import path from "path";
 import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
@@ -26,7 +27,23 @@ const config = {
             },
         },
     },
-
+        plugins: [
+        // Replaces "@docusaurus/Translate" so built-in theme texts follow the language toggle.
+        function translateAliasPlugin() {
+            return {
+                name: "translate-alias-plugin",
+                configureWebpack() {
+                    return {
+                        resolve: {
+                            alias: {
+                                "@docusaurus/Translate": path.join(process.cwd(), "src/i18n/Translate.js"),
+                            },
+                        },
+                    };
+                },
+            };
+        },
+    ],
     presets: [
         [
             "classic",
