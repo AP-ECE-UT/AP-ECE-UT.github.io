@@ -53,6 +53,22 @@ pre,
   direction: ltr;
   unicode-bidi: isolate;
 }
+html[dir="ltr"] .navbar-sidebar {
+  left: 0;
+  right: auto;
+  transform: translate3d(-100%, 0, 0);
+}
+
+html[dir="ltr"] .navbar-sidebar--show .navbar-sidebar {
+  transform: none;
+}
+html[dir="ltr"] .navbar-sidebar__items--show-secondary {
+  transform: translate3d(calc(var(--ifm-navbar-sidebar-width) * -1), 0, 0);
+}
+
+html[dir="ltr"] .navbar-sidebar__back {
+  text-align: left;
+}
 /*rtl:end:ignore*/
 
 .markdown img {
@@ -80,7 +96,19 @@ pre,
 .navbar__title {
   font-weight: 800;
 }
+html[lang="en"] .navbar__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
 
+html[lang="en"] .navbar__link {
+  font-weight: 500;
+}
+/* backdrop-filter makes the navbar the containing block of the fixed mobile menu and breaks it */
+.navbar.navbar-sidebar--show {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
 .navbar__link {
   font-weight: 600;
   border-radius: var(--ifm-global-radius);
@@ -250,5 +278,15 @@ html[dir="ltr"] .markdown > :not(pre):not(.theme-admonition) {
 }
 html[dir="ltr"] a[class*="tag"] {
   unicode-bidi: plaintext;
+}
+html[dir="ltr"] [class*="authorSocialLink"] {
+  margin-left: 0;
+  margin-right: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* Duck logo faces the other way in English */
+html[dir="ltr"] .navbar__logo img {
+  transform: scaleX(-1);
 }
 /*rtl:end:ignore*/

@@ -42,7 +42,7 @@ export default {
             current: "Teaching Assistants",
             former: "Former Teaching Assistants",
         },
-        entryYear: "Entry year",
+        entryYear: "Entry ",
     },
     projects: {
         archiveTitle: "Projects Archive",

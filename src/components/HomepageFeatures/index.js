@@ -42,7 +42,7 @@ export default function HomepageFeatures() {
     return (
         <section className="padding-vert--lg">
             <div className="container">
-                <div className="row">
+                <div className="row" dir="rtl">
                     {featureList.map((props, idx) => (
                         <Feature key={idx} featureKey={props.key} imageSrc={props.imageSrc} link={props.link} />
                     ))}

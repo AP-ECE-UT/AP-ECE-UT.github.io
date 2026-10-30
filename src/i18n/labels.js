@@ -152,7 +152,7 @@ const labels = {
 export function translateEntryYear(title) {
     const match = typeof title === "string" && title.match(/^ورودی\s*([0-9۰-۹]+)$/);
     if (!match) return title;
-    return `Entry year ${match[1].replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d))}`;
+    return `Entry ${match[1].replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d))}`;
 }
 
 const normalize = text => text.replace(/\s+/g, " ").trim();
