@@ -54,11 +54,13 @@ export function LanguageProvider({ children }) {
         const root = document.documentElement;
         const apply = () => {
             if (root.lang !== lang) root.lang = lang;
+            const dir = lang === "en" ? "ltr" : "rtl";
+            if (root.dir !== dir) root.dir = dir;
             if (root.dataset.uiLang !== lang) root.dataset.uiLang = lang;
         };
         apply();
         const observer = new MutationObserver(apply);
-        observer.observe(root, { attributes: true, attributeFilter: ["lang"] });
+        observer.observe(root, { attributes: true, attributeFilter: ["lang", "dir"] });
         return () => observer.disconnect();
     }, [lang]);
 

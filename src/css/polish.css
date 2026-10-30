@@ -186,3 +186,69 @@ footer {
     font-size: 1.7rem;
   }
 }
+
+/* ---------- English (LTR) fixes ----------
+   The site is built as RTL, so rtlcss mirrors every physical rule. In English the page is
+   dir="ltr", which means those mirrored rules must be flipped back. Protected from rtlcss. */
+/*rtl:begin:ignore*/
+html[dir="ltr"] .navbar__logo {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+html[dir="ltr"] .menu__link--sublist-caret::after,
+html[dir="ltr"] .menu__caret::before {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .menu__list-item--collapsed .menu__link--sublist-caret::after,
+html[dir="ltr"] .menu__list-item--collapsed .menu__caret::before {
+  transform: rotate(90deg);
+}
+
+html[dir="ltr"] .theme-admonition {
+  border-right-width: 0;
+  border-left: 5px solid var(--ifm-alert-border-color);
+}
+
+html[dir="ltr"] .theme-admonition [class*="admonitionIcon"] {
+  margin-left: 0;
+  margin-right: 0.4em;
+}
+
+html[dir="ltr"] .pagination-nav__link--next {
+  text-align: right;
+}
+
+html[dir="ltr"] .pagination-nav__link--prev {
+  text-align: left;
+}
+
+html[dir="ltr"] .breadcrumbs__item:not(:last-child)::after {
+  transform: none;
+}
+
+html[dir="ltr"] [class*="email_"] {
+  padding-right: 0;
+  padding-left: calc(7rem - 4px);
+  direction: ltr;
+}
+
+html[dir="ltr"] [class*="codeBlockTitle"] {
+  text-align: left;
+}
+
+html[dir="ltr"] [class*="linkItem_"] img {
+  margin-right: 4px;
+  margin-left: 0;
+}
+
+/* Persian lesson/blog text shown inside the English (LTR) page keeps its own direction. */
+html[dir="ltr"] .markdown > :not(pre):not(.theme-admonition) {
+  unicode-bidi: plaintext;
+}
+html[dir="ltr"] a[class*="tag"] {
+  unicode-bidi: plaintext;
+}
+/*rtl:end:ignore*/
