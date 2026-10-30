@@ -10,3 +10,26 @@
 .featureLink:hover {
   text-decoration: none;
 }
+
+.feature {
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: transform var(--ifm-transition-fast) var(--ifm-transition-timing-default),
+    box-shadow var(--ifm-transition-fast) var(--ifm-transition-timing-default),
+    border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  border-color: var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.featureSvg {
+  transition: transform 0.25s ease;
+}
+
+.feature:hover .featureSvg {
+  transform: scale(1.05) rotate(-1.5deg);
+}

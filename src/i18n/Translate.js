@@ -9,6 +9,7 @@ import { interpolate } from "@docusaurus/Interpolate";
 import codeTranslations from "@generated/codeTranslations";
 
 import { getCurrentLang, subscribeLang } from "@site/src/i18n/langStore";
+import { isolate } from "@site/src/i18n/bidi";
 
 function getLocalizedMessage({ id, message }) {
     if (typeof id === "undefined" && typeof message === "undefined") {
@@ -35,5 +36,7 @@ export default function Translate({ children, id, values }) {
         console.warn("Illegal <Translate> children", children);
         throw new Error("The Docusaurus <Translate> component only accept simple string values");
     }
-    return <>{interpolate(getLocalizedMessage({ message: children, id }), values)}</>;
+    const message = getLocalizedMessage({ message: children, id });
+    // English text is isolated so its punctuation renders correctly inside the RTL layout.
+    return <>{interpolate(getCurrentLang() === "en" ? isolate(message) : message, values)}</>;
 }

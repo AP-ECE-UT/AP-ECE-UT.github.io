@@ -1,0 +1,188 @@
+/* ------------------------------------------------------------------
+   Visual polish + text direction rules.
+   The page layout is RTL in both languages (component order never changes).
+   ------------------------------------------------------------------ */
+
+:root {
+  --ap-radius: 14px;
+  --ap-radius-sm: 10px;
+  --ifm-line-height-base: 1.8;
+  --ifm-heading-line-height: 1.35;
+  --ifm-global-radius: 8px;
+  --ifm-navbar-shadow: 0 1px 14px rgb(0 0 0 / 8%);
+  --ap-hero-start: var(--ifm-color-primary-darker);
+  --ap-hero-end: var(--ifm-color-primary-lighter);
+}
+
+[data-theme="dark"] {
+  --ifm-navbar-shadow: 0 1px 14px rgb(0 0 0 / 45%);
+  --ap-hero-start: var(--ifm-color-primary-darkest);
+  --ap-hero-end: var(--ifm-color-primary-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--ifm-color-primary-lightest);
+  color: #fff;
+}
+
+/* ---------- Text direction ---------- */
+
+/* Docusaurus mirrors all CSS for the Persian (RTL) locale at build time, so the page layout is
+   RTL in both languages. English text is isolated as LTR in the components (see i18n/bidi.js).
+   Persian text needs no extra rules. */
+
+html[lang="fa"] .markdown {
+  line-height: 2;
+}
+
+/* Code is always LTR, also inside RTL text. The ignore directives stop the RTL build step
+   from mirroring these rules. */
+/*rtl:begin:ignore*/
+pre,
+.theme-code-block,
+.markdown pre {
+  direction: ltr;
+  text-align: left;
+}
+
+.markdown code {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+/*rtl:end:ignore*/
+
+.markdown img {
+  border-radius: var(--ap-radius-sm);
+}
+
+.markdown > h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.markdown table {
+  display: table;
+  width: 100%;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background-color: color-mix(in srgb, var(--ifm-navbar-background-color) 88%, transparent);
+}
+
+.navbar__title {
+  font-weight: 800;
+}
+
+.navbar__link {
+  font-weight: 600;
+  border-radius: var(--ifm-global-radius);
+  transition: color var(--ifm-transition-fast), background var(--ifm-transition-fast);
+}
+
+/* ---------- Hero ---------- */
+
+.hero--primary {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgb(255 255 255 / 20%), transparent 42%),
+    radial-gradient(circle at 88% 85%, rgb(255 255 255 / 14%), transparent 40%),
+    linear-gradient(135deg, var(--ap-hero-start), var(--ap-hero-end));
+}
+
+.hero__title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.hero__subtitle {
+  opacity: 0.94;
+  max-width: 54rem;
+  margin-inline: auto;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  border-radius: var(--ap-radius);
+}
+
+.card.cardContainer {
+  transition-property: border, box-shadow, transform;
+}
+
+.card.cardContainer:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- Docs: sidebar, pagination, admonitions ---------- */
+
+.menu__link {
+  border-radius: var(--ifm-global-radius);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: 700;
+}
+
+.theme-doc-sidebar-container {
+  border-inline-end: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.pagination-nav__link {
+  border-radius: var(--ap-radius);
+  transition: border-color var(--ifm-transition-fast), box-shadow var(--ifm-transition-fast),
+    transform var(--ifm-transition-fast);
+}
+
+.pagination-nav__link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.theme-admonition {
+  border-radius: var(--ap-radius-sm);
+  box-shadow: none;
+}
+
+.breadcrumbs__link {
+  border-radius: 999px;
+}
+
+/* ---------- Blog ---------- */
+
+.blog-post-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.blog-wrapper article {
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.blog-wrapper article:last-of-type {
+  border-bottom: none;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  font-size: 0.95rem;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 996px) {
+  .blog-post-title {
+    font-size: 1.7rem;
+  }
+}

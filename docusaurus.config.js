@@ -27,7 +27,8 @@ const config = {
             },
         },
     },
-        plugins: [
+
+    plugins: [
         // Replaces "@docusaurus/Translate" so built-in theme texts follow the language toggle.
         function translateAliasPlugin() {
             return {
@@ -44,6 +45,7 @@ const config = {
             };
         },
     ],
+
     presets: [
         [
             "classic",
@@ -61,7 +63,7 @@ const config = {
                     blogSidebarCount: 'ALL',
                 },
                 theme: {
-                    customCss: "./src/css/global.css",
+                    customCss: ["./src/css/global.css", "./src/css/polish.css"],
                 },
             },
         ],

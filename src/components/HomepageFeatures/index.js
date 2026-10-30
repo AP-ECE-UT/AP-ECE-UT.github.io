@@ -24,15 +24,15 @@ const featureList = [
 ];
 
 function Feature({ featureKey, imageSrc, link }) {
-    const { t } = useLanguage();
+    const { t, ltr } = useLanguage();
     return (
         <div className="col col--4 text--center">
-            <div className="padding-horiz--md">
+            <div className={`padding--md ${styles.feature}`}>
                 <Link to={link} className={styles.featureLink}>
                     <img className={styles.featureSvg} src={imageSrc} alt="Duck" />
-                    <Heading as="h3">{t(`home.features.${featureKey}.title`)}</Heading>
+                    <Heading as="h3">{ltr(t(`home.features.${featureKey}.title`))}</Heading>
                 </Link>
-                <p>{t(`home.features.${featureKey}.description`)}</p>
+                <p>{ltr(t(`home.features.${featureKey}.description`))}</p>
             </div>
         </div>
     );

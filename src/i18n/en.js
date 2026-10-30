@@ -10,7 +10,7 @@ export default {
         projects: "Projects",
         assistants: "Assistants",
     },
-        home: {
+    home: {
         tagline: "Website of the Advanced Programming course at the University of Tehran!",
         features: {
             tutorials: {
@@ -44,7 +44,7 @@ export default {
         },
         entryYear: "Entry year",
     },
-        projects: {
+    projects: {
         archiveTitle: "Projects Archive",
         archiveDescription: "Choose a term to view the project descriptions and sample solutions",
         termDescription: "Archive of the project descriptions and sample solutions for this term",
@@ -61,7 +61,7 @@ export default {
             spring: "Spring",
         },
     },
-        common: {
+    common: {
         comments: "Comments",
     },
     langToggle: {

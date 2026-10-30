@@ -10,7 +10,7 @@ export default {
         projects: "پروژه‌ها",
         assistants: "دستیاران",
     },
-        home: {
+    home: {
         tagline: "سایت درس برنامه‌سازی پیشرفته دانشگاه تهران!",
         features: {
             tutorials: {
@@ -44,7 +44,7 @@ export default {
         },
         entryYear: "ورودی",
     },
-        projects: {
+    projects: {
         archiveTitle: "آرشیو پروژه‌ها",
         archiveDescription: "ترم موردنظر خود را برای مشاهده صورت مسئله و کد پاسخ پروژه‌ها انتخاب کنید",
         termDescription: "آرشیو صورت مسئله و کد پاسخ پروژه‌های این ترم",
@@ -61,7 +61,7 @@ export default {
             spring: "بهار",
         },
     },
-        common: {
+    common: {
         comments: "نظرات",
     },
     langToggle: {
