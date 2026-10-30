@@ -1,0 +1,31 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 2rem;
+  padding: 0 0.6rem;
+  margin-inline: 0.25rem;
+  border-radius: 1rem;
+  color: var(--ifm-navbar-link-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  /* The navbar is a flex row: a higher order puts this button after the color-mode toggle. */
+  order: 10;
+  -webkit-tap-highlight-color: transparent;
+  transition: background var(--ifm-transition-fast);
+}
+
+.toggle:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.label {
+  line-height: 1;
+}
+
+.mobile {
+  order: 0;
+  margin: 0.5rem var(--ifm-menu-link-padding-horizontal);
+  color: var(--ifm-menu-color);
+}

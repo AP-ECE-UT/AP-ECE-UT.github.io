@@ -3,22 +3,26 @@ import ClampLines from "react-clamp-lines";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
 
-import toFaNum from "@site/src/utils/toFaNum";
+import projectsDataEn from "@site/src/data/projectsDataEn";
+import { useLanguage } from "@site/src/context/LanguageContext";
 import styles from "./styles.module.css";
 import "@site/src/css/card.css";
 
 function CardLayout({ icon, title, description, number, pdf, code }) {
+    const { lang, t, num } = useLanguage();
+
     return (
         <div className="card padding--lg cardContainer">
             <Heading as="h3" className={clsx("text--truncate", styles.cardTitle)} title={title}>
                 {icon}
-                {" پروژه "}
-                {toFaNum(number.toString())}
+                {" " + t("projects.project") + " "}
+                {num(number)}
                 {"- "}
                 {title}
             </Heading>
             {description && (
                 <ClampLines
+                    key={lang}
                     text={description}
                     id={`cl-${icon}${number}`}
                     lines={2}
@@ -33,13 +37,13 @@ function CardLayout({ icon, title, description, number, pdf, code }) {
                 <div className={styles.linkItem}>
                     <Link href={pdf}>
                         <img src="/icon/document.svg" alt="Description" />
-                        <span>صورت پروژه</span>
+                        <span>{t("projects.description")}</span>
                     </Link>
                 </div>
                 <div className={styles.linkItem}>
                     <Link href={code}>
                         <img src="/icon/code.svg" alt="Code" className={styles.themeInvert}/>
-                        <span>پاسخ نمونه</span>
+                        <span>{t("projects.solution")}</span>
                     </Link>
                 </div>
             </div>
@@ -47,10 +51,13 @@ function CardLayout({ icon, title, description, number, pdf, code }) {
     );
 }
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ slug, project }) {
+    const { lang } = useLanguage();
+    const en = lang === "en" ? projectsDataEn[slug]?.[project.number] : null;
+
     return (
         <div className="col col--4 margin-bottom--lg">
-            <CardLayout {...project} />
+            <CardLayout {...project} {...en} />
         </div>
     );
 }

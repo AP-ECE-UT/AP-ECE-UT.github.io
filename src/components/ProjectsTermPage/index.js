@@ -5,41 +5,45 @@ import Link from "@docusaurus/Link";
 import HomepageHeader from "@site/src/components/HomepageHeader";
 import ProjectCard from "@site/src/components/ProjectCard";
 import FooterDuck from "@site/src/components/FooterDuck";
+import { useLanguage } from "@site/src/context/LanguageContext";
 
 import projectsData from "@site/src/data/projectsData";
-import toFaNum from "@site/src/utils/toFaNum";
+import termLabel from "@site/src/utils/termLabel";
 
 // TODO: #6 add pdf viewer
 
 export default function ProjectsTermPage({ slug }) {
+    const language = useLanguage();
+    const { t, lang } = language;
     const term = projectsData.find((t) => t.slug === slug);
 
     if (!term) {
         return (
-            <Layout title="ترم پیدا نشد">
+            <Layout title={t("projects.notFoundTitle")}>
                 <main className="container padding-vert--xl">
-                    <Heading as="h1">ترم موردنظر پیدا نشد</Heading>
-                    <Link to="/projects">بازگشت به آرشیو پروژه‌ها</Link>
+                    <Heading as="h1">{t("projects.notFoundHeading")}</Heading>
+                    <Link to="/projects">{t("projects.backToArchive")}</Link>
                 </main>
             </Layout>
         );
     }
 
-    const title = `آرشیو پروژه‌ها - ${toFaNum(term.section)}`;
-    const desc = "آرشیو صورت مسئله و کد پاسخ پروژه‌های این ترم";
+    const label = termLabel(term.section, language);
+    const title = `${t("projects.archiveTitle")} - ${label}`;
+    const desc = t("projects.termDescription");
 
     return (
         <Layout title={title} description={desc}>
-            <HomepageHeader title={toFaNum(term.section)} subtitle={desc} />
-            <main style={{ flexGrow: 1 }}>
+            <HomepageHeader title={label} subtitle={desc} />
+                        <main dir={lang === "en" ? "ltr" : "rtl"} style={{ flexGrow: 1 }}>
                 <section className="padding-vert--lg">
                     <div className="container">
-                        <Link to="/projects">← بازگشت به انتخاب ترم</Link>
+                        <Link to="/projects">{t("projects.backToTerms")}</Link>
                     </div>
                     <div className="container margin-top--lg">
                         <div className="row">
                             {term.list.map((project, idx) => (
-                                <ProjectCard key={idx} project={project} />
+                                <ProjectCard key={idx} slug={slug} project={project} />
                             ))}
                         </div>
                     </div>

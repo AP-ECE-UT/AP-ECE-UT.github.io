@@ -3,7 +3,9 @@ import { useColorMode } from "@docusaurus/theme-common";
 
 import Heading from "@theme/Heading";
 
+import { useLanguage } from "@site/src/context/LanguageContext";
 export default function UtterancesComments() {
+    const { t } = useLanguage();
     const { colorMode, setColorMode } = useColorMode();
     const ref = useRef();
 
@@ -34,7 +36,7 @@ export default function UtterancesComments() {
 
     return (
         <div style={{ paddingTop: 60 }}>
-            <Heading as="h2">نظرات</Heading>
+            <Heading as="h2">{t("common.comments")}</Heading>
             <div ref={ref} />
         </div>
     );
