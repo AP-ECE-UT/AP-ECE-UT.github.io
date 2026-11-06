@@ -1,0 +1,377 @@
+In this post we want to cover the rule of three/five/zero, resource management and move semantics.
+
+## The Rule of Three/Five/Zero
+
+### Introduction
+
+By now you are familiar with the different kinds of constructors in C++. In this post we want to review them, introduce the kinds of values, and take a look at move semantics.
+
+Besides the main constructors, the following methods can be defined for a class:
+
+1. destructor
+2. copy constructor
+3. copy assignment
+
+and since C++11 the following methods can be defined as well:
+
+4. move constructor
+5. move assignment
+
+Except for the main constructors, the rest are needed only when our class manages a resource. If one of these five is defined because the class manages resources, the others must be defined too. This is known as the rule of three or five in C++11.
+
+If the class does not manage any resources, none of them is needed, and this is called the rule of zero.
+The general shape of a class that has all five special methods looks like this:
+
+```cpp
+class Test {
+public:
+  // default constructor
+  Test();
+  // constructor
+  Test(int a);
+
+  // destructor
+  ~Test();
+  // copy constructor
+  Test(const Test& other);
+  // copy assignment
+  Test& operator=(const Test& rhs);
+  // move constructor
+  Test(Test&& other) noexcept;
+  // move assignment
+  Test& operator=(Test&& rhs) noexcept;
+};
+```
+
+### Automatic Generation
+
+If a class does not define one of the 5 special methods, the compiler tries to generate it implicitly. For example, if a class has no constructor at all, the compiler creates a default constructor whose definition calls the default constructors of all the fields of the class.
+
+The same holds for the copy constructor, the copy assignment and the destructor: if any of these three is not defined explicitly in the code, it is generated implicitly by the compiler.
+
+However, if at least one of those three is defined, the compiler does not generate the move constructor and the move assignment. What makes this behavior more interesting is that if none of the three is defined, the move constructor and the move assignment will be generated. The reason is compatibility with earlier versions of C++, which had no concept of move.
+
+### Keywords
+
+For the five special functions and the default constructor, we can use the `default` and `delete` keywords:
+
+```cpp
+class A {
+public:
+  A() = default;
+  A(const A& other) = delete;
+};
+```
+
+The `default` keyword tells the compiler to use its implicit definition for that function. This way we state it directly ourselves and do not have to deal with the complicated rules for automatic generation of these methods.
+
+The `delete` keyword removes the function and prevents it from being used. For example, here the copy constructor has been deleted, so the compiler does not allow an instance of the class to be copied.
+
+**Note**: As you know, when a class is going to be used polymorphically and inherited from, its destructor must be `virtual`. Otherwise, when you `delete` a pointer to the base class, the destructor of the derived class is not run. If the base class does not need a special destructor, you can make it `default`:
+
+```cpp
+virtual ~Class() = default;
+```
+
+There is something to pay attention to here: the `delete` keyword can also be used on other functions, including the main constructors, to prevent implicit conversions. For example, if we have a class `Point` whose constructor takes an `int a`, we can also call `Point(10.2)` and the `double` is converted to an `int`. But if we write
+
+```cpp
+Point(double a) = delete;
+```
+
+in the class, calling the constructor of this class with a floating-point value becomes illegal.
+
+## Resource Management
+
+### Introduction
+
+In this section we want to implement a class for a fixed-size heap array.
+We start from a class that has only its main constructor, add new methods to it step by step, and look at the reason for each of them.
+
+```cpp
+class Array {
+public:
+    Array(int size);
+    int size() const;
+    // ...
+private:
+    int* data_ = nullptr;
+    int size_;
+};
+
+Array::Array(int size)
+    : data_(new int[size]()),
+      size_(size) {}
+
+int Array::size() const { return size_; }
+```
+
+### destructor
+
+Since we allocate memory in this class, we need a destructor that releases it:
+
+```cpp
+~Array() { delete[] data_; }
+```
+
+### copy constructor
+
+Now let us go through the steps of building the copy constructor.
+
+```cpp
+Array(const Array& other)
+  : Array(other.size_) {
+  std::copy(other.data_,
+            other.data_ + other.size_,
+            data_);
+}
+```
+
+Here we have an object of the `Array` class as the argument, and we have to make a copy of it. This is called when we write the following code:
+
+```cpp
+Array test(10);
+Array testCopy(test);
+Array testCopy = test;
+```
+
+Note that the `=` sign, because it is on an initialization line, actually calls the copy constructor.
+
+At the start of the copy constructor (note that we are now inside `testCopy`) we call the main constructor with the size of `test` (a delegating constructor); this takes care of allocating the memory of the array. Then we copy its elements using `std::copy`.
+
+### copy assignment
+
+Our work is not finished here, and as we said before, we also need a copy assignment operator. A simple implementation of this operator can look like the following:
+
+```cpp
+Array& operator=(const Array& rhs) {
+  if (this != &rhs) {             // (1)
+    // delete existing array
+    delete[] data_;               // (2)
+    data_ = nullptr;              // (2)
+
+    // copy rhs’ data
+    size_ = rhs.size_;            // (3)
+    data_ = new int[size_];       // (3)
+    std::copy(rhs.data_,
+              rhs.data_ + rhs.size_,
+              data_);             // (3)
+  }
+  return *this;                   // (4)
+}
+```
+
+1. First we do a self-assignment check. This means checking whether the object is being assigned to itself; if so, nothing should happen. Self-assignment rarely happens, so in most cases this check is wasted work.
+
+2. If an exception is thrown in the `new` further down, we have already lost our current `data_`, and `size_` also has a wrong value. Since the destructor of the class may be called afterwards, the data that we deleted ourselves would be deleted again in the destructor. To prevent this, we set it to `nullptr`, because `delete nullptr` is a no-op.
+
+3. Copying the data from `rhs` into the newly allocated array.
+
+```cpp
+Array& operator=(const Array& rhs) {
+  if (this != &rhs) {             // (1)
+    // prepare the new data
+    int* newData = new int[rhs.size_];
+
+    // replace the old data
+    // (non-throwing)
+    delete[] data_;               // (3)
+    data_ = newData;              // (3)
+    size_ = rhs.size_;            // (3)
+    std::copy(rhs.data_,
+              rhs.data_ + rhs.size_,
+              data_);             // (3)
+  }
+  return *this;                   // (4)
+}
+```
+
+4. Finally, the copy assignment returns the class itself. The reason is so that we can use it in a chain of operations after the assignment and make use of the value of the class. For example `a = b = c`, or, if the class can be converted to `bool`, use it in an `if` statement.
+
+### Copy-and-Swap Idiom
+
+This technique can solve all the problems raised above in the copy assignment operator. For this, we need to add a `swap` function to our class. No allocation or copying happens in this method; only the pointers and sizes of the two objects are exchanged, shallowly.
+
+```cpp
+friend void swap(Array& first,
+                 Array& second)
+                 noexcept {
+    using std::swap;
+    swap(first.data_, second.data_);
+    swap(first.size_, second.size_);
+}
+```
+
+This function is defined outside the class, and its inputs are two references to our class. To access the private fields, we make the function a `friend` inside the class (if the definition of a `friend` function is written inside the class, as in the example above, it is still considered a function outside the class).
+
+`noexcept` is written after this function, which means the function does not throw an exception. Inside the function, `using std::swap` comes first, and the reason for it goes back to ADL (Argument Dependent Lookup). Finally, we swap all the fields.
+
+After writing `swap`, and given the copy constructor that was implemented above, the other special methods (the copy assignment and, later on, the move constructor and move assignment) can easily be implemented in a few lines:
+
+```cpp
+Array& operator=(const Array& rhs) {
+    Array temp(rhs);
+    swap(*this, temp);
+    return *this;
+}
+```
+
+In this copy assignment, we first make a copy of `rhs` using the copy constructor and then `swap` it with the class itself. This way we have no duplication, and all the copying logic lives in the copy constructor. Note that we no longer need the self-assignment check either, and in that very special case the code still works correctly. Exception safety also holds in this code: until the copy has been completely built, the fields of our class do not change, and `swap` throws nothing.
+
+## Kinds of Values
+
+### Introduction
+
+In general, there are two kinds of values, called lvalues and rvalues (there is actually a finer classification, which we do not cover).
+
+lvalue stands for left value because it can appear on the left side of an = expression, and rvalue stands for right value because it can appear on the right side of =.
+
+rvalues are temporary; they go away and have no name. For example, in the expression:
+
+```cpp
+int a = 2 + 3;
+```
+
+the value of `2 + 3`, which is 5, is an rvalue; it is stored in `a`, which is an lvalue, and then goes away. `2 + 3` itself is not stored anywhere, has no name and is temporary. The return value of a function is the same: it stays an rvalue until it is stored somewhere:
+
+```cpp
+int b = 2 * func();
+```
+
+### References
+
+We can make references to both lvalues and rvalues: for an lvalue we use the `&` character and for an rvalue we use `&&`:
+
+```cpp
+int a = 10;
+int& b = a;       // lvalue reference
+int&& c = func(); // rvalue reference
+```
+
+An lvalue reference is initialized once at the start so that it knows which variable it refers to, and after that it cannot be reassigned, and the variable it refers to does not change.
+
+An rvalue reference merely extends the lifetime of the rvalue. As we said, an rvalue is a value that has no name. So in the previous example `c` is an lvalue whose type is a reference to an rvalue.
+Both of these can also be function parameters, and if we overload the function like this:
+
+```cpp
+void func(int& a);
+void func(int&& a);
+```
+
+calling the function with an rvalue goes to the second one.
+
+If we had only the `int&` function, we could not call `func(10)`, because an rvalue cannot bind to an lvalue reference.
+
+By the rules of the language, however, an rvalue can bind to a const lvalue reference. That is why a function that takes `const string&` can be called with `"test"` (here `"test"` calls the `const char*` constructor of string, an rvalue of type `string` is created, and it is bound to the const lvalue reference).
+
+## Move Semantics
+
+### Introduction
+
+Since C++11, a number of new methods for moving have been added to the language. Using the mechanisms the language provides, including rvalue references and `std::move`, we can avoid extra memory allocations and copies and make the code more exception safe.
+
+For example, suppose we want to make a copy of a string:
+
+```cpp
+std::string str = "test";
+std::string test(str);
+```
+
+The second line calls the copy constructor of string. This is the behavior we want, because a copy of `str` is made there and `str`, which is an lvalue, is left untouched.
+
+Look at the following examples:
+
+```cpp
+std::string test(func());
+std::string test(s1 + s2);
+std::string test(s.substr(...));
+```
+
+If the copy constructor is called, a copy is made of the rvalue we had. But we could use the rvalue directly, since it does not matter if it is modified, and avoid the extra copy (which for a string includes an extra allocation).
+That is why string has a move constructor, whose input is an rvalue reference:
+
+```cpp
+Class(Class&& other);
+```
+
+In the move constructor, we treat `other` like any other lvalue, and we know that changing its value does not matter because it is a reference to a temporary value.
+For example, we know that `std::string` uses a pointer to a character to access the string stored on the heap. Inside the move constructor, instead of copying the memory of `other`, we take over the whole memory of `other` for our own class. In other words, we transfer ownership (that is, as we will see later, we assign the `char*` directly and set the one in `other` to `nullptr` so that its destructor has no problem).
+
+### Move
+
+Sometimes we do not need an lvalue anymore and want to move it:
+
+```cpp
+std::string str = "test";
+std::string test = std::move(str);
+```
+
+Here, with the helper function `std::move`, we can transfer the ownership of `str`. After that, `str` must not be used; otherwise it causes undefined behavior.
+
+When a function takes a parameter by value, what we pass to it is used to construct it. So if we pass an lvalue, the copy constructor is called, and if we pass an rvalue, the move constructor is called. That is, constructors are like overloaded methods too.
+
+```cpp
+void func(std::string a) {...}
+
+func(str);
+func(std::string("test"));
+func(std::move(str));
+```
+
+In the first call, the copy constructor is called and a copy is made of `str`, which is an lvalue of type string.
+
+In the second call, the string constructor first runs and creates a temporary object, which is an rvalue. So when it is passed to the function, the move constructor is run for `a`, and an instance inside the function is produced from the temporary object.
+
+In the third call, `str` is treated as an rvalue by `std::move` and the move constructor is run for `a`. After this call, `str` must not be used.
+
+So, as we can see, the whole job of `std::move` is to cast its input to an rvalue reference and return it.
+
+```cpp
+class Person {
+public:
+    Person(std::string name)
+        : name_(std::move(name)) {}
+private:
+    std::string name_;
+};
+```
+
+An almost ideal way to store a string in a class is shown above.
+
+This is preferred to taking a `const std::string&` and then copying it. Note that if we had not used `std::move`, passing `str` to the constructor of this class would copy the string twice (once for passing it by value and once for the copy constructor of the class field).
+
+Here we can also pass `Person(std::move(str))` or `Person(func(x))` or any other rvalue, and in that case we will have no memory allocation at all.
+
+### Implementing Move
+
+Continuing the discussion we had in resource management, we now want to add the move-related methods to the heap array class.
+
+#### Move constructor
+
+If we used the copy-and-swap idiom to implement the rule of 3, adding the move constructor and move assignment for the rule of 5 will be easy. We add these two to the Array example:
+
+```cpp
+Array(Array && other) noexcept {
+    swap(*this, other);
+}
+```
+
+This constructor takes an rvalue and is noexcept. Inside it, as in the copy assignment, we swap our class with the other one. The difference is that there we had to make a copy because the input was an lvalue, but here the input is an rvalue and we can directly swap with it.
+
+#### Move assignment
+
+```cpp
+Array& operator=(Array&& rhs)
+                 noexcept {
+    swap(*this, rhs);
+    return *this;
+}
+```
+
+The assignment works similarly and only additionally returns the class at the end. After the swap, once the lifetime of the rvalue variable ends, its destructor is called and cleanup is performed (so the values the class held before the swap are destroyed).
+
+Note that in the class we set the default value of pointers to `nullptr`, so that, for example, if our class had a default constructor and was later move-assigned, the destructor of the rvalue that gets called would call `delete nullptr`, which is fine.
+
+Combining move with templates gives other advanced concepts such as universal / forwarding references and `std::forward`, which are beyond the scope of this post.
+
+You can see a complete example that follows the rule of 5 at [this link](https://gist.github.com/MisaghM/f14887e38224c6c21d07d0cac025341a), which is the implementation of a linear two-dimensional array.
