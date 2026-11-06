@@ -24,8 +24,8 @@
   line-height: 1;
 }
 
-.mobile {
+.sidebarHeader {
   order: 0;
-  margin: 0.5rem var(--ifm-menu-link-padding-horizontal);
+  margin-inline: 0 0.25rem;
   color: var(--ifm-menu-color);
 }

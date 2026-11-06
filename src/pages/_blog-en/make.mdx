@@ -1,0 +1,408 @@
+In this post we want to give an overview of the compilation process and of multi-file projects using a Makefile, and point out a few important things about it. Finally, we briefly introduce the CMake tool.
+
+## Compilation Steps
+
+### Introduction
+
+You probably already have a basic familiarity with Makefile. In this post we want to give an overview of the compilation process and of multi-file projects using a Makefile, and point out a few important things about it. Finally, we briefly introduce the CMake tool.
+A Makefile is a tool for producing the executable file of a program from its source. This tool is used for dependency management.
+To understand this post better, it helps to review how a C or C++ program is compiled.
+
+### 1. Preprocessor
+
+The output of this phase is the same input code, after some preprocessing has been applied to it.
+
+The preprocessing includes expanding macros, defines and includes, and removing comments.
+
+For example, if we have a file.hpp and include it in file.cpp, we can see that in file.i the whole content of file.hpp appears in place of the `#include` directive.
+
+The `-E` flag gives the output of this phase:
+
+```bash
+g++ -E file.cpp -o file.i
+```
+
+### 2. Compiler
+
+The output of this phase is an assembly file, which is the code converted to the instructions of the target CPU.
+
+The `-S` flag gives the output of this phase:
+
+```bash
+g++ -S file.cpp -o file.s
+```
+
+### 3. Assembler
+
+The output of this phase is a binary file, which is the assembly code converted to binary machine instructions.
+
+The `-c` flag gives the output of this phase:
+
+```bash
+g++ -c file.cpp -o file.o
+```
+
+### 4. Linker
+
+The output of this phase is the executable program.
+In this phase, several object files, that is .o files, are combined and a single output file is produced. (Libraries, the .a files, are also linked to the code in this same phase.)
+That is, if we have several files such as file1.cpp and file2.cpp, each of them is converted independently into a .o file, and finally they are linked together:
+
+```bash
+g++ file1.o file2.o -o file.out
+```
+
+### Example
+
+![Compilation Steps](/img/blog/compilation-steps.png)
+
+When we type `g++ file.cpp -o file.out`, all of these steps are carried out at once!
+When we work with a multi-file project, instead of going through all these steps for all the files after every change (which noticeably increases compile time), we first convert each of the source files (which are also called translation units) into an object file (a .o file), and finally link them.
+
+Now when a file changes, there is no need to recompile all the files. Only the file that changed is compiled into a .o again, and then we link everything together once more.
+
+## Makefile
+
+### Dependencies
+
+We want files to be recompiled only when they change. To do this, the topic of dependencies is unavoidable. When a file changes, it obviously needs to be recompiled. But there is another case: when a file that is included changes, we have to compile again, because changes to the header file can affect our file.
+In a Makefile, for each source file (translation unit) we write all of its dependencies. Based on the modification times of the files, the Make program recompiles a file if it needs it.
+
+To use it, we create a text file named Makefile or makefile at the top level of our project and run the `make` command in a terminal that is open in the project directory.
+
+Comments in a Makefile are written with the # character.
+
+### Rule
+
+A Makefile rule consists of 3 parts:
+
+```text
+target: prerequisites
+ recipe
+```
+
+The target is the file we want to produce, the prerequisites are the dependencies, and the recipe is the command that is run if one of the prerequisites is newer than the target. Note that the recipe must start with a tab character and not spaces. Otherwise we get a missing separator error.
+
+In practice we have rules like this:
+
+```makefile
+file.o: file.cpp file.hpp file2.hpp
+ g++ -c file.cpp -o file.o
+```
+
+Each object file depends on one cpp and several hpp files.
+Here the goal (target) is to build file.o, which depends on the 3 files after it. If one of them is newer than file.o, the command below it is run, which compiles the file.
+
+### Automatic Variables
+
+To avoid typing the same things again and again, a Makefile has several automatic variables that make writing rules easier. We name a few of them using an example:
+
+```makefile
+file.o: file.cpp file.hpp file2.hpp
+```
+
+```makefile
+$@ = file.o
+ (the target)
+$^ = file.cpp file.hpp file2.hpp
+ (all prerequisites)
+$< = file.cpp
+ (the first prerequisite)
+$? = e.g. file.cpp file2.hpp
+ (prerequisites newer than target)
+```
+
+Using them, the rules for producing object files are written like this:
+
+```makefile
+file.o: file.cpp file.hpp file2.hpp
+ g++ -c $< -o $@
+```
+
+### Variables
+
+In a Makefile, to make the code more readable, variables can be defined like this:
+
+```makefile
+FILES = file.o file2.o
+```
+
+If the definition of a variable (or of any line, including prerequisites) is long, you can use the \\ character to continue the definition on the next line:
+
+```makefile
+FILES = src/file1.cpp \
+        src/file2.cpp
+```
+
+To access the value of this variable, we use variable expansion:
+
+```makefile
+$(FILES) or ${FILES}
+```
+
+For variables, besides =, several other operators can be used, including `:=`, `+=` and `?=`.
+
+The difference between `=` and `:=` shows up when the variable's definition contains an expansion. When a variable is assigned with =, every time we access its value the variables inside it are expanded again, but `:=` performs the expansions only once, on that same line.
+
+We show the point above with an example:
+
+```makefile
+foo = abc
+bar = $(foo) bar
+foo = xyz
+# $(bar) is now "xyz bar"
+```
+
+If we had used `:=` in the definition of bar, its value would not have changed when the value of foo changed.
+
+With `+=` you can append to the end of a variable's value.
+
+The `?=` operator gives the variable the value on its right side when the variable has no value yet.
+
+### Functions
+
+Functions in a Makefile are written inside `$()`, where the first word is the name of the function and the parameters follow it.
+
+For example, the info function is used for printing:
+
+```makefile
+$(info Printing a variable: $(var))
+```
+
+With the wildcard function you can select files using `*`:
+
+```makefile
+$(wildcard *.txt)
+```
+
+With the shell function you can get the output of a terminal command. For example, the following gives all the .cpp files inside the src folder:
+
+```makefile
+FILES = $(shell find src/ -name "*.cpp" -type f)
+```
+
+The firstword and lastword functions give the first and last word of a string (or of the value of a variable).
+
+The filter function is used to keep the words that match a particular pattern. The filter-out function does the opposite and removes the ones that match.
+
+The following example removes main.cpp and all files ending in .o from VAR:
+
+```makefile
+VAR2 = $(filter-out main.cpp %.o, $(VAR))
+```
+
+The patsubst function, short for pattern substitution, looks like this:
+
+```makefile
+$(patsubst %.o,%.cpp,file.o file2.s file3.o)
+```
+
+The output of this function is file.cpp and file3.cpp.
+
+A Makefile construct that works similarly to patsubst is the substitution reference:
+
+```makefile
+$(var:pattern=replacement)
+```
+
+Equivalent to the example above:
+
+```makefile
+$(var:%.o=%.cpp)
+```
+
+### Recipe
+
+The recipe part of a rule can consist of several commands on several lines. The commands are run in a subshell, and the command being run is itself printed to the terminal.
+
+To prevent the command itself from being printed, you can put the @ character before it:
+
+```makefile
+print-help:
+ echo This prints echo and the text
+ @echo This doesn’t print the echo command
+```
+
+To prevent the output of a command from being printed, you can redirect it to the null device:
+
+```bash
+command arg >/dev/null
+ # redirect stdout to null
+command arg >/dev/null 2>&1
+ # redirect errors to stdout as well
+```
+
+If the target has no prerequisites, the first line of the recipe can be written like this:
+
+```makefile
+target: ; recipe
+```
+
+When a command fails while a recipe is running, make stops. By putting - before a command, you can ignore errors:
+
+```makefile
+-g++ file.cpp
+```
+
+### Target
+
+If we write the name of a target after the make command on the command line, it runs that one rule specifically. If we run plain make, the first rule in the file is run.
+
+Rules that have nothing to do with a file named after the target are put under a target named .PHONY. Examples are the print-help rule written above, or the common all target, in which we produce all the outputs of the program:
+
+```makefile
+.PHONY: all print-help
+all: $(EXE)
+```
+
+As we can see, a rule may have no recipe and only call several targets:
+
+```makefile
+.PHONY: clean clean-obj clean-exe
+clean: clean-obj clean-exe
+```
+
+With .PHONY we make sure that nothing goes wrong if a file with the same name as a target exists.
+
+### Complete Example
+
+Since the rule that builds EXE does the job of the linker, all the .o files are given to it as input (`$^`).
+
+```makefile
+FILES = file.o file2.o
+EXE = program.out
+CXX = g++ -std=c++11
+
+all: $(EXE)
+$(EXE): $(FILES)
+ $(CXX) $^ -o $@
+
+file.o: file.cpp file.hpp file2.hpp
+ $(CXX) -c $< -o $@
+file2.o: file2.cpp file2.hpp
+ $(CXX) -c $< -o $@
+
+.PHONY: all clean
+clean:
+ rm -f $(FILES) $(EXE)
+```
+
+## CMake, an Alternative?
+
+### Build System
+
+Build systems are programs used to automatically produce the executable output of our code.
+
+A Makefile counts as a build system, and after we describe our project to it, it can compile the project automatically and take dependencies into account.
+
+Every programming language has its own build systems. For example, in Java, Maven and Gradle are well known.
+
+### The C++ Ecosystem
+
+C++ is only a standard, and compilers are implementations of that standard. Since the standard says nothing about it, there is no standard tool for managing builds, libraries and so on.
+
+For this reason, many tools have been built by the C++ developer community for this purpose.
+
+A few of these tools are Makefile, Bazel, and every IDE, including Visual Studio, which have their own way of handling projects. Or, for example, Ninja, which was built with the goal of fast builds.
+
+But some tools do not aim to do the building themselves. Instead, they are something more high-level that, from a project description we write, can convert it into the description needed by different build systems.
+
+Premake and CMake are among these programs.
+
+### The Development Environment Problem
+
+As is clear, build systems are not necessarily cross-platform.
+
+In a project that many people work on, it is usually not possible to restrict everyone to a specific set of tools for coding. For example, one person works in VS (which uses solution and vcxproj files) and another codes on Linux and uses a Makefile.
+
+With a tool like CMake, you can generate the project description files for most build systems and IDEs and keep only one main description, in CMake's own format (written in the CMakeLists.txt file).
+
+### CMake
+
+As mentioned, CMake is a program for generating the project files of different build tools from a shared project description. That is, CMake does not do the building directly itself but leaves it to other build systems.
+
+CMake uses its own descriptive language, and after we write CMakeLists.txt, by running the program we can get the files of the build system we want.
+
+This tool also handles dependencies automatically. This means there is no need to write all the prerequisites of the object files by hand.
+
+### A Simple Example
+
+Suppose we have the following three files in the project:
+
+```text
+├── foo.cpp
+├── foo.hpp
+└── main.cpp
+```
+
+A function is defined inside foo.cpp, and its declaration is in foo.hpp. Finally, this function is called by main. Next, we use CMake to build this small project.
+
+#### Step One
+
+In the first step, we first have to specify the version of CMake we are using; this makes sure the CMake functions we use are run by a version of CMake that supports them. For this we use the following function:
+
+```cmake
+cmake_minimum_required(VERSION <min>)
+```
+
+Right after specifying the CMake version, we have to specify the name of the project. This can be done with the following function:
+
+```cmake
+project(<PROJECT-NAME>
+ [VERSION <major>[.<minor>[.<patch>]]]
+ [DESCRIPTION <project-description-string>]
+ [HOMEPAGE_URL <url-string>]
+ [LANGUAGES <language-name>...])
+```
+
+So in the end, for our own project we add the following two lines to the CMakeLists.txt file:
+
+```cmake
+cmake_minimum_required(VERSION 3.12)
+project(foo_proj
+ VERSION 1.0
+ DESCRIPTION "A project to introduce CMake"
+ LANGUAGES CXX)
+```
+
+#### Step Two
+
+After specifying the CMake version and the project name, we have to specify the desired output file along with its source files. The output file can be, for example, an executable or a library. The outputs are called targets.
+
+```cmake
+add_executable(<name>)
+```
+
+The variable `<name>` must be unique within a project. Now we can specify the source files for the target we created:
+
+```cmake
+target_sources(<name> PRIVATE
+ <source1> <source2>...)
+```
+
+In addition, it is clear that there must be only one main function in the listed files.
+
+```cmake
+add_executable(foo)
+target_sources(foo PRIVATE
+ main.cpp foo.cpp)
+```
+
+Now we can specify some properties for the target we created, including the C++ version:
+
+```cmake
+target_compile_features(foo PRIVATE cxx_std_11)
+```
+
+#### Last Step
+
+Now, to build the project, we first create a build folder and enter the following command inside it:
+
+```bash
+cmake ..
+```
+
+With this, the build system files for the current platform are generated in the current folder (build), using the CMakeLists.txt of the previous folder (..).
+
+After the desired build system has been generated (for example, a Makefile), we build the executable with that system's command (for example, we run the make command).
+Now the project is built and ready to run.

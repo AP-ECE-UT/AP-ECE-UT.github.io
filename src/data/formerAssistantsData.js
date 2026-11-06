@@ -113,7 +113,7 @@ const formerAssistantsData = {
                 name: "پریا پاسه‌ورز",
                 title: "ورودی 1401",
                 email: "pasehvarzparia@gmail.com",
-                imageURL: "/img/TAs/PariaPasevarz.jpg",
+                imageURL: "/img/TAs/PariaPasehvarz.jpg",
                 socials: {
                     github: "https://github.com/PariaPasehvarz",
                     linkedin: "https://www.linkedin.com/in/paria-pasehvarz-7597bb2b6",

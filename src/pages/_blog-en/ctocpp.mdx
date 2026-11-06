@@ -1,0 +1,470 @@
+You got to know the C language in the Fundamentals of Computer Programming course. C++ has most of the functions and features of C, and at first glance there seems to be a lot of similarity between the two. This way of thinking makes the code written in C++ messy. In this post we go over some of the differences between the two languages and common mistakes made by people who are just learning C++.
+
+## Namespaces
+
+`namespace`s are among the most fundamental concepts of C++. We know that in C++ all `identifier`s must be unique, and if there is ambiguity in identifying a variable or function, we get a compile error because of name collisions. For example, when a function with the same name `func` is defined in two files, we run into a problem at link time.
+
+In C++, using `namespace`s we can define a new `scope` and, by defining functions, variables and classes inside them, prevent name collisions.
+
+Whatever is not inside any `namespace` is said to be in the `global namespace`:
+
+```cpp
+#include <iostream>
+float func() { /*...*/ }
+int main() {
+    std::cout << func();
+    std::cout << ::func();
+    return 0;
+}
+```
+
+In this example the function `func` is in the `global namespace` and can be accessed either as `func` or as `::func`. The `::` operator (called the Scope Resolution Operator) is used to access `namespace`s.
+
+There is a predefined `namespace` named `std` in which all the functions of the C++ standard library live. For example, the `cout` variable that you use to display output is defined in this `namespace`.
+
+To define `namespace`s we use the `namespace` keyword:
+
+```cpp
+namespace example {
+    void func() { /*...*/ }
+    int test = 0;
+}
+
+int main() {
+    return test; // Error
+    return example::test; // Correct
+}
+```
+
+As you can see, the `namespace` keyword creates a new `scope` and separates the `identifier`s inside it from the rest of the code. In this example, `func` and `test` cannot be reached without `example::`.
+
+`namespace`s can also be nested:
+
+```cpp
+namespace foo {
+    namespace bar {
+        void func() { /*...*/ }
+    }
+}
+
+int main() {
+    foo::bar::func();
+    return 0;
+}
+```
+
+Libraries usually put their code in a `namespace` so that it does not collide with the user's code. The C++ standard library is no exception to this rule, and all of its functions and classes are in a `namespace` named `std`.
+
+You have certainly used `using namespace std` by now. The `using namespace` statement brings all the `identifier`s inside the given `namespace` into the `scope` where the statement is written. This way it is as if that `namespace` did not exist and we reach what is inside it directly.
+
+```cpp
+namespace example {
+    int test = 0;
+}
+
+int func() {
+    using namespace example;
+    return test;
+}
+
+int main() {
+    return test; // Error
+}
+```
+
+In this example, because `using namespace example` is used inside the function `func`, all the members of the `namespace` named `example` are accessible in its `scope` (which is the whole function `func`). If `using namespace example` had been written at the start of the code (outside all functions, that is in the `global namespace`), the `main` function could have accessed it too.
+
+For example, in the case of `std`, if we write `using namespace std` we can directly use `string`, `vector`, `cout` and so on. If we do not write it, we have to add `std::` before them: `std::string`, `std::vector` and so on.
+
+Using `using namespace std` is considered bad practice, and in clean code `using namespace` should not be used in the `global namespace`. It raises the chance of name collisions (for example, a variable named `max` colliding with `std::max`). Collisions become very common as more libraries are used, and the whole purpose of `namespace`s is called into question.
+
+However, using it inside a `scope` may be useful. For example, you can read about `std::literals::string_literals`.
+
+## Function Overloading
+
+In C++ we can overload functions. This means two functions can have the same name as long as their input parameters are different. Note that you cannot overload based on the return type.
+
+```cpp
+int func(int a) { /*...*/ }
+int func(int b) { /*...*/ }      // Error
+float func(int a) { /*...*/ }    // Error
+int func(float a) { /*...*/ }    // Correct
+int func(int a, int b) { /*...*/ } // Correct
+```
+
+## Default Arguments
+
+In C++ we can use default values for arguments in function definitions. With this, if a parameter is not given a value when the function is called and it has a default value, the parameter takes the default value. Note that if a value is given for the parameter in the call, the function does not use the default value:
+
+```cpp
+void func(int x, int y = 1) { /*...*/ }
+func(1, 2); // func(1, 2)
+func(1);    // func(1, 1)
+func();     // Error
+```
+
+Default arguments must necessarily be at the end of the function definition. Think about the reason for this.
+
+```cpp
+void func(int a, int b = 1, int c);     // Error
+void func(int a, int b = 1, int c = 2); // Correct
+```
+
+Note that if you declare a function, you should not write the default values again in its definition:
+
+```cpp
+void func(int a = 2);
+void func(int a = 2) { /*...*/ } // Error
+void func(int a) { /*...*/ }     // Correct
+```
+
+## NULL vs nullptr
+
+In C we used the `NULL` macro. This macro is usually defined in C as follows:
+
+```cpp
+#define NULL (void*)0
+```
+
+In C, `void*` is implicitly (automatically) converted to any pointer type, which is why when we used `malloc` we could write the following:
+
+```cpp
+int* test = malloc(sizeof(int));
+```
+
+This code gives an error in C++ and must be cast explicitly (manually):
+
+```cpp
+int* test = (int*)malloc(sizeof(int));
+```
+
+For this reason, in C++ the `NULL` macro is usually defined as follows:
+
+```cpp
+#define NULL 0
+```
+
+In C++ we should use `nullptr` instead of `NULL`, which holds a real null pointer value and not a numeric one.
+
+That is, in C++ we use `int* a = nullptr` and, for example, `time(nullptr)` instead of `time(NULL)`.
+
+`NULL` can be problematic and, for example, causes a mistake in the following case:
+
+```cpp
+void func(int a) { /*...*/ }
+void func(int* a) { /*...*/ }
+func(NULL);     // calls the first function
+func(nullptr);  // calls the second function
+```
+
+## Type & Namespace Alias
+
+In C we used `typedef` to create type aliases:
+
+```cpp
+typedef int MyInteger;
+```
+
+In C++ we use `using`:
+
+```cpp
+using MyInteger = int;
+```
+
+Or for function pointers:
+
+```cpp
+typedef void (*MyFunc)(int, float);
+using MyFunc = void(*)(int, float);
+```
+
+(Here `MyFunc` is a pointer to a function that takes two parameters, an `int` and a `float`, and whose return type is `void`.)
+
+In C++ we can alias `namespace`s too:
+
+```cpp
+namespace first {
+    namespace second {
+        void func();
+    }
+}
+
+namespace test = first::second; // alias
+test::func();
+```
+
+## Struct Without Keyword
+
+In C++ there is no longer any need to write the `struct` keyword before using its type. So there is no need to `typedef` it either.
+
+```cpp
+struct MyStruct { int value; };
+MyStruct instance;            // C++
+struct MyStruct instance;     // C (do not)
+typedef struct { int value; } MyStruct; // do not
+```
+
+## Working With the Heap
+
+In C we used `malloc` for dynamic memory allocation:
+
+```cpp
+struct MyStruct* heapInstance = malloc(sizeof(struct MyStruct));
+```
+
+and when we were done with it, we made sure to `free` it, because otherwise we would have a memory leak:
+
+```cpp
+free(heapInstance);
+```
+
+In C++, with data structures like `std::vector` and `std::string`, we rarely need to allocate heap memory manually, and it is good to avoid it as much as possible. If needed, we use `new` instead of `malloc`:
+
+```cpp
+MyStruct* heapInstance = new MyStruct();
+```
+
+and in the end we must return its memory with `delete`:
+
+```cpp
+delete heapInstance;
+```
+
+To create an array, you can use the following syntax:
+
+```cpp
+int* array = new int[num]();
+delete[] array;
+```
+
+Note that you will read later that it is good to handle resources (for example this same dynamic memory) in classes using C++'s RAII mechanisms, and that with vector we do not need to create dynamic arrays.
+
+## The Boolean Type
+
+C++ gives us the `bool` type, and there is no longer any need to use `int` for variables to which we gave the value `0` or `1` in C. The `bool` type takes the values `true` and `false` and occupies one byte.
+
+```cpp
+bool a = true;
+if (a) { a = false; }
+```
+
+## Casting
+
+In C there is a kind of cast, written as follows, which should not be used in C++:
+
+```cpp
+char a = 'A';
+int b = (int)a;
+```
+
+In C++ there are four kinds of casts, and for ordinary casts `static_cast` is used:
+
+```cpp
+int b = static_cast<int>(a);
+```
+
+This cast is stricter, checks the compatibility of types and shows problems at compile time.
+
+For example, the following code compiles with a C-style cast but gives an error with `static_cast`:
+
+```cpp
+int* ptr = (int*)a;               // undefined behavior
+int* ptr = static_cast<int*>(a);  // compile error
+```
+
+The other three C++ casts are `dynamic_cast`, `const_cast` and `reinterpret_cast`; you will meet `dynamic_cast` later in a polymorphic setting. You can research the other two yourself.
+
+## C Standard Library
+
+Although for most of the C library and language features we have a C++ replacement, sometimes we need to use the standard C libraries. For example, `math.h` is also used in C++, but we have to note that to use them we drop the `h` extension and add a `c` to the start. That is, to use the `math.h` library we include it as follows:
+
+```cpp
+#include <cmath>
+```
+
+## Naming Rules
+
+According to the C++ standard, three kinds of naming for variables and functions are reserved for the use of the compiler and the standard libraries, and we must not use them.
+
+- All names that use two consecutive underscores. (`__name` or `name__` or `test__name`)
+- All names that start with one underscore followed by an uppercase letter. (`_Name`)
+- All names that start with one underscore followed by a lowercase letter and are in the `global namespace`. (`_name`)
+
+So it is good never to use two consecutive underscores at all, and not to start any name with an underscore.
+
+Note that using an underscore at the end of a name is fine, and private variables of classes are usually named this way. (`name_`)
+
+Often a header guard is written as follows, which, according to what was just said, is not correct:
+
+```cpp
+#ifndef __FILE_NAME_HPP__
+#define __FILE_NAME_HPP__
+#endif
+```
+
+It is good for headers that correspond to `.cpp` files to have the `.hpp` extension, and in the header guard, too, not to use two underscores as elsewhere.
+
+## Pointer vs Reference
+
+We are familiar with pointers. We know that a pointer simply points to a cell in memory, and a pointer to any type usually takes 4 bytes on a 32-bit system and 8 bytes on a 64-bit system to store the address of the target cell.
+
+In C++ we also have references, which are really the same as pointers, but the syntax for using them is easier. It is good to use references as much as possible and to use pointers only when necessary.
+
+In the following code we see an example of using a pointer and a reference:
+
+```cpp
+// pointer
+void func(int* a) { *a = 2; }
+int a = 1;
+func(&a);
+
+// reference
+void func(int& a) { a = 2; }
+int a = 1;
+func(a);
+```
+
+References have other differences from pointers too. References cannot be uninitialized:
+
+```cpp
+int a = 1;
+int& b;      // Error
+int& c = a;  // Correct
+```
+
+Unlike with pointers, this initial value of a reference cannot be changed:
+
+```cpp
+int a = 1, b = 2;
+int* ptr = &a;
+ptr = &b;    // changes the pointer to b
+int& ref = a;
+ref = b;     // assigns 2 to a
+```
+
+Unlike a pointer to a pointer, there is no reference to a reference or pointer to a reference. And finally, a pointer can become `nullptr`, but a reference is given a value from the start and cannot be null.
+
+References also cannot be used in data structures such as `std::vector`:
+
+```cpp
+std::vector<int&> // Error
+std::vector<int*> // Correct
+```
+
+## Pass by Value
+
+Here we only look at what happens under the hood when passing a variable, and all we need to know is that passing a variable to a function as a `reference` counts as `pass by reference`.
+
+In practice, all variables in C and C++ are `pass by value`, and their value is copied into the function. The concept of `pass by reference` is really copying a variable of pointer type:
+
+```cpp
+void func(int* p) { p = &globalX; }
+int a = 1;
+int* ptr = &a;
+func(ptr);
+```
+
+After the function runs, the variable `ptr` still points to `a`. This is because a copy of `ptr` was made when it was passed to the function. Since this copy also points to `a`, if we write `*p = 2` the content of `a` changes, but we cannot change the pointer itself. (In Fundamentals of Programming you probably gave the function the address of the pointer (`&ptr`) as an `int**` to do this.)
+
+References are also a pointer under the hood, with different restrictions and syntax. Since a reference generally cannot be re-assigned, the code above has no meaning for references.
+
+## Const Reference
+
+Sometimes we pass variables as references so that they can be changed. But sometimes, because the object we are passing is heavy, we use a reference so that we do not pay the cost of copying it. But then the object could be changed inside the function, which is not what we want. In these cases we use a `const reference`:
+
+```cpp
+void func(const std::vector<int>& vec) { /*...*/ }
+```
+
+The `const` keyword prevents possible changes through the reference. Following this practice is called `const correctness`: we make every variable that is not supposed to change `const`, so that the code is more readable and the chance of errors goes down.
+
+A heavy object is usually an object that manages a resource (for example heap memory), and so copying it is expensive. `std::vector` and `std::string` are of this kind. Note that making a `fundamental type` (such as `int`, `float`, `char`, `bool`) a const reference not only does not reduce the cost of copying (because a pointer has to be copied just like them), but also increases the cost of accessing the variable (an extra indirection is placed between the variable and its value in memory).
+
+Also regarding `const correctness`, we usually do not make the `pass by value` variables of functions `const`. The reason is that they are copied into the function, and whether they are `const` or not has no effect outside the function and gives us no useful information.
+
+```cpp
+void func(const int& a); // bad
+void func(const int a);  // not useful
+void func(int a);        // good
+void func(std::string s); // bad
+void func(std::string& s); // not good if we don’t want to change the string
+void func(const std::string& s); // good
+```
+
+## Const & Constexpr
+
+In C, to define `constant`s we used `#define`:
+
+```cpp
+#define CONSTANT 10
+```
+
+At compile time, the pre-processor replaces every place in the code where `CONSTANT` is used with `10`.
+
+In C++ we use `const` and `constexpr`.
+
+```cpp
+constexpr int CONSTANT = 10;
+```
+
+One of the advantages of this approach over `define` is that the type of the variable is known. Since not everything can be written as `constexpr` (which has to be known at compile time), we can also use `const`:
+
+```cpp
+const std::string TITLE = "test";
+```
+
+Be careful: if you put the line above in a header file and include it in several files, each file gets its own copy of this constant variable. To share a variable between several files, you can read about `extern`.
+
+You can also read about the limitations of using `constexpr`.
+
+## Variable Length Array
+
+One of the features of the C language is VLAs, which are defined as follows:
+
+```cpp
+int n = 12;
+int arr[n];
+```
+
+As we know, the size of an array must be known at compile time, but here a variable is used for it, and in a way it is as if a dynamic array is being created.
+
+Since the array lives on the stack, if `n` is large this can lead to a stack overflow. This feature generally leads to unsafe code and its use is not recommended; because if we know the value of `n` is small, we can give the array a fixed size, and if we do not know the value of `n`, we should use the heap.
+
+This feature does not exist in the C++ standard, but compilers usually support it as an extension. In C++ we should never use VLAs, and we can consider `std::vector` a safe alternative to them.
+
+## Data Structures
+
+C++ has many data structures, which you will get to know later. Here we point out three things.
+
+In C, to define a fixed-size array on the stack we wrote the following:
+
+```cpp
+int arr[10];
+```
+
+As you probably ran into in Fundamentals, passing this array to functions and copying it is not easy. So in C++ we can use its equivalent, `std::array`:
+
+```cpp
+#include <array>
+std::array<int, 10> arr;
+```
+
+Working with this array is like working with a vector, and it also works well with the functions of `<algorithm>`.
+
+In the `<utility>` header, `std::pair` is defined, which is like a `struct` with two variables:
+
+```cpp
+#include <utility>
+std::pair<int, char> a = {10, 'b'};
+std::cout << a.first << a.second;
+```
+
+Also in the `<tuple>` header, `std::tuple` is defined, which can hold a fixed number of variables:
+
+```cpp
+#include <tuple>
+std::tuple<int, int, bool> a = {1, 2, true};
+std::cout << std::get<0>(a); // prints 1
+```
+
+Using `tuple`s is not recommended, and wherever we want to keep more values together, it is good to use a `struct`. This way, because the variables have names, the code is more readable.

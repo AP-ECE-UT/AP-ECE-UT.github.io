@@ -14,7 +14,7 @@ export default function ProjectsIndexPage() {
 
     return (
         <Layout title={title} description={desc}>
-            <HomepageHeader title={title} subtitle={desc} />
+            <HomepageHeader title={title} />
                         <main dir={lang === "en" ? "ltr" : "rtl"} style={{ flexGrow: 1 }}>
                 <section className="padding-vert--lg">
                     <div className="container margin-top--lg">

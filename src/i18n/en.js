@@ -38,7 +38,7 @@ export default {
         title: "Teaching Assistants",
         description: "Meet the course teaching assistants and find ways to contact them.",
         sections: {
-            senior: "Senior Teaching Assistants",
+            senior: "Chief Teaching Assistants",
             current: "Teaching Assistants",
             former: "Former Teaching Assistants",
         },

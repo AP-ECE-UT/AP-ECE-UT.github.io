@@ -12,7 +12,7 @@ export default function HomepageHeader({ title, subtitle }) {
         <header className={clsx("hero hero--primary", styles.heroBanner)}>
             <div className="container">
                 <Heading as="h1" className="hero__title">{ltr(title)}</Heading>
-                <p className="hero__subtitle">{ltr(subtitle)}</p>
+                {subtitle && <p className="hero__subtitle">{ltr(subtitle)}</p>}
             </div>
         </header>
     );
