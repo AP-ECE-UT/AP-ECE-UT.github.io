@@ -1,0 +1,321 @@
+So far you have had a basic introduction to object-oriented design. In this post we first explain the SOLID principles, and then introduce one of the design patterns.
+
+## SOLID Principles
+
+The SOLID rules were first introduced in 2000 by Robert C. Martin in the paper "Design Principles and Design Patterns". Later, Michael Feathers extended these rules and gave them to the programming community under the acronym SOLID. The SOLID principles consist of five principles for object-oriented programming that ultimately lead to code that is more readable, more maintainable and more flexible in the face of change. Below we get to know these principles in more detail.
+
+### S for Single Responsibility
+
+This rule states that each class should implement only one responsibility. In several ways, this helps us have and maintain cleaner code:
+
+- Writing tests for the class becomes simpler, and the number of cases that have to be tested becomes smaller.
+- The relationships between classes become simpler and the complexity of the code goes down.
+- Classes become smaller, which makes each part more readable and easier to debug.
+
+To understand this principle better, look at the following example:
+Suppose we have a `Student` class. This class has attributes such as the student's name, student ID and so on, which are assigned and used in its functions. Part of the class is shown in the code below:
+
+```cpp
+class Student {
+public:
+  void study(const Course& course) {
+    Book course_book = course.get_book(); 
+    course_book.read();
+  }
+  void live() {
+    // Implementation
+  }
+
+private:
+  std::string name_;
+  std::string std_id_;
+};
+```
+
+As is clear here, the `Student` class implements two responsibilities.
+Next we list the reasons why we might want to change the implementation of this class. The first reason is related to how `study` is implemented; maybe we want to change the way the student studies from "reading a book" to "watching educational videos". The second reason is related to a change in the student's lifestyle; maybe we want to add a new hobby to the student's life, or maybe we want to add exercise to the daily routine. Here it is clear that we have at least two reasons to change the class, which violates the Single Responsibility rule. A better implementation might be to remove `live` from the student.
+
+Finally, the most important thing to remember about this rule is this: every class should have only one reason to change.
+
+### O for Open-Closed
+
+The name of this rule is a bit unclear, and its meaning is not obvious from its appearance. Open-Closed essentially means being open for extension and closed for modification. In other words, this rule takes away our permission to change code that has already been written, while for adding new features to the program we can extend it.
+
+To understand it better, look at the following example (the example is taken from [this link](https://www.baeldung.com/solid-principles)):
+
+Suppose we have defined a guitar as follows:
+
+```cpp
+class Guitar {
+public:
+  Guitar() { /* Implementation */ }
+
+protected:
+  std::string brand_;
+  std::string model_;
+  std::string volume_;
+};
+```
+
+After a while we realize we need a "cooler" guitar; the guitar designers decide to add a flame pattern to it to make it more appealing to young people. For this, some might make the tempting suggestion of changing the old code of the `Guitar` class to add the desired pattern. This solution can make the old code unstable and introduce new bugs into it; in addition, sometimes the programmers who wrote the old code may have changed, replaced by new programmers who know nothing about the old implementation.
+
+To avoid reading and understanding the old code, we can take refuge in the Open-Closed rule. The more correct solution is to extend this class as follows:
+
+```cpp
+class CoolGuitarWithFlames: public Guitar {
+private:
+  std::string pattern_;
+};
+```
+
+This way we can be sure that the old code stays untouched and stable.
+
+### L for Liskov Substitution
+
+The Liskov rule states that every class should be replaceable by its subclasses. To understand it better, look at the following example:
+Suppose we have built the following class for the category of birds:
+
+```cpp
+class Bird {
+public:
+  virtual void fly() {
+    // Implementation
+  }
+};
+```
+
+Now, if we want to build a class for penguins that is a subtype of the bird class, we can do it as follows:
+
+```cpp
+class Penguin : public Bird {
+public:
+  void fly() override {
+    throw std::runtime_error(
+      "I can’t; I have little wings!!");
+  }
+};
+```
+
+Clearly, a penguin cannot fly and cannot implement the `fly` function. So if we replace the `Bird` class with the `Penguin` class, which is a subtype of `Bird`, the resulting implementation will not be acceptable. This is a clear example of a violation of the Liskov rule.
+
+One way to solve this problem is to use implementations that also take birds that cannot fly into account.
+
+### I for Interface Segregation
+
+This principle states that the interfaces we define for our classes should not be so large that some of the methods we define for them are left unused.
+According to this principle, if an interface is large, it should be split into interfaces with smaller responsibilities.
+
+Suppose we want to write an interface for a printer and a scanner:
+
+```cpp
+class IPrinterAndScanner {
+public:
+  virtual void print() = 0;
+  virtual void scan() = 0;
+};
+```
+
+In that case the printer and scanner classes are written as follows:
+
+```cpp
+class SimplePrinter : public IPrinterAndScanner {
+public:
+  void print() override {
+    // Implementation
+  }
+  void scan() override {
+    // Does nothing
+  }
+};
+
+class DigitalScanner : public IPrinterAndScanner {
+public:
+  void print() override {
+    // Does nothing
+  }
+  void scan() override {
+    // Implementation
+  }
+};
+```
+
+As we can see, our interface contains more than a class needs, and a class that implements it is forced to leave part of it empty.
+
+By following the Interface Segregation principle, the code changes to the following:
+
+```cpp
+class IPrinter {
+public:
+  virtual void print() = 0;
+};
+
+class IScanner {
+public:
+  virtual void scan() = 0;
+};
+```
+
+In this case, each class takes only the functions it needs from the relevant interface, and if it needs both, it implements both.
+
+### D for Dependency Inversion
+
+This principle means that high-level classes should not depend directly on low-level classes. High-level classes should reach low-level classes through an abstraction, so that if a low-level class changes, the high-level class is not affected by it.
+
+One solution that can help us in many cases is to use interfaces. In that case the high-level class depends on the interface and not on the low-level class.
+
+For example, suppose we want to create a new operating system called `OS`. This operating system has to support a `Mouse` and a `Keyboard`. We could then have the two classes `Keyboard` and `Mouse`:
+
+```cpp
+class OS {
+public:
+  OS() {
+    keyboard_ = new Keyboard();
+    mouse_ = new Mouse();
+  }
+private:
+  Keyboard* keyboard_;
+  Mouse* mouse_;
+};
+```
+
+By doing this, we have made the high-level `OS` class depend on the `Keyboard` and `Mouse` classes. This causes problems, including making the `OS` class harder to test and making it depend on two concrete classes. Having this dependency removes the possibility of replacing `Keyboard` with another type of keyboard, or `Mouse` with another mouse.
+
+We have to separate these classes from each other in some way to remove the direct dependency. To do this, we can define interfaces for the two classes and use them inside `OS`.
+
+We define the two interfaces `MouseInterface` and `KeyboardInterface`, and change `Mouse` and `Keyboard` so that they implement their corresponding interfaces. Now the `OS` class becomes:
+
+```cpp
+class OS {
+public:
+  OS(KeyboardInterface* k,
+     MouseInterface* m) {
+    keyboard_ = k;
+    mouse_ = m;
+  }
+
+private:
+  KeyboardInterface* keyboard_;
+  MouseInterface* mouse_;
+};
+```
+
+Now we can use any mouse or keyboard that implements the interface in this operating system. These two interfaces handle their own low-level classes, and what we work with are these interfaces, not the low-level classes themselves, whose possible changes would affect the high-level code.
+
+## Design Patterns
+
+Design patterns are a kind of approach and strategy for solving problems in different areas, so that we can use them to solve specific problems.
+The good thing about using these patterns is that they let us develop programs with more confidence, increase our speed and quality, and work with more focus on the project. In most cases, this also makes the code more readable and cleaner. Design patterns are also important when refactoring code.
+
+One thing to keep in mind is that we do not need to memorize all of these patterns and know exactly how each one is implemented. Rather, we only need to know when it is appropriate to use which pattern. In general, we should not go to extremes in using these patterns!
+
+Next we look at one of the design patterns. We recommend that you study the other design patterns as well and add to your knowledge in this area.
+
+### Categories
+
+Design patterns were first collected and presented in the book *Design Patterns: Elements of Reusable Object-Oriented Software* by four authors, known as the Gang of Four, or GoF for short.
+The book is divided into two parts: the first is about object-oriented design and the second describes 23 design patterns. These 23 patterns are divided into 3 groups:
+
+- **Creational Patterns**: These patterns deal mostly with mechanisms for creating objects, which increases the flexibility of the code. They also increase code reuse.
+- **Structural Patterns**: These patterns are about how objects are assembled and kept together, so that our structures stay flexible and efficient.
+- **Behavioral Patterns**: These patterns are about creating effective relationships between objects and assigning responsibilities among them properly.
+
+### Factory Design Pattern
+
+The Factory pattern is a creational pattern in which an interface is used to create classes; this interface gives us an abstract class, but we can use it to refer to any type we want. Put more simply, it is a pattern that creates different objects for us and hands them to us in an abstract form.
+
+For example, suppose that to exchange data between different computers, we want to use Wi-Fi if the computer is connected to a Wi-Fi network, and otherwise use Bluetooth.
+The classes would be as follows:
+
+```cpp
+class Wifi {
+public:
+  Wifi();
+  ~Wifi();
+  void connect();
+  void disconnect();
+  ...
+};
+
+class Bluetooth {
+public:
+  Bluetooth();
+  ~Bluetooth();
+  void connect();
+  void disconnect();
+  ...
+};
+```
+
+The program code would be as follows:
+
+```cpp
+if (NetUtils::has_wifi(node)) {
+  Wifi wifi;
+  wifi.connect();
+}
+else {
+  Bluetooth bluetooth;
+  bluetooth.connect();
+}
+// ...
+if (NetUtils::has_wifi(node)) {
+  Wifi wifi;
+  wifi.disconnect();
+}
+else {
+  Bluetooth bluetooth;
+  bluetooth.disconnect();
+}
+```
+
+This version contains duplicated code and uses several identical `if` statements. Doing this in a higher-level function, which is supposed to call other main functions abstractly, is not right.
+Here we can use a factory. We create a class such as `Network` and define two subclasses for it.
+Since we are also using polymorphism, we hide some of the functionality, and our code will be more extensible. So our classes become the following:
+
+```cpp
+class Network {
+public:
+  Network() {...}
+  ~Network() {...}
+  virtual void connect() = 0;
+  virtual void disconnect() = 0;
+};
+
+class Wifi : public Network {
+public:
+  Wifi() {...}
+  ~Wifi() {...}
+  void connect() override {...}
+  void disconnect() override {...}
+  ...
+};
+
+class Bluetooth : public Network {
+public:
+  Bluetooth() {...}
+  ~Bluetooth() {...}
+  void connect() override {...}
+  void disconnect() override {...}
+  ...
+};
+```
+
+Now we write the factory function:
+
+```cpp
+Network* get_network_interface(Node node) {
+  return NetUtils::has_wifi(node) ?
+         new Wifi() : new Bluetooth();
+}
+```
+
+Finally, the program code changes to the following:
+
+```cpp
+Network* nw = get_network_interface(node);
+nw->connect();
+// ...
+nw->disconnect();
+```
+
+This was one example of using a factory. This pattern is used in other scenarios as well, and you can research them further.
