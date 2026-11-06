@@ -1,0 +1,504 @@
+You have probably come across a few regular expressions already. In this post we first go over the general definitions and uses of regular expressions, and then look at how to write them and what their rules are. Finally, we introduce the standard `regex` library in C++.
+
+## Introduction
+
+Regular expressions, or Regex for short, are strings written according to specific rules and patterns, and they make it easier to get at information. The language of a regex is the set of strings that match it. In the following sections you will learn more about the idea of a language and about matching a string against a regex. To try the examples, you can use [this link](https://regexr.com) or [this one](https://regex101.com).
+
+## Uses
+
+Regexes have many uses. For example, you can use them to:
+
+- Find a particular piece of text inside a larger text.
+- Compare a string against a given format or pattern (in applications, this can be used to validate user input).
+- Replace part of a text.
+- Split a string into several parts.
+
+For example, suppose you are given a list of file names and you want to find the files whose format is pdf. You can use the following regex:
+
+```text
+^.+\.pdf$
+```
+
+This expression finds the file names that match the given pattern. The example above may look a bit unclear for now; we explain the rules in detail below so that you understand it better.
+
+## Basic Syntax
+
+In the examples, the first line shows the regex, the second line shows a subset of L (the language of the regex), and the third line shows a subset of the complement of L.
+In other words, the second line shows strings that match our regex, and the third line shows the complement of the language L, which contains all the strings that are not members of L.
+
+## Basic Matchers
+
+To find a string inside a long text, it is enough to type that string. Note that regexes are case-sensitive by default.
+
+```cpp
+OK
+{"OK"}
+{"These", "strings", "won’t", "match"}
+```
+
+## Character classes
+
+These characters represent sets of characters, which makes regexes easier to use.
+
+### Character Sets ([ ])
+
+With [ ] we can choose a set of characters of our own; just write the characters you want inside the brackets. In effect, we are saying that any one of the characters inside [ ] is acceptable.
+
+```cpp
+s[kpa]y
+{"sky", "spy", "say"}
+{"Say", "sad", "lonely", "sKY", ...}
+```
+
+### Negated Character Sets ([^])
+
+Adding ^ at the start of the brackets means those characters must not be matched. If we had put ^ at the start of the brackets in the previous example, every word that has s at the start, one character in the middle and y at the end would match, as long as the middle character is not k, p or a.
+
+```cpp
+s[^kpa]y
+{"sby", "sKy", "s_y", ...}
+{"sky", "spy", "say", "lonely", ...}
+```
+
+### Letter Range ([first-last])
+
+Writing a - (dash) inside [ ] means we do not have to list every character separately. So writing [first-last] puts every character between first and last into our character set. For example, the following expressions are equivalent:
+
+```text
+[a-f] = [abcdef]
+[4-9] = [456789]
+[1-3c-eM] = [123cdeM]
+```
+
+Note that if last comes before first, we get an invalid regular expression error.
+
+```cpp
+b[a-f4-9]r
+{"bar", "bbr", "bfr", "b7r", ...}
+{"b3r", "bgr", "bCr", ...}
+```
+
+## Metacharacters
+
+There are a number of predefined character classes for sets that are used very often, such as:
+
+```text
+. = [^\n]
+\w = [A-Za-z0-9_]
+\W = [^A-Za-z0-9_]
+\d = [0-9]
+\D = [^0-9]
+\s = [ \t\n\r\f\v]
+\S = [^ \t\n\r\f\v]
+```
+
+The dot (.) matches any character except newline. w stands for word and d stands for digit.
+You are already familiar with `\n` and the space from the \s set. The rest are other kinds of whitespace, which are explained in the Character Escapes section.
+You can also use these inside character sets:
+
+```text
+[\dAbc] = [0-9Abc]
+```
+
+## Options (Flags)
+
+A regex has options that let you change how it is interpreted. For example, you can make a regex case-insensitive.
+In the examples of this section, the first line is the input and the second line is the regex. The green parts are the parts that match the regex. Note that regexes are usually written between two / characters.
+
+### g (global)
+
+The g flag makes all matching expressions be returned, not just the first one. Without this option, the regex searches the input string and returns only the first word that matches.
+
+```text
+sky smy sfy say sty hdsPyfd s_y s0y
+/s[^kpa]y/g
+sky smy sfy say sty hdsPyfd s_y s0y
+/s[^kpa]y/
+```
+
+### i (case-insensitive)
+
+The i flag makes the expression match regardless of whether letters are uppercase or lowercase.
+
+```text
+The quick brown fox jumps over the Lazy Dog
+/lazy/i
+The quick brown fox jumps over the Lazy Dog
+/lazy/
+```
+
+### m (multiline mode)
+
+Using m makes the regex work on each line separately rather than on the whole text. The example for this section comes after the explanation of anchors.
+
+## Quantifiers
+
+These characters specify how many times the character before them may repeat.
+
+### Asterisk (\*)
+
+If we put \* after a character, we are saying the previous character may appear in the text any number of times (zero or more).
+
+```text
+bear beer br ber
+/be*r/g
+```
+
+### Plus Sign (+)
+
+If we put + after a character, we are saying the previous character may appear in the text one or more times.
+
+```text
+bear beer br ber
+/be+r/g
+```
+
+### Question Mark (?)
+
+If we put ? after a character, we are saying the previous character may or may not appear in the text.
+
+```text
+ruin run ruiin
+/rui?n/g
+```
+
+### Curly Braces (\{\})
+
+To say that we want a character to appear exactly a certain number of times, we use `{n}` after that character, where `n` is the number of times we want it to appear.
+
+```text
+day daay daaay daaaay
+/da{3}y/g
+```
+
+If we want a character to appear at least m times and at most `n` times, we use `{m,n}`. If we leave out `n`, the words in which the character appears at least m times are matched.
+
+```text
+day daay daaay daaaay daaaaay
+/da{3,}y/g
+day daay daaay daaaay daaaaay
+/da{3,4}y/g
+```
+
+## Anchors
+
+These characters specify where in the text we should look for the string.
+
+### Dollar Sign ($)
+
+The match between the regex and the text is checked at the end of the text.
+
+```text
+My phone number is 555-121-1231
+/1\d*1$/g
+```
+
+### Caret (^)
+
+The match between the regex and the text is checked at the start of the text.
+
+```text
+Test your code, then test it again
+/^test/g
+
+Roses are red, violets are blue
+Roses are red, violets are blue
+/^Roses/gm
+
+Roses are red, violets are blue
+Roses are red, violets are blue
+/^Roses/g
+```
+
+## Alternation
+
+### Pipe (|)
+
+As you may have guessed, this character does the job of "or" for us, and it is quite similar to [ ]. The two are different, though: the [ ] operator works on characters (character level), while the | operator can also be used with several characters (expression level).
+
+```text
+The cat sat on the mat, is solving flat.
+/(s|m|fl)at/g
+```
+
+## Character Escapes
+
+The backslash (\\) is a special character that changes the meaning of the character after it. As we have seen, some characters have special meanings (such as ^_|[]+?.). Now suppose you want to search the text for _; if you type this character normally, it is interpreted differently because it has a special meaning. To search for it, you can use `\_`, which makes the regex look for the _ character in the text. There are also some special characters that get a special meaning when preceded by \\.
+
+### Special Characters
+
+The characters in this group are usually used to represent whitespace and similar things. Some of them are listed below:
+
+```cpp
+\b (word boundary)
+\t (tab)
+\n (newline)
+\f (form feed)
+\v (vertical tab)
+```
+
+### Escape Characters
+
+The way to search for characters that have a special meaning is to use the escape character, that is \\, which makes the regex treat the next character as an ordinary one.
+
+```text
+\*
+\+
+\?
+\.
+```
+
+To search for the \\ character itself, it is enough to escape it like this: `\\`
+
+## Grouping Constructs
+
+### (subexpression)
+
+Parentheses are used to group several regex parts together. Groups can later be referenced or forced to follow certain rules.
+Suppose we want to get the name, age and profession of a person from the following string:
+
+```text
+Andrew Mead, 34 years old, is a Full-stack Developer
+/(\w+\s\w+),\s(\d+)\syears\sold,\sis\sa\s(.*)/g
+```
+
+The expression above matches the whole string, but the person's name is stored in the first group (`\w+\s\w+`), the age in the second group (`\d+`) and the profession in the third group (`.*`). How to access the contents of the groups is explained in the backreference section.
+
+### `(?<name>subexpression)` `(?’name’subexpression)`
+
+We have seen how to group regular expressions. Now, if we want to give each group a specific name, such as name, we use `?<name>` or `?'name'` at the start of each pair of parentheses.
+Suppose we have a string of dates in the format YYYY-MM-DD and we want the year, month and day in regex groups named year, month and day:
+
+```text
+2003-06-23
+/^(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})$/
+```
+
+### (?:subexpression) Non-capturing Group
+
+Using this syntax gives us a non-capturing group, which means the referencing feature cannot be used for these groups. The difference between these groups and ordinary groups becomes clearer in the backreference examples.
+
+## Backreference Constructs
+
+### \\number
+
+Suppose you want to write a regex in which some parts of your string are equal to each other. You can use backreferences for this. To refer back to the i-th group, we use \\i.
+
+```text
+123-123-i-i
+123-123-i-m
+/(\d+)-\1-(\w+)-\2/g
+```
+
+Or, for example, we want to get the username and domain from an email address and check whether two input email addresses have the same domain:
+
+```text
+cat@meowy.com - meow@meowy.com
+dog@meowy.com - woof@notmeowy.com
+/([^@]+)@(.+\..+) - ([^@]+)@\2/g
+```
+
+When you want to use backreferences, be careful with non-capturing groups.
+
+```text
+ab-cd,xyz-xyz
+ab-cd,xyz-ab
+/(?:ab)-cd,(xyz)-\1/g
+```
+
+### `\k<name>`
+
+When the number of groups gets large, referring to them by number becomes exhausting, so we can give the groups names to make them easier to access.
+
+```text
+cat@meowy.com - meow@meowy.com
+dog@meowy.com - woof@notmeowy.com
+/(?<address>[^@]+)@(?<domain>.+\..+) - ([^@]+)@\k<domain>/g
+```
+
+## Regex Library in C++
+
+C++ has a library called regex, which is a very powerful tool for working with text.
+Using regular expressions, this library lets us search, manipulate and validate text.
+There are four main parts to working with regular expressions, and each has its own object:
+
+### Target Sequence
+
+The sequence of characters we search in. This sequence can be a C string (an array of characters ending with null, `\0`) or a std::string.
+
+### Pattern
+
+This is our regex itself, which is an object of type std::basic_regex.
+
+### Matched Array
+
+Information about the matches that were found can be retrieved as an object of type std::match_results.
+
+### Replacement String
+
+The text that we replace the matches with.
+
+## Main Classes
+
+All the classes related to regular expressions live in the standard library header `<regex>`.
+
+### std::basic_regex
+
+This is a class template whose job is to hold a regex. For ordinary strings, we use `std::basic_regex<char>`, also known as `std::regex`.
+To create an object of it, you can use the following constructors:
+
+```cpp
+std::regex();
+```
+
+The default constructor creates an empty regex that matches nothing.
+
+```cpp
+std::regex(const std::string& pattern, std::syntax_option_type flags);
+std::regex(const char* pattern, std::syntax_option_type flags);
+```
+
+These constructors build a regex from the given string, and flags determines how it is interpreted.
+Flags can specify the syntax and algorithm of the regex as well as its options:
+
+`ECMAScript / basic / extended / awk / grep / egrep`
+
+These flags show which syntax and algorithm the regex follows. The default is the well-known ECMAScript syntax. At most one of these flags can be applied.
+`icase`
+This flag makes the regex case-insensitive; that is, it does not distinguish between uppercase and lowercase letters.
+`multiline`
+We explained how this flag works in the earlier sections.
+`nosubs`
+With this flag, all groups become non-capturing and are equivalent to `(?:subexpression)`.
+`optimize`
+This flag is used to improve performance when the regex is compiled. Using it tells the regex engine to apply optimizations at compile time, which makes searching with the regex faster.
+To use several flags, it is enough to combine them with the or operator (|):
+
+```cpp
+std::regex rgx("^test$", std::regex::icase | std::regex::multiline);
+```
+
+### std::sub_match
+
+This is a class template, which for ordinary strings is equivalent to std::ssub_match. Each matched part of the input text is stored as an object of this class type.
+This class holds a pair of iterators into the original string that show the range matched by the regex. Note that we do not construct this class ourselves; we only use it through the results of search algorithms and similar functions.
+
+### std::match_results
+
+This is a class template, which for ordinary strings is equivalent to std::smatch. This class stores a group of matches, that is std::ssub_match objects, which can be reached with the [ ] operator.
+The first std::ssub_match inside a std::smatch (index 0) is always the whole match, and the content of the first group is at index 1.
+
+## Algorithms
+
+Now let us look at the main functions for using regexes in C++. With these functions you can perform matching and replacing.
+
+### std::regex_match
+
+This function checks whether the regex matches the entire input string, and returns the answer as a bool. Some of the overloads of this function are as follows:
+
+```cpp
+std::regex_match(const std::string& str, const std::regex& re);
+std::regex_match(const char* str, const std::regex& re);
+std::regex_match(Iterator first, Iterator last, const std::regex& re);
+```
+
+Example:
+
+```cpp
+std::string input("1234");
+std::regex pattern("\\d{4}");
+if (std::regex_match(input, pattern)) {
+    std::cout << "Match found!";
+}
+```
+
+Note that to use the metacharacter \d, the backslash has been escaped. This is because C++ itself treats \ as a special character, and to put a \ in a string we have to escape it. For example, to put a real \ in a regex we have to write \\\\ , which becomes \\ in the string and which the regex takes as a single \.
+To stop C++ from treating \ as special, you can use raw string literals, which look like this:
+
+```cpp
+std::string x = R"(this is not a "newline": \n)";
+```
+
+The character R goes in front of the string, and parentheses must come next to the " characters. The string above is equivalent to the following:
+
+```cpp
+std::string x= "this is not a \"newline\": \\n";
+```
+
+Other overloads of this function take a reference to a std::smatch object as the second parameter, and the result of the groups and the matched range is stored in it:
+
+```cpp
+std::regex_match(const std::string& str, std::smatch& m, const std::regex& re);
+```
+
+How to use this kind of overload is explained in the next algorithm.
+
+### std::regex_search
+
+For the given regex, this function looks for a match in any part of the input string and returns the result of the search as a bool. The overloads of this function are similar to those of the previous algorithm, std::regex_match:
+
+```cpp
+std::regex_search(const std::string & str, std::smatch& m, const std::regex& re);
+```
+
+The difference between this function and std::regex_match is that this function checks all parts of the input string for a match with the regex, whereas with std::regex_match the whole string has to match the regex.
+Here is how to use it, with an example:
+
+```cpp
+int main() {
+    std::string input = "Sample text 123 here for test.";
+    std::regex pattern(R"(text\s(\d+)\s(\w+))");
+
+    std::smatch match;
+    if (std::regex_search(input, match, pattern)) {
+        std::cout << "Matched input!" << std::endl;
+
+        std::string whole_match = match[0].str();
+        std::cout << "Whole match: " << whole_match << '\n';
+
+        for (int i = 1; i < match.size(); i++) {
+            std::cout << "Group " << i << ": " << match[i] << '\n';
+        }
+    }
+    return 0;
+}
+```
+
+And the output is as follows:
+
+```text
+Matched input!
+Whole match: text 123 here
+Group 1: 123
+Group 2: here
+```
+
+If std::regex_match had been used here, the function would have returned false.
+To find all the matches in an input string (like the g flag), you have to use the overload that takes iterators, and after each successful match inside the if, update the starting iterator.
+
+### std::regex_replace
+
+This function lets us replace all the matches in the input with a given expression. The output of this function is the modified string. It has several different call forms, the most common of which is the following:
+std::regex_replace(std::string input, std::regex pattern, std::string replacement);
+The substitution syntax is not covered in this post, and you can look it up yourself. Its metacharacters start with $, and for example $& means substituting the whole match.
+Example:
+
+```cpp
+int main() {
+    std::string text = "Xyz Text.";
+    std::regex pattern("x", std::regex::icase);
+    std::string replacement = "REP";
+
+    std::string res = std::regex_replace(text, pattern, replacement);
+    std::cout << res;
+    return 0;
+}
+```
+
+And the output is as follows:
+
+```text
+REPyz TeREPt.
+```
+
+If `replacement = "M$&M"` had been used, the output would have been `MXMyz TeMxMt`.
