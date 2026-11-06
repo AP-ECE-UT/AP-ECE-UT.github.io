@@ -34,7 +34,7 @@ export default function ProjectsTermPage({ slug }) {
 
     return (
         <Layout title={title} description={desc}>
-            <HomepageHeader title={label} subtitle={desc} />
+            <HomepageHeader title={label} />
                         <main dir={lang === "en" ? "ltr" : "rtl"} style={{ flexGrow: 1 }}>
                 <section className="padding-vert--lg">
                     <div className="container">
