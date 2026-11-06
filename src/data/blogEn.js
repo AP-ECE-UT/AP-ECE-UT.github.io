@@ -2,6 +2,7 @@
 // Each entry: { Content, toc, excerpt } - the MDX body, its table of contents and the
 // short text shown on the blog list page. Posts without an entry stay in Persian.
 import Regex, { toc as regexToc } from "@site/src/pages/_blog-en/regex.mdx";
+import Make, { toc as makeToc } from "@site/src/pages/_blog-en/make.mdx";
 import Design, { toc as designToc } from "@site/src/pages/_blog-en/design.mdx";
 import Resource, { toc as resourceToc } from "@site/src/pages/_blog-en/resource.mdx";
 
@@ -23,6 +24,12 @@ const blogEn = {
         toc: designToc,
         excerpt:
             "So far you have had a basic introduction to object-oriented design. In this post we first explain the SOLID principles, and then introduce one of the design patterns.",
+    },
+    make: {
+        Content: Make,
+        toc: makeToc,
+        excerpt:
+            "In this post we want to give an overview of the compilation process and of multi-file projects using a Makefile, and point out a few important things about it. Finally, we briefly introduce the CMake tool.",
     },
 };
 
